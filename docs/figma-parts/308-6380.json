@@ -1,0 +1,57 @@
+{
+  "nodeId": "308:6380",
+  "name": "side-bar/menu-icon",
+  "atomicLevel": "Atoms",
+  "description": "サイドバーのアイコンメニューボタン（アイコンのみ）。3状態（Default / Hover / Current）のバリアント。",
+  "figmaDocUrl": "https://ui.shadcn.com/docs/components/button#icon",
+  "variants": [
+    {
+      "name": "Default",
+      "state": "Default",
+      "description": "通常状態。白背景・ブランド青アイコン。"
+    },
+    {
+      "name": "Hover",
+      "state": "Hover",
+      "description": "ホバー状態。薄青背景（#ddeaff）・ブランド青アイコン。"
+    },
+    {
+      "name": "Current",
+      "state": "Current",
+      "description": "現在ページの状態。ブランド青背景（#2862cb）・白アイコン。"
+    }
+  ],
+  "props": {
+    "state": "'Default' | 'Hover' | 'Current'（状態）",
+    "icon": "string（FontAwesome アイコン名、デフォルト: 'grip-horizontal'）"
+  },
+  "dimensions": {
+    "width": "var(--width/w-10, 40px)",
+    "height": "var(--height/h-10, 40px)",
+    "borderRadius": "var(--border-radius/rounded-md, 8px)",
+    "paddingX": "var(--spacing/4, 16px)",
+    "paddingY": "var(--spacing/2, 8px)"
+  },
+  "designTokens": {
+    "defaultBackground": "var(--background/surface/bg-sf-primary, white)",
+    "hoverBackground": "var(--brand/blue-monkey/50, #ddeaff)",
+    "currentBackground": "var(--background/button/bg-btn-primary, #2862cb)",
+    "defaultIconColor": "var(--text/text-brand, #2862cb)",
+    "hoverIconColor": "var(--text/text-brand, #2862cb)",
+    "currentIconColor": "var(--text/text-tertiary, white)",
+    "iconSize": "16px",
+    "iconFont": "Font Awesome 7 Free Solid"
+  },
+  "structure": {
+    "root": "div（flex, items-center, justify-center, w-10, h-10, rounded-md）",
+    "icon": "div（FontAwesome アイコン、16px）"
+  },
+  "notes": [
+    "3状態バリアント（Default / Hover / Current）",
+    "アイコンは FontAwesome Solid の 'grip-horizontal'（グリッドメニューアイコン）",
+    "FA CDN 経由: <i class='fa-solid fa-grip-horizontal'>",
+    "Current 状態のみ背景が青になりアイコンが白に変わる",
+    "Default / Hover はアイコン色同じ（ブランド青）、背景色のみ異なる",
+    "sidebar（Organism）の子として使用される"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "nodeId": "864:40386",
+  "componentName": "Badge/SubStatus",
+  "category": "Atoms",
+  "index": 18,
+  "figmaCode": "type BadgeSubStatusProps = {\n  className?: string;\n  state?: \"PageRebuildTime\" | \"Editting\" | \"Approved\";\n};\n\nexport default function BadgeSubStatus({ className, state = \"PageRebuildTime\" }: BadgeSubStatusProps) {\n  const isApproved = state === \"Approved\";\n  const isEditting = state === \"Editting\";\n  return (\n    <div className={...}>\n      {/* 状態に応じてテキスト・アイコン・日時を表示 */}\n    </div>\n  );\n}",
+  "variants": [
+    {
+      "name": "PageRebuildTime（再構築予約）",
+      "nodeId": "621:13873",
+      "description": "オレンジ背景（#ea580c）に時計アイコン（FA: clock）＋再構築日時テキスト。横幅が可変。",
+      "backgroundColor": "#ea580c (var(--background/button/bg-btn-submit))",
+      "textColor": "#fafafa (var(--base/primary-foreground))",
+      "paddingX": "6px (var(--spacing/1-5))",
+      "content": "FA:clock アイコン + 「再構築予約：2026/2/12 14:40」"
+    },
+    {
+      "name": "Editting（編集中）",
+      "nodeId": "619:13581",
+      "description": "グレー背景（#e2e8f0）に「編集中」テキスト。",
+      "backgroundColor": "#e2e8f0 (var(--background/surface/bg-sf-tertiary))",
+      "textColor": "#0d2144 (var(--text/text-primary))",
+      "paddingX": "8px (var(--spacing/2))",
+      "content": "「編集中」"
+    },
+    {
+      "name": "Approved（承認済）",
+      "nodeId": "619:13582",
+      "description": "薄オレンジ背景（#fff7ed）に「承認済」テキスト（オレンジ色）。透明な枠線付き。",
+      "backgroundColor": "#fff7ed (var(--background/caution/bg-caution-foreground))",
+      "textColor": "#ea580c (var(--background/caution/bg-caution-light))",
+      "paddingX": "8px (var(--spacing/2))",
+      "border": "1px solid transparent",
+      "content": "「承認済」"
+    }
+  ],
+  "styles": {
+    "height": "20px (var(--height/h-5))",
+    "paddingY": "4px (var(--spacing/1))",
+    "gap": "4px (var(--spacing/1))",
+    "borderRadius": "6px (var(--border-radius/rounded-sm))",
+    "fontSize": "12px (var(--text/xs/font-size))",
+    "fontWeight": "400 (Regular)",
+    "fontFamily_text": "Noto Sans JP",
+    "fontFamily_icon": "Font Awesome 7 Free Solid"
+  },
+  "typography": {
+    "text": {
+      "style": "text-xs/leading-none/regular",
+      "fontFamily": "Noto Sans JP",
+      "fontStyle": "Regular",
+      "fontSize": "var(--text/xs/font-size)",
+      "fontWeight": 400,
+      "lineHeight": 1,
+      "letterSpacing": 0
+    },
+    "dateTime": {
+      "style": "text-xs/leading-normal/regular",
+      "fontFamily": "Noto Sans JP",
+      "fontStyle": "Regular",
+      "fontSize": "var(--text/xs/font-size)",
+      "fontWeight": 400,
+      "lineHeight": "var(--text/xs/line-height)",
+      "letterSpacing": 0
+    }
+  },
+  "documentation": "https://ui.shadcn.com/docs/components/badge#default",
+  "notes": "ページの副ステータスを示す3状態バッジ。PageRebuildTime のみ時計アイコン＋日時テキストの2要素構成。Figma 上の state 名に typo あり（'Editting' → 'Editing'）。"
+}

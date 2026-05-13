@@ -1,0 +1,54 @@
+{
+  "nodeId": "619:13590",
+  "componentName": "Tooltip",
+  "category": "Atoms",
+  "index": 14,
+  "figmaCode": "const imgRectangle5 = \"https://www.figma.com/api/mcp/asset/97ccfd25-5f84-468c-a0e7-6ba6f97744a0\";\n\nexport default function Tooltip({ className }: { className?: string }) {\n  return (\n    <div className={className || \"content-stretch flex gap-[var(--spacing/1,4px)] items-center justify-center px-[var(--spacing/2,8px)] py-[var(--spacing/1,4px)] relative rounded-[4px] shadow-[0px_4px_6px_0px_rgba(0,0,0,0.1),0px_2px_4px_0px_rgba(0,0,0,0.1)] w-[146px]\"} data-node-id=\"619:13590\" data-name=\"Tooltip\">\n      <div className=\"absolute h-[29px] left-0 top-[-5px] w-[146px]\" data-node-id=\"308:7647\">\n        <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgRectangle5} />\n      </div>\n      <p className=\"font-[family-name:var(--font/font-sans,'Geist:SemiBold','Noto_Sans_JP:Bold',sans-serif)] font-[var(--font-weight/semibold,600)] leading-[var(--text/xs/line-height,16px)] relative shrink-0 text-[10px] text-[color:var(--base/primary-foreground,#fafafa)] whitespace-nowrap\" data-node-id=\"308:7649\">\n        テキスト\n      </p>\n    </div>\n  );\n}",
+  "variants": [
+    {
+      "name": "（単一バリアント）",
+      "nodeId": "619:13590",
+      "description": "吹き出し形状のツールチップ。背景は濃紺（画像アセット）、テキストは白。"
+    }
+  ],
+  "styles": {
+    "width": "146px",
+    "paddingX": "8px (var(--spacing/2))",
+    "paddingY": "4px (var(--spacing/1))",
+    "gap": "4px (var(--spacing/1))",
+    "borderRadius": "4px",
+    "shadow": "shadow/md（2層のドロップシャドウ）",
+    "textColor": "#fafafa (var(--base/primary-foreground))",
+    "fontSize": "10px",
+    "fontWeight": "600 (SemiBold)",
+    "fontFamily": "font/font-sans (Geist:SemiBold / Noto_Sans_JP:Bold)",
+    "lineHeight": "16px (var(--text/xs/line-height))"
+  },
+  "shadow": {
+    "name": "shadow/md",
+    "layers": [
+      {
+        "type": "DROP_SHADOW",
+        "color": "rgba(0,0,0,0.1)",
+        "offsetX": "0px",
+        "offsetY": "4px",
+        "blur": "6px",
+        "spread": "0px"
+      },
+      {
+        "type": "DROP_SHADOW",
+        "color": "rgba(0,0,0,0.1)",
+        "offsetX": "0px",
+        "offsetY": "2px",
+        "blur": "4px",
+        "spread": "0px"
+      }
+    ]
+  },
+  "assets": {
+    "backgroundShape": "https://www.figma.com/api/mcp/asset/97ccfd25-5f84-468c-a0e7-6ba6f97744a0",
+    "backgroundShapeDescription": "吹き出し形状の背景画像（濃紺）。高さ29px、幅146px、上部に-5pxのオフセット。"
+  },
+  "documentation": "https://ui.shadcn.com/docs/components/badge#default",
+  "notes": "背景が画像アセット（Rectangle5）で構成されている。吹き出しの矢印も画像に含まれる。幅146px固定、単一バリアント。"
+}

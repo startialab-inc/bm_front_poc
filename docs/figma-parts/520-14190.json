@@ -1,0 +1,116 @@
+{
+  "nodeId": "520:14190",
+  "name": "Button/text",
+  "atomicLevel": "Atom",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "テキスト＋アイコンのゴーストボタン。shadcn/ui Ghost Button 相当。",
+  "referenceUrl": "https://ui.shadcn.com/docs/components/button#ghost",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "gap": "var(--spacing/2, 8px)",
+    "height": "var(--height/h-8, 32px)",
+    "paddingTop": "var(--spacing/1, 4px)",
+    "paddingBottom": "var(--spacing/1, 4px)",
+    "paddingLeft": "var(--spacing/3, 12px)",
+    "paddingRight": "var(--spacing/4, 16px)",
+    "borderRadius": "var(--border-radius/rounded-md, 8px)"
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "520:14187",
+      "background": "transparent",
+      "border": "none",
+      "icon": {
+        "color": "var(--iconitify/ic-primary, #143166)"
+      },
+      "text": {
+        "color": "var(--text/text-primary, #0d2144)",
+        "fontFamily": "Noto Sans JP",
+        "fontStyle": "Regular",
+        "fontWeight": 400
+      }
+    },
+    {
+      "state": "Hover",
+      "nodeId": "520:14188",
+      "background": "var(--brand/blue-monkey/50, #ddeaff)",
+      "border": "none",
+      "icon": {
+        "color": "var(--iconitify/ic-primary, #143166)"
+      },
+      "text": {
+        "color": "var(--text/text-brand, #2862cb)",
+        "fontFamily": "Noto Sans JP",
+        "fontStyle": "Bold",
+        "fontWeight": 700
+      }
+    },
+    {
+      "state": "Focus",
+      "nodeId": "520:14189",
+      "background": "var(--brand/blue-monkey/50, #ddeaff)",
+      "border": "1px solid var(--brand/blue-monkey/500, #2862cb)",
+      "icon": {
+        "color": "var(--iconitify/ic-primary, #143166)"
+      },
+      "text": {
+        "color": "var(--text/text-brand, #2862cb)",
+        "fontFamily": "Noto Sans JP",
+        "fontStyle": "Bold",
+        "fontWeight": 700
+      }
+    },
+    {
+      "state": "Disabled",
+      "nodeId": "523:14363",
+      "figmaStateName": "State4",
+      "background": "transparent",
+      "border": "none",
+      "icon": {
+        "color": "var(--iconitify/ic-disable, #cbd5e1)"
+      },
+      "text": {
+        "color": "var(--text/text-disable, #cbd5e1)",
+        "fontFamily": "Noto Sans JP",
+        "fontStyle": "Regular",
+        "fontWeight": 400
+      }
+    }
+  ],
+  "typography": {
+    "label": {
+      "fontFamily": "Noto Sans JP",
+      "fontSize": "var(--text/sm/font-size, 14px)",
+      "lineHeight": 1,
+      "letterSpacing": 0
+    }
+  },
+  "icon": {
+    "library": "Font Awesome 7 Free",
+    "style": "Solid",
+    "size": "16px",
+    "fontSize": "15px",
+    "placeholder": "circle"
+  },
+  "props": {
+    "state": {
+      "type": "string",
+      "enum": ["Default", "Hover", "Focus", "Disabled"],
+      "default": "Default"
+    },
+    "label": {
+      "type": "string",
+      "default": "ボタン"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Font Awesome アイコン名（例: circle）",
+      "default": "circle"
+    }
+  },
+  "rawCode": "type ButtonTextProps = {\n  className?: string;\n  state?: \"Focus\" | \"Default\" | \"Hover\" | \"State4\";\n};\n\nexport default function ButtonText({ className, state = \"Default\" }: ButtonTextProps) {\n  const isFocus = state === \"Focus\";\n  const isHover = state === \"Hover\";\n  const isState4 = state === \"State4\";\n  return (\n    <div className={className || `${String.raw`content-stretch flex gap-[var(--spacing\\/2,8px)] h-[var(--height\\/h-8,32px)] items-center justify-center pl-[var(--spacing\\/3,12px)] pr-[var(--spacing\\/4,16px)] py-[var(--spacing\\/1,4px)] relative rounded-[var(--border-radius\\/rounded-md,8px)] `}${isState4 ? \"\" : isFocus ? String.raw`bg-[var(--brand\\/blue-monkey\\/50,#ddeaff)] border border-[var(--brand\\/blue-monkey\\/500,#2862cb)] border-solid` : isHover ? String.raw`bg-[var(--brand\\/blue-monkey\\/50,#ddeaff)]` : String.raw`bg-[var(--tailwind-colors\\/base\\/transparent,rgba(255,255,255,0))]`}`}>\n      <div className=\"content-stretch flex flex-col items-center justify-center relative shrink-0 size-[16px]\">\n        <div className={`flex flex-col font-[\"Font_Awesome_7_Free:Solid\",sans-serif] justify-end leading-[0] not-italic relative shrink-0 text-[15px] w-full ${isState4 ? String.raw`text-[color:var(--iconitify\\/ic-disable,#cbd5e1)]` : String.raw`text-[color:var(--iconitify\\/ic-primary,#143166)] text-center`}`}>\n          <p className=\"leading-[1.4]\">circle</p>\n        </div>\n      </div>\n      <div className={`${String.raw`flex flex-col justify-center leading-[0] relative shrink-0 text-[length:var(--text\\/sm\\/font-size,14px)] whitespace-nowrap `}${isState4 ? String.raw`font-[\"Noto_Sans_JP:Regular\",sans-serif] font-normal text-[color:var(--text\\/text-disable,#cbd5e1)]` : [\"Hover\", \"Focus\"].includes(state) ? String.raw`font-[\"Noto_Sans_JP:Bold\",sans-serif] font-bold text-[color:var(--text\\/text-brand,#2862cb)]` : String.raw`font-[\"Noto_Sans_JP:Regular\",sans-serif] font-normal text-[color:var(--text\\/text-primary,#0d2144)]`}`}>\n        <p className=\"leading-none\">ボタン</p>\n      </div>\n    </div>\n  );\n}"
+}

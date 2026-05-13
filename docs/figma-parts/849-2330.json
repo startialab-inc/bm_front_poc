@@ -1,0 +1,50 @@
+{
+  "nodeId": "849:2330",
+  "name": "TabChild",
+  "atomicLevel": "Atoms",
+  "description": "タブナビゲーションの子要素。選択状態（下線付き）と非選択状態の2バリアント。",
+  "variants": [
+    {
+      "name": "Selected",
+      "state": true,
+      "description": "選択中の状態。下部に 2px のブランドカラー（青）ボーダー。テキストは text-primary 色。"
+    },
+    {
+      "name": "Unselected",
+      "state": false,
+      "description": "非選択の状態。下線なし。テキストは text-secondary 色（グレー）。"
+    }
+  ],
+  "props": {
+    "label": "string（タブラベル、例: 'タブ'）",
+    "selected": "boolean（選択状態）"
+  },
+  "dimensions": {
+    "height": "var(--height/h-11, 44px)",
+    "width": "204px（固定）"
+  },
+  "designTokens": {
+    "background": "var(--background/surface/bg-sf-primary, white)",
+    "selectedBorderBottom": "2px solid var(--divider/divider-brand, #2862cb)",
+    "selectedTextColor": "var(--text/text-primary, #0d2144)",
+    "unselectedTextColor": "var(--text/text-secondary, #64748b)",
+    "fontSize": "var(--text/sm/font-size, 14px)",
+    "lineHeight": "var(--text/sm/line-height, 20px)",
+    "fontWeight": "var(--font-weight/medium, 500)",
+    "fontFamily": "var(--font/font-sans, 'Geist:Medium', 'Noto_Sans_JP:Regular', sans-serif)",
+    "paddingX": "var(--spacing/2, 8px)",
+    "paddingY": "var(--spacing/1, 4px)"
+  },
+  "structure": {
+    "root": "div（bg-white, flex, h-[44px], w-[204px], items-start）+ 選択時: border-b-2 brand色",
+    "inner": "div（flex, flex-1, items-center, justify-center, px-2, py-1）",
+    "label": "p（flex-1, medium 14px, text-center）"
+  },
+  "notes": [
+    "選択時のみ border-b-2 でブランド色（#2862cb）の下線を表示",
+    "幅は 204px 固定（SegmentControlChild の 204.571px とほぼ同じ）",
+    "高さは 44px（h-11）で SegmentControl より 13px 高い",
+    "日本語フォント（Noto Sans JP）も font-family に含む",
+    "Tab（Molecule）の子として使用される"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "nodeId": "619:13589",
+  "componentName": "Badge/PageStatus",
+  "category": "Atoms",
+  "index": 16,
+  "figmaCode": "type BadgePageStatusProps = {\n  className?: string;\n  state?: \"Close\" | \"Open\";\n};\n\nexport default function BadgePageStatus({ className, state = \"Open\" }: BadgePageStatusProps) {\n  const isClose = state === \"Close\";\n  return (\n    <div className={className || `border-[length:var(--border-width/border,1px)] border-[var(--tailwind-colors/base/transparent,rgba(255,255,255,0))] border-solid content-stretch flex gap-[var(--spacing/1,4px)] h-[var(--height/h-5,20px)] items-center justify-center overflow-clip px-[var(--spacing/2,8px)] py-[var(--spacing/1,4px)] relative rounded-[var(--border-radius/rounded-sm,6px)] ${isClose ? \"bg-[var(--background/surface/bg-sf-tertiary,#e2e8f0)]\" : \"bg-[var(--tailwind-colors/emerald/500,#10b981)]\"}`} id={isClose ? \"node-619_13580\" : \"node-619_13579\"}>\n      <p className={`font-[\"Noto_Sans_JP:Regular\",sans-serif] font-normal leading-none relative shrink-0 text-[length:var(--text/xs/font-size,12px)] whitespace-nowrap ${isClose ? \"text-[color:var(--text/text-primary,#0d2144)]\" : \"text-[color:var(--base/primary-foreground,#fafafa)]\"}`}>\n        {isClose ? \"非公開\" : \"公開中\"}\n      </p>\n    </div>\n  );\n}",
+  "variants": [
+    {
+      "name": "Open（公開中）",
+      "nodeId": "619:13579",
+      "description": "公開状態。緑背景（#10b981）に白テキスト「公開中」。"
+    },
+    {
+      "name": "Close（非公開）",
+      "nodeId": "619:13580",
+      "description": "非公開状態。グレー背景（#e2e8f0）に濃紺テキスト「非公開」。"
+    }
+  ],
+  "styles": {
+    "height": "20px (var(--height/h-5))",
+    "paddingX": "8px (var(--spacing/2))",
+    "paddingY": "4px (var(--spacing/1))",
+    "gap": "4px (var(--spacing/1))",
+    "borderRadius": "6px (var(--border-radius/rounded-sm))",
+    "border": "1px solid transparent",
+    "backgroundColor_Open": "#10b981 (var(--tailwind-colors/emerald/500))",
+    "backgroundColor_Close": "#e2e8f0 (var(--background/surface/bg-sf-tertiary))",
+    "textColor_Open": "#fafafa (var(--base/primary-foreground))",
+    "textColor_Close": "#0d2144 (var(--text/text-primary))",
+    "fontSize": "12px (var(--text/xs/font-size))",
+    "fontWeight": "400 (Regular)",
+    "fontFamily": "Noto Sans JP"
+  },
+  "typography": {
+    "label": {
+      "style": "text-xs/leading-none/regular",
+      "fontFamily": "Noto Sans JP",
+      "fontStyle": "Regular",
+      "fontSize": "var(--text/xs/font-size)",
+      "fontWeight": 400,
+      "lineHeight": 1,
+      "letterSpacing": 0
+    }
+  },
+  "labels": {
+    "Open": "公開中",
+    "Close": "非公開"
+  },
+  "documentation": "https://ui.shadcn.com/docs/components/badge#default",
+  "notes": "ページの公開状態を示す2状態バッジ。高さ20px固定。"
+}

@@ -1,0 +1,68 @@
+{
+  "nodeId": "1000:53908",
+  "name": "PasswordStrength",
+  "atomicLevel": "Atoms",
+  "description": "パスワード強度を色付きバーで表示するインジケーター。4段階のバリアントあり。",
+  "variants": [
+    {
+      "name": "short",
+      "type": "short",
+      "background": "#ef4444（red-500）",
+      "label": "パスワードが短すぎます",
+      "width": "auto（固定幅なし）"
+    },
+    {
+      "name": "weak",
+      "type": "weak",
+      "background": "#f97316（orange-500）",
+      "label": "弱い",
+      "width": "180px"
+    },
+    {
+      "name": "normal",
+      "type": "normal",
+      "background": "#713f12（yellow-900）",
+      "label": "普通",
+      "width": "180px"
+    },
+    {
+      "name": "strong",
+      "type": "strong",
+      "background": "#22c55e（green-500）",
+      "label": "強い",
+      "width": "180px"
+    }
+  ],
+  "props": {
+    "type": "'short' | 'weak' | 'normal' | 'strong'（パスワード強度レベル）"
+  },
+  "dimensions": {
+    "height": "auto（テキスト高さ + padding）",
+    "width": "short: auto / その他: 180px",
+    "paddingX": "var(--spacing/6, 24px)",
+    "paddingY": "var(--spacing/1, 4px)"
+  },
+  "designTokens": {
+    "shortBackground": "var(--tailwind-colors/red/500, #ef4444)",
+    "weakBackground": "var(--tailwind-colors/orange/500, #f97316)",
+    "normalBackground": "var(--tailwind-colors/yellow/900, #713f12)",
+    "strongBackground": "var(--tailwind-colors/green/500, #22c55e)",
+    "textColor": "var(--text/text-tertiary, white)",
+    "fontSize": "var(--text/xs/font-size, 12px)",
+    "fontFamily": "Noto_Sans_JP:Regular, sans-serif",
+    "fontWeight": "400（normal）",
+    "lineHeight": "1（leading-none）"
+  },
+  "structure": {
+    "root": "div（flex, items-center, justify-center, px-6, py-1, 背景色は type に応じて変化）",
+    "label": "p（12px, Noto Sans JP Regular, white, leading-none, whitespace-nowrap）"
+  },
+  "notes": [
+    "4バリアント（short / weak / normal / strong）",
+    "背景色は Tailwind デザイントークンから直接参照（CSS 変数形式）",
+    "ProgressBar とセットで使われる想定（ProgressBar #23 参照）",
+    "フォントは Noto Sans JP（日本語フォント）のみ",
+    "テキスト色は white（text-tertiary のエイリアスが white）",
+    "short のみ幅が auto（短すぎますというメッセージが長いため）"
+  ]
+}

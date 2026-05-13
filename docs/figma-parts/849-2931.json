@@ -1,0 +1,54 @@
+{
+  "nodeId": "849:2931",
+  "componentName": "Switch",
+  "category": "Atoms",
+  "index": 10,
+  "figmaCode": "type SwitchProps = {\n  className?: string;\n  prop1?: boolean;\n};\n\nexport default function Switch({ className, prop1 = true }: SwitchProps) {\n  const isNotProp1 = !prop1;\n  return (\n    <div className={className || `${String.raw`border-[length:var(--border-width/border-2,2px)] border-[var(--tailwind-colors/base/transparent,rgba(255,255,255,0))] border-solid content-stretch flex h-[var(--height/h-5,20px)] items-center px-[2px] relative rounded-[var(--border-radius/rounded-full,9999px)] w-[var(--width/w-9,36px)] `}${isNotProp1 ? String.raw`bg-[var(--background/surface/bg-sf-tertiary,#e2e8f0)]` : String.raw`bg-[var(--background/success/bg-success-dark,#34d399)] justify-end`}`} id={isNotProp1 ? \"node-849_2929\" : \"node-849_2930\"}>\n      <div className=\"bg-[var(--background/surface/bg-sf-primary,white)] rounded-[var(--border-radius/rounded-full,9999px)] shadow-[var(--shadow/lg/1/offset-x,0px)_var(--shadow/lg/1/offset-y,10px)_var(--shadow/lg/1/blur-radius,15px)_var(--shadow/lg/1/spread-radius,-3px)_var(--shadow/lg/1/color,rgba(0,0,0,0.1)),var(--shadow/lg/2/offset-x,0px)_var(--shadow/lg/2/offset-y,4px)_var(--shadow/lg/2/blur-radius,6px)_var(--shadow/lg/2/spread-radius,-4px)_var(--shadow/lg/2/color,rgba(0,0,0,0.1))] shrink-0 size-[16px]\" id={isNotProp1 ? \"node-849_2928\" : \"node-849_2925\"} data-name=\"Switch\" />\n    </div>\n  );\n}",
+  "variants": [
+    {
+      "name": "ON (prop1=true)",
+      "nodeId": "849:2930",
+      "description": "スイッチON状態。背景色が緑（#34d399）、つまみが右寄り。"
+    },
+    {
+      "name": "OFF (prop1=false)",
+      "nodeId": "849:2929",
+      "description": "スイッチOFF状態。背景色がグレー（#e2e8f0）、つまみが左寄り。"
+    }
+  ],
+  "styles": {
+    "width": "36px (var(--width/w-9))",
+    "height": "20px (var(--height/h-5))",
+    "borderRadius": "9999px (var(--border-radius/rounded-full))",
+    "border": "2px solid transparent",
+    "paddingX": "2px",
+    "backgroundColor_ON": "#34d399 (var(--background/success/bg-success-dark))",
+    "backgroundColor_OFF": "#e2e8f0 (var(--background/surface/bg-sf-tertiary))",
+    "thumbSize": "16px",
+    "thumbColor": "white (var(--background/surface/bg-sf-primary))",
+    "thumbBorderRadius": "9999px (var(--border-radius/rounded-full))",
+    "thumbShadow": "shadow/lg (2層のドロップシャドウ)"
+  },
+  "shadow": {
+    "name": "shadow/lg",
+    "layers": [
+      {
+        "type": "DROP_SHADOW",
+        "color": "rgba(0,0,0,0.1)",
+        "offsetX": "0px",
+        "offsetY": "10px",
+        "blur": "15px",
+        "spread": "-3px"
+      },
+      {
+        "type": "DROP_SHADOW",
+        "color": "rgba(0,0,0,0.1)",
+        "offsetX": "0px",
+        "offsetY": "4px",
+        "blur": "6px",
+        "spread": "-4px"
+      }
+    ]
+  },
+  "notes": "prop1=true がON、false がOFF。つまみの位置は justify-end（右）/ 左寄り（デフォルト）で制御。"
+}

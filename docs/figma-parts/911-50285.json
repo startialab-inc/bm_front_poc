@@ -1,0 +1,55 @@
+{
+  "nodeId": "911:50285",
+  "componentName": "Tag",
+  "category": "Atoms",
+  "index": 9,
+  "figmaCode": "type TagProps = {\n  className?: string;\n  type?: \"Undelete\" | \"Deleteable\";\n};\n\nexport default function Tag({ className, type = \"Deleteable\" }: TagProps) {\n  const isUndelete = type === \"Undelete\";\n  return (\n    <div className={className || `${String.raw`bg-[var(--background\\/surface\\/bg-sf-tertiary,#e2e8f0)] content-stretch flex gap-[var(--spacing\\/2,8px)] h-[var(--height\\/h-9,36px)] items-center justify-center overflow-clip px-[var(--spacing\\/3,12px)] py-[var(--spacing\\/1-5,6px)] relative rounded-[var(--border-radius\\/rounded-sm,6px)] `}${isUndelete ? String.raw`border-[length:var(--border-width\\/border,1px)] border-[var(--divider\\/divider-primary,#e5e5e5)] border-solid` : \"whitespace-nowrap\"}`} id={isUndelete ? \"node-911_50284\" : \"node-869_5679\"}>\n      <p className={`${String.raw`font-[\"Noto_Sans_JP:Regular\",sans-serif] font-normal leading-none relative shrink-0 text-[color:var(--text\\/text-primary,#0d2144)] text-[length:var(--text\\/sm\\/font-size,14px)] `}${isUndelete ? \"whitespace-nowrap\" : \"\"}`} id={isUndelete ? \"node-911_50282\" : \"node-869_5676\"}>\n        タグ\n      </p>\n      {type === \"Deleteable\" && (\n        <div className=\"flex flex-col font-['Font_Awesome_7_Free:Solid',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-[color:var(--iconitify\\/ic-secondary,#64748b)]\" data-node-id=\"869:5677\">\n          <p className=\"leading-[1.4]\">circle-xmark</p>\n        </div>\n      )}\n    </div>\n  );\n}",
+  "variants": [
+    {
+      "name": "Deleteable",
+      "nodeId": "869:5679",
+      "description": "削除ボタン（×アイコン）付きタグ。デフォルト状態。"
+    },
+    {
+      "name": "Undelete",
+      "nodeId": "911:50284",
+      "description": "削除ボタンなしのタグ。border付き。"
+    }
+  ],
+  "styles": {
+    "height": "36px (var(--height/h-9))",
+    "paddingX": "12px (var(--spacing/3))",
+    "paddingY": "6px (var(--spacing/1-5))",
+    "gap": "8px (var(--spacing/2))",
+    "borderRadius": "6px (var(--border-radius/rounded-sm))",
+    "backgroundColor": "#e2e8f0 (var(--background/surface/bg-sf-tertiary))",
+    "textColor": "#0d2144 (var(--text/text-primary))",
+    "fontSize": "14px (var(--text/sm/font-size))",
+    "fontWeight": "400 (Regular)",
+    "fontFamily": "Noto Sans JP",
+    "iconColor": "#64748b (var(--iconitify/ic-secondary))",
+    "iconSize": "14px",
+    "borderColor_Undelete": "#e5e5e5 (var(--divider/divider-primary))",
+    "borderWidth_Undelete": "1px (var(--border-width/border))"
+  },
+  "typography": {
+    "label": {
+      "style": "text-sm/leading-none/regular",
+      "fontFamily": "Noto Sans JP",
+      "fontStyle": "Regular",
+      "fontSize": "var(--text/sm/font-size)",
+      "fontWeight": 400,
+      "lineHeight": 1,
+      "letterSpacing": 0
+    }
+  },
+  "icon": {
+    "type": "FontAwesome",
+    "name": "circle-xmark",
+    "style": "solid",
+    "size": "14px",
+    "color": "#64748b"
+  },
+  "documentation": "https://ui.shadcn.com/docs/components/badge#default",
+  "notes": "Deleteable バリアントはタグテキスト + ×アイコン。Undelete バリアントはテキストのみで border あり。"
+}

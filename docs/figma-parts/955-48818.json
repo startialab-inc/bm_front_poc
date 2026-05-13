@@ -1,0 +1,35 @@
+{
+  "nodeId": "955:48818",
+  "name": "ProgressBar",
+  "atomicLevel": "Atoms",
+  "description": "進捗を示すプログレスバー。単一バリアント。トラック（グレー）＋フィル（青）の2層構造。",
+  "variants": [
+    {
+      "name": "Default",
+      "description": "単一バリアント。progress プロパティ（0〜100）でフィル幅を制御する。"
+    }
+  ],
+  "props": {
+    "progress": "number（0〜100、進捗パーセンテージ）"
+  },
+  "dimensions": {
+    "height": "var(--height/h-2, 8px)",
+    "width": "100%（Figma での表示は 768px、実装では親要素幅に合わせる）",
+    "fillWidthNote": "Figma では 192px / 768px = 25% の状態で表示"
+  },
+  "designTokens": {
+    "trackBackground": "var(--background/surface/bg-sf-tertiary, #e2e8f0)",
+    "fillBackground": "var(--background/button/bg-btn-primary, #2862cb)",
+    "height": "var(--height/h-2, 8px)"
+  },
+  "structure": {
+    "track": "div（bg-sf-tertiary, w-full, h-2, relative, overflow-hidden）",
+    "fill": "div（absolute, left-0, top-0, h-full, bg-btn-primary）幅は progress に応じて変化"
+  },
+  "notes": [
+    "単一バリアント（バリアントなし）",
+    "Vue 実装では progress prop（0〜100）を受け取り、フィルの width を :style で設定する",
+    "トラックに border-radius は設定されていない（Figma ではフラット）",
+    "PasswordStrength（#24）でこのコンポーネントが使われている可能性がある"
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "nodeId": "538:11930",
+  "componentName": "Badge/PageSettingIcon",
+  "category": "Atoms",
+  "index": 15,
+  "figmaCode": "const img1715 = \"https://www.figma.com/api/mcp/asset/28eb3aa7-829f-4bdf-bdf1-aa071693edc4\";\nconst img1716 = \"https://www.figma.com/api/mcp/asset/44e4aadb-2170-4eae-8d99-5e9ca995f5e8\";\n\ntype BadgePageSettingIconProps = {\n  className?: string;\n  status?: boolean;\n  type?: \"Contact\" | \"Editable\" | \"PageSetting\" | \"OpenTerm\" | \"BowNowScript\" | \"BowNow\" | \"Curation\";\n};\n// ... （省略）",
+  "variants_matrix": {
+    "types": ["Contact", "Editable", "PageSetting", "OpenTerm", "BowNowScript", "BowNow", "Curation"],
+    "statuses": [true, false],
+    "description": "type × status の組み合わせで 14 バリアント"
+  },
+  "variants": [
+    {
+      "type": "Contact",
+      "status": true,
+      "nodeId": "538:11924",
+      "icon": "envelope",
+      "backgroundColor": "#143166 (var(--brand/blue-monkey/800))",
+      "iconColor": "white (var(--iconitify/ic-tertiary))"
+    },
+    {
+      "type": "Contact",
+      "status": false,
+      "nodeId": "788:15806",
+      "icon": "envelope",
+      "backgroundColor": "#e2e8f0 (var(--background/surface/bg-sf-tertiary))",
+      "iconColor": "#cbd5e1 (var(--iconitify/ic-disable))"
+    },
+    {
+      "type": "Editable",
+      "status": true,
+      "nodeId": "538:11925",
+      "icon": "users",
+      "backgroundColor": "#143166 (var(--brand/blue-monkey/800))",
+      "iconColor": "white (var(--iconitify/ic-tertiary))"
+    },
+    {
+      "type": "Editable",
+      "status": false,
+      "nodeId": "788:15810",
+      "icon": "users",
+      "backgroundColor": "#e2e8f0 (var(--background/surface/bg-sf-tertiary))",
+      "iconColor": "#cbd5e1 (var(--iconitify/ic-disable))"
+    },
+    {
+      "type": "PageSetting",
+      "status": true,
+      "nodeId": "538:11926",
+      "icon": "gears",
+      "backgroundColor": "#143166 (var(--brand/blue-monkey/800))",
+      "iconColor": "white (var(--iconitify/ic-tertiary))"
+    },
+    {
+      "type": "PageSetting",
+      "status": false,
+      "nodeId": "788:15812",
+      "icon": "gears",
+      "backgroundColor": "#e2e8f0 (var(--background/surface/bg-sf-tertiary))",
+      "iconColor": "#cbd5e1 (var(--iconitify/ic-disable))"
+    },
+    {
+      "type": "OpenTerm",
+      "status": true,
+      "nodeId": "538:11927",
+      "icon": "calendar",
+      "backgroundColor": "#143166 (var(--brand/blue-monkey/800))",
+      "iconColor": "white (var(--iconitify/ic-tertiary))"
+    },
+    {
+      "type": "OpenTerm",
+      "status": false,
+      "nodeId": "788:15814",
+      "icon": "calendar",
+      "backgroundColor": "#e2e8f0 (var(--background/surface/bg-sf-tertiary))",
+      "iconColor": "#cbd5e1 (var(--iconitify/ic-disable))"
+    },
+    {
+      "type": "BowNowScript",
+      "status": true,
+      "nodeId": "538:11928",
+      "icon": "code",
+      "backgroundColor": "#5a0000",
+      "iconColor": "#fe0100"
+    },
+    {
+      "type": "BowNowScript",
+      "status": false,
+      "nodeId": "788:15816",
+      "icon": "code",
+      "backgroundColor": "#e2e8f0 (var(--background/surface/bg-sf-tertiary))",
+      "iconColor": "#cbd5e1 (var(--iconitify/ic-disable))"
+    },
+    {
+      "type": "BowNow",
+      "status": true,
+      "nodeId": "788:15785",
+      "icon": "画像アセット（グループ1715）",
+      "backgroundColor": "#5a0000",
+      "iconColor": "N/A（画像）"
+    },
+    {
+      "type": "BowNow",
+      "status": false,
+      "nodeId": "788:15818",
+      "icon": "画像アセット（グループ1716）",
+      "backgroundColor": "#e2e8f0 (var(--background/surface/bg-sf-tertiary))",
+      "iconColor": "N/A（画像）"
+    },
+    {
+      "type": "Curation",
+      "status": true,
+      "nodeId": "1173:56462",
+      "icon": "quote-left",
+      "backgroundColor": "#143166 (var(--brand/blue-monkey/800))",
+      "iconColor": "white (var(--iconitify/ic-tertiary))"
+    },
+    {
+      "type": "Curation",
+      "status": false,
+      "nodeId": "1173:56464",
+      "icon": "quote-left",
+      "backgroundColor": "#e2e8f0 (var(--background/surface/bg-sf-tertiary))",
+      "iconColor": "#cbd5e1 (var(--iconitify/ic-disable))"
+    }
+  ],
+  "styles": {
+    "size": "24px (var(--width/w-6)) 正方形",
+    "borderRadius": "20px（ほぼ円形）",
+    "iconSize": "12px",
+    "backgroundColor_active": "#143166 (var(--brand/blue-monkey/800))",
+    "backgroundColor_inactive": "#e2e8f0 (var(--background/surface/bg-sf-tertiary))",
+    "backgroundColor_BowNow_active": "#5a0000",
+    "iconColor_active": "white (var(--iconitify/ic-tertiary))",
+    "iconColor_inactive": "#cbd5e1 (var(--iconitify/ic-disable))",
+    "iconColor_BowNowScript_active": "#fe0100"
+  },
+  "iconMap": {
+    "Contact": "envelope",
+    "Editable": "users",
+    "PageSetting": "gears",
+    "OpenTerm": "calendar",
+    "BowNowScript": "code",
+    "BowNow": "画像アセット",
+    "Curation": "quote-left"
+  },
+  "assets": {
+    "BowNow_active": "https://www.figma.com/api/mcp/asset/28eb3aa7-829f-4bdf-bdf1-aa071693edc4",
+    "BowNow_inactive": "https://www.figma.com/api/mcp/asset/44e4aadb-2170-4eae-8d99-5e9ca995f5e8",
+    "BowNow_iconSize": "14px × 15.405px"
+  },
+  "notes": "24px の丸型アイコンバッジ。7種類のタイプ × active/inactive の組み合わせで合計14バリアント。BowNow タイプのみ Font Awesome ではなく画像アセットを使用。BowNow/BowNowScript の active 時は背景が深紅（#5a0000）。"
+}

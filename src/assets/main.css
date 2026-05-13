@@ -1,0 +1,82 @@
+/* Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* Tailwind oxide スキャナーの除外設定 */
+/* docs/figma-parts/*.json 内のスラッシュ入り CSS 変数名が誤検知されるのを防ぐ */
+@source not "../../docs/**";
+/* AI とのやりとりを記録するディレクトリ。将来的に誤検知される文字列が混入するリスクがある */
+@source not "../../.specstory/**";
+
+/* アイコンフォント */
+/* TODO: プロジェクト固有のアイコンフォントがある場合はここでインポートする */
+/* 例: @import './_your_icon_font.scss'; */
+
+/* =====================================================
+ * デザイントークン（Figma カラーガイドラインより）
+ * TODO: Figma デザイントークンから定義する
+ * =====================================================*/
+@theme {
+  /* =====================================================
+   * フォント設定
+   * =====================================================*/
+  --font-sans: 'Noto Sans JP', sans-serif;
+
+  /* =====================================================
+   * ブランドカラー（Blue Monkey）
+   * =====================================================*/
+  --color-brand-50: #ddeaff;
+  --color-brand-100: #b8cff9;
+  --color-brand-500: #2862cb;
+  --color-brand-700: #1b4187;
+  --color-brand-800: #143166;
+  --color-brand-900: #0d2144;
+
+  /* =====================================================
+   * テキスト色
+   * =====================================================*/
+  --color-text-primary: #0d2144;
+  --color-text-brand: #2862cb;
+  --color-text-white: #ffffff;
+  --color-text-disable: #cbd5e1;
+
+  /* =====================================================
+   * アイコン色
+   * =====================================================*/
+  --color-icon-primary: #143166;
+  --color-icon-brand: #2862cb;
+  --color-icon-disable: #cbd5e1;
+
+  /* =====================================================
+   * ボタン背景色
+   * =====================================================*/
+  --color-btn-primary: #2862cb;
+  --color-btn-primary-hover: #1b4187;
+  --color-btn-primary-focus: #0d2144;
+  --color-btn-submit: #ea580c;
+  --color-btn-submit-hover: #f97316;
+  --color-btn-submit-focus: #c2410c;
+  --color-btn-destructive: #dc2626;
+  --color-btn-destructive-hover: #ef4444;
+  --color-btn-destructive-focus: #b91c1c;
+  --color-btn-disable: #d1d5db;
+
+  /* =====================================================
+   * サーフェス・背景色
+   * =====================================================*/
+  --color-surface-primary: #ffffff;
+  --color-surface-secondary: #f8fafc;
+  --color-surface-selected: #eff6ff;
+  --color-surface-secondary-hover: #e2e8f0;
+
+  /* =====================================================
+   * 枠線色
+   * =====================================================*/
+  --color-border-brand: #143166;
+  --color-border-disable: #d4d4d4;
+
+  /* =====================================================
+   * レイアウト固定値（Figma 共通レイアウト構造より定義する）
+   * =====================================================*/
+  /* --spacing-header-height: 48px; */
+  /* --spacing-sidebar-width: 42px; */
+}

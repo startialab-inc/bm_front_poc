@@ -1,0 +1,42 @@
+{
+  "nodeId": "411:7357",
+  "name": "Icon/LeftMenu",
+  "atomicLevel": "Atoms",
+  "description": "左メニューの開閉を切り替えるアイコン。open / close の2バリアント。SVG 画像アセット使用。",
+  "variants": [
+    {
+      "name": "close",
+      "prop1": "close",
+      "description": "サイドバーを閉じる状態のアイコン（PanelLeft）。サイドバーが開いているときに表示。"
+    },
+    {
+      "name": "open",
+      "prop1": "open",
+      "description": "サイドバーを開く状態のアイコン（PanelLeftClose）。サイドバーが折りたたまれているときに表示。"
+    }
+  ],
+  "props": {
+    "prop1": "'close' | 'open'（アイコン種別）"
+  },
+  "dimensions": {
+    "width": "16px",
+    "height": "16px"
+  },
+  "imageAssets": {
+    "closeIcon": "Icon / PanelLeft（左パネル展開アイコン）。SVG ベクター画像。",
+    "openIcon": "Icon / PanelLeftClose（左パネル折りたたみアイコン）。SVG ベクター画像。",
+    "note": "画像 URL は Figma MCP の一時 URL（7日間有効）。Vue 実装時は静的 SVG アセットとして配置する必要あり。"
+  },
+  "structure": {
+    "root": "div（16x16px, relative）",
+    "iconWrapper": "div（absolute, inset-0, overflow-clip）",
+    "vector": "div（absolute, inset-12.5%）> div（absolute, inset-[-6.25%]）> img"
+  },
+  "notes": [
+    "2バリアント（close: パネル開き状態アイコン / open: パネル閉じ状態アイコン）",
+    "全要素が SVG 画像アセット。テキストや FA アイコンは使用しない",
+    "Vue 実装では SVG ファイルを assets/ に配置し、<img> または <component :is> で参照する",
+    "または FontAwesome の panel-left / panel-left-close アイコンで代替可能か確認が必要",
+    "サイドバーの折りたたみトグルボタンとして使用される"
+  ]
+}

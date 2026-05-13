@@ -1,0 +1,60 @@
+{
+  "nodeId": "910:42969",
+  "name": "Button/Filter",
+  "atomicLevel": "Atom",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "絞り込み検索ボタン。アイコン＋テキストのゴーストボタン。バリアントなし（単一状態）。shadcn/ui Ghost Button 相当。",
+  "referenceUrl": "https://ui.shadcn.com/docs/components/button#ghost",
+  "notes": "session-plan.md では node-id 910:42969 を 'Button/Sort' と記載していたが、Figma 実データは 'Button/Filter'。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "gap": "var(--spacing/2, 8px)",
+    "height": "var(--height/h-10, 40px)",
+    "paddingTop": "var(--spacing/1, 4px)",
+    "paddingBottom": "var(--spacing/1, 4px)",
+    "paddingLeft": "var(--spacing/3, 12px)",
+    "paddingRight": "var(--spacing/4, 16px)",
+    "borderRadius": "var(--border-radius/rounded-md, 8px)"
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "910:42969",
+      "background": "transparent",
+      "border": "none",
+      "icon": {
+        "color": "var(--text/text-brand, #2862cb)"
+      },
+      "text": {
+        "color": "var(--text/text-brand, #2862cb)",
+        "fontFamily": "Noto Sans JP",
+        "fontStyle": "Regular",
+        "fontWeight": 400,
+        "fontSize": "var(--text/sm/font-size, 14px)",
+        "lineHeight": 1
+      }
+    }
+  ],
+  "icon": {
+    "library": "Font Awesome 7 Free",
+    "style": "Solid",
+    "size": "16px",
+    "fontSize": "13px",
+    "placeholder": "sliders"
+  },
+  "props": {
+    "label": {
+      "type": "string",
+      "description": "表示するフィルターラベルテキスト",
+      "default": "絞り込み検索"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Font Awesome アイコン名",
+      "default": "sliders"
+    }
+  }
+}

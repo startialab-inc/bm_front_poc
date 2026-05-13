@@ -1,0 +1,40 @@
+{
+  "nodeId": "621:17779",
+  "componentName": "Badge/Tag",
+  "category": "Atoms",
+  "index": 17,
+  "figmaCode": "export default function BadgeTag({ className }: { className?: string }) {\n  return (\n    <div className={className || \"bg-[var(--background/surface/bg-sf-primary,white)] border-[length:var(--border-width/border,1px)] border-[var(--divider/divider-primary,#e5e5e5)] border-solid content-stretch flex gap-[var(--spacing/1,0px)] items-center justify-center overflow-clip px-[var(--spacing/1-5,6px)] py-[var(--spacing/px,1px)] relative rounded-[var(--border-radius/rounded-xs,2px)]\"} data-node-id=\"621:17779\" data-name=\"Badge/Tag\">\n      <p className=\"font-[family-name:var(--font/font-sans,'Geist:Regular','Noto_Sans_JP:Regular',sans-serif)] font-normal leading-[var(--text/xs/line-height,16px)] relative shrink-0 text-[10px] text-[color:var(--base/primary,#171717)] whitespace-nowrap\" data-node-id=\"621:17775\">\n        タグ\n      </p>\n    </div>\n  );\n}",
+  "variants": [
+    {
+      "name": "（単一バリアント）",
+      "nodeId": "621:17779",
+      "description": "白背景にグレー枠の小型タグバッジ。テキストは「タグ」。"
+    }
+  ],
+  "styles": {
+    "paddingX": "6px (var(--spacing/1-5))",
+    "paddingY": "1px (var(--spacing/px))",
+    "gap": "0px (var(--spacing/1))",
+    "borderRadius": "2px (var(--border-radius/rounded-xs))",
+    "borderWidth": "1px (var(--border-width/border))",
+    "borderColor": "#e5e5e5 (var(--divider/divider-primary))",
+    "backgroundColor": "white (var(--background/surface/bg-sf-primary))",
+    "textColor": "#171717 (var(--base/primary))",
+    "fontSize": "10px",
+    "fontWeight": "400 (Regular)",
+    "fontFamily": "font/font-sans (Geist:Regular / Noto_Sans_JP:Regular)",
+    "lineHeight": "16px (var(--text/xs/line-height))"
+  },
+  "typography": {
+    "label": {
+      "fontFamily": "font/font-sans",
+      "fontStyle": "Regular",
+      "fontSize": "10px",
+      "fontWeight": 400,
+      "lineHeight": "var(--text/xs/line-height)",
+      "letterSpacing": 0
+    }
+  },
+  "documentation": "https://ui.shadcn.com/docs/components/badge#default",
+  "notes": "非常に小型（10px）のタグバッジ。角丸2pxで四角に近い形状。白背景＋細いグレー枠。Tag (#9 の 911:50285) とは別物。"
+}

@@ -1,0 +1,52 @@
+{
+  "nodeId": "932:25025",
+  "name": "PagerNubmer",
+  "atomicLevel": "Atoms",
+  "description": "ページネーションの番号ボタン。アクティブ（現在ページ）とデフォルト（その他のページ）の2バリアント。",
+  "figmaNameNote": "コンポーネント名 'PagerNubmer' は Figma 上の typo（'Number' の誤記）。Vue 実装時も同名で合わせる。",
+  "variants": [
+    {
+      "name": "Active",
+      "state": "Acutive",
+      "figmaStateName": "Acutive（Figma 上の typo: 'Active' の誤記）",
+      "description": "現在ページ。濃い紺色背景（#143166）・白テキスト・円形。"
+    },
+    {
+      "name": "Default",
+      "state": "Default",
+      "description": "その他のページ。薄いグレー背景・細ボーダー・text-primary 色テキスト・円形。"
+    }
+  ],
+  "props": {
+    "page": "number（ページ番号）",
+    "active": "boolean（現在ページかどうか）"
+  },
+  "dimensions": {
+    "height": "var(--height/h-6, 24px)",
+    "width": "var(--width/w-6, 24px)",
+    "borderRadius": "rounded-full（9999px）"
+  },
+  "designTokens": {
+    "activeBackground": "var(--background/button/bg-btn-secondary, #143166)",
+    "activeTextColor": "var(--new-ui/grayscale/#ffffff, white)",
+    "defaultBackground": "var(--background/surface/bg-sf-secondary, #f8fafc)",
+    "defaultBorder": "1px solid var(--divider/divider-primary, #e5e5e5)",
+    "defaultTextColor": "var(--text/text-primary, #0d2144)",
+    "fontSize": "var(--text/xs/font-size, 12px)",
+    "fontFamily": "Noto_Sans_JP:Regular, sans-serif",
+    "fontWeight": "400（normal）",
+    "lineHeight": "1（leading-none）",
+    "paddingY": "var(--spacing/0, 0px)"
+  },
+  "structure": {
+    "root": "div（flex-col, items-center, justify-center, h-6, w-6, rounded-full）",
+    "text": "p（12px, Noto Sans JP Regular, leading-none）"
+  },
+  "notes": [
+    "Figma 上のコンポーネント名 'PagerNubmer' および state 名 'Acutive' はいずれも typo",
+    "Vue 実装時は正しい英語（PagerNumber / Active）で命名してよい",
+    "フォントが Noto Sans JP（日本語フォント）のみ。英数字も Noto で表示される",
+    "Pagination（Molecule）の子として使用される",
+    "アクティブ状態の背景色 #143166 はボタン Secondary の背景色と同じトークン"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "nodeId": "520:13248",
+  "name": "SegmentControlChild",
+  "atomicLevel": "Atoms",
+  "description": "セグメントコントロール（タブ切り替え）の子要素。選択状態と非選択状態の2バリアント。",
+  "variants": [
+    {
+      "name": "Selected",
+      "state": true,
+      "description": "選択中の状態。白背景・ボーダー付き・rounded-sm（6px）。テキストは text-primary 色。"
+    },
+    {
+      "name": "Unselected",
+      "state": false,
+      "description": "非選択の状態。背景なし・button 要素・rounded-md（8px）。テキストは text-secondary 色。"
+    }
+  ],
+  "props": {
+    "label": "string（タブラベル、例: 'すべて'）",
+    "count": "number（件数、例: 8）→ '(8)' 形式で表示",
+    "selected": "boolean（選択状態）"
+  },
+  "dimensions": {
+    "height": "31px",
+    "width": "flex-1（親コンテナに合わせて伸縮）"
+  },
+  "designTokens": {
+    "selectedBackground": "var(--background/surface/bg-sf-primary, white)",
+    "selectedBorder": "1px solid var(--custom/dark:input, rgba(255,255,255,0))",
+    "selectedBorderRadius": "var(--border-radius/rounded-sm, 6px)",
+    "unselectedBorderRadius": "var(--border-radius/rounded-md, 8px)",
+    "selectedTextColor": "var(--text/text-primary, #0d2144)",
+    "unselectedTextColor": "var(--text/text-secondary, #64748b)",
+    "labelFontSize": "var(--text/sm/font-size, 14px)",
+    "labelLineHeight": "var(--text/sm/line-height, 20px)",
+    "labelFontWeight": "var(--font-weight/medium, 500)",
+    "badgeFontSize": "var(--text/xs/font-size, 12px)",
+    "badgeLineHeight": "var(--text/xs/line-height, 16px)",
+    "badgeFontWeight": "var(--font-weight/semibold, 600)",
+    "badgeTextColor": "var(--text/text-secondary, #64748b)",
+    "paddingX": "var(--spacing/2, 8px)",
+    "paddingY": "var(--spacing/1, 4px)",
+    "gap": "var(--spacing/1, 4px)"
+  },
+  "structure": {
+    "root": "div（flex, h-[31px]）",
+    "selected": "div（bg-white, border, rounded-sm, flex, items-center, justify-center, gap-1, px-2, py-1）",
+    "unselected": "button（透明背景, rounded-md, flex, items-center, justify-center, gap-1, px-2, py-1）",
+    "label": "p（medium 14px）",
+    "badgeNumber": "div（h-[20px], min-w-[20px], flex, items-center, justify-center, px-1, overflow-clip）> p（semibold 12px）"
+  },
+  "notes": [
+    "件数は '(8)' のように括弧付きで表示",
+    "選択時は div、非選択時は button 要素を使い分ける",
+    "Badge Number の text-secondary 色は選択・非選択ともに同じ",
+    "SegmentControl（Molecule）の子として使用される"
+  ]
+}

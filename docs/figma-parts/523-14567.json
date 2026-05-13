@@ -1,0 +1,96 @@
+{
+  "nodeId": "523:14567",
+  "name": "Button/Destructive",
+  "atomicLevel": "Atom",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "削除・危険操作用の赤色ボタン（アイコンなし）。shadcn/ui Destructive Button 相当。",
+  "referenceUrl": "https://ui.shadcn.com/docs/components/button",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "gap": "var(--spacing/2, 8px)",
+    "height": "40px",
+    "paddingTop": "var(--spacing/2, 8px)",
+    "paddingBottom": "var(--spacing/2, 8px)",
+    "paddingLeft": "var(--spacing/4, 16px)",
+    "paddingRight": "var(--spacing/4, 16px)",
+    "borderRadius": "var(--border-radius/rounded-md, 8px)"
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "523:14568",
+      "background": "var(--background/button/bg-btn-destructive, #dc2626)",
+      "border": "none",
+      "text": {
+        "color": "var(--text/text-tertiary, #ffffff)",
+        "fontFamily": "var(--font/font-sans, Noto Sans JP)",
+        "fontWeight": "var(--font-weight/medium, 500)",
+        "fontSize": "var(--text/sm/font-size, 14px)",
+        "lineHeight": "var(--text/sm/line-height, 20px)"
+      }
+    },
+    {
+      "state": "Hover",
+      "nodeId": "523:14570",
+      "background": "var(--tailwind-colors/red/500, #ef4444)",
+      "border": "none",
+      "text": {
+        "color": "var(--text/text-tertiary, #ffffff)",
+        "fontFamily": "var(--font/font-sans, Noto Sans JP)",
+        "fontWeight": "var(--font-weight/medium, 500)",
+        "fontSize": "var(--text/sm/font-size, 14px)",
+        "lineHeight": "var(--text/sm/line-height, 20px)"
+      }
+    },
+    {
+      "state": "Focus",
+      "nodeId": "523:14572",
+      "background": "var(--tailwind-colors/red/700, #b91c1c)",
+      "border": "none",
+      "text": {
+        "color": "var(--text/text-tertiary, #ffffff)",
+        "fontFamily": "var(--font/font-sans, Noto Sans JP)",
+        "fontWeight": "var(--font-weight/medium, 500)",
+        "fontSize": "var(--text/sm/font-size, 14px)",
+        "lineHeight": "var(--text/sm/line-height, 20px)"
+      }
+    },
+    {
+      "state": "Disabled",
+      "nodeId": "523:14574",
+      "figmaStateName": "Disable",
+      "background": "var(--background/button/bg-btn-disablle, #d1d5db)",
+      "border": "none",
+      "text": {
+        "color": "var(--text/text-tertiary, #ffffff)",
+        "fontFamily": "var(--font/font-sans, Noto Sans JP)",
+        "fontWeight": "var(--font-weight/medium, 500)",
+        "fontSize": "var(--text/sm/font-size, 14px)",
+        "lineHeight": "var(--text/sm/line-height, 20px)"
+      }
+    }
+  ],
+  "typography": {
+    "label": {
+      "fontFamily": "var(--font/font-sans, Noto Sans JP)",
+      "fontSize": "var(--text/sm/font-size, 14px)",
+      "fontWeight": "var(--font-weight/medium, 500)",
+      "lineHeight": "var(--text/sm/line-height, 20px)",
+      "letterSpacing": 0
+    }
+  },
+  "props": {
+    "state": {
+      "type": "string",
+      "enum": ["Default", "Hover", "Focus", "Disabled"],
+      "default": "Default"
+    },
+    "label": {
+      "type": "string",
+      "default": "ボタン"
+    }
+  }
+}

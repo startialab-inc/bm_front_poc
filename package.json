@@ -1,0 +1,65 @@
+{
+  "name": "bm_front_poc",
+  "version": "0.1.0",
+  "description": "AI-powered Vue component generator and reviewer",
+  "private": true,
+  "scripts": {
+    "dev-start": "vite --port 8300",
+    "dev": "run-s kill:dev dev-start",
+    "build-start": "vite build",
+    "build": "run-s kill:dev build-start",
+    "preview": "vite preview --port 8300",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "vue-tsc --noEmit",
+    "storybook-start": "storybook dev -p 6006",
+    "storybook": "run-s kill:storybook storybook-start",
+    "build-storybook-start": "storybook build && find storybook-static -maxdepth 1 -name '*.woff2' -delete",
+      "build-storybook": "run-s kill:storybook build-storybook-start",
+    "kill:dev": "npx kill-port 8300",
+    "kill:storybook": "npx kill-port 6006"
+  },
+  "keywords": [
+    "ai",
+    "vue",
+    "figma",
+    "mcp"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^5.1.2",
+    "@playwright/mcp": "^0.0.68",
+    "@storybook/addon-a11y": "^10.3.5",
+    "@storybook/addon-docs": "^10.3.5",
+    "@storybook/addon-mcp": "^0.6.0",
+    "@storybook/addon-onboarding": "^10.3.5",
+    "@storybook/addon-vitest": "^10.3.5",
+    "@storybook/vue3-vite": "^10.3.5",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/node": "^22.10.5",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "@vitest/browser-playwright": "^4.1.4",
+    "@vitest/coverage-v8": "^4.1.4",
+    "@vue/test-utils": "^2.4.6",
+    "chrome-devtools-mcp": "^0.18.1",
+    "happy-dom": "^20.8.9",
+    "playwright": "^1.58.2",
+    "storybook": "^10.3.5",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11",
+    "vitest": "^4.1.4"
+  },
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=10.0.0"
+  },
+  "dependencies": {
+    "kill-port": "^2.0.1",
+    "npm-run-all": "^4.1.5",
+    "vue": "^3.5.31",
+    "vue-router": "^4.6.4"
+  }
+}

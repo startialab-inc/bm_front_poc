@@ -1,0 +1,96 @@
+{
+  "nodeId": "523:14502",
+  "name": "Button/Primary",
+  "atomicLevel": "Atom",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "塗りつぶし青のプライマリボタン（アイコンなし）。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "gap": "var(--spacing/2, 8px)",
+    "height": "40px",
+    "paddingTop": "var(--spacing/2, 8px)",
+    "paddingBottom": "var(--spacing/2, 8px)",
+    "paddingLeft": "var(--spacing/4, 16px)",
+    "paddingRight": "var(--spacing/4, 16px)",
+    "borderRadius": "var(--border-radius/rounded-md, 8px)"
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "523:14503",
+      "background": "var(--background/button/bg-btn-primary, #2862cb)",
+      "border": "none",
+      "text": {
+        "color": "var(--text/text-tertiary, #ffffff)",
+        "fontFamily": "var(--font/font-sans, Noto Sans JP)",
+        "fontWeight": "var(--font-weight/medium, 500)",
+        "fontSize": "var(--text/sm/font-size, 14px)",
+        "lineHeight": "var(--text/sm/line-height, 20px)"
+      }
+    },
+    {
+      "state": "Hover",
+      "nodeId": "523:14505",
+      "background": "var(--brand/blue-monkey/700, #1b4187)",
+      "border": "none",
+      "text": {
+        "color": "var(--text/text-tertiary, #ffffff)",
+        "fontFamily": "var(--font/font-sans, Noto Sans JP)",
+        "fontWeight": "var(--font-weight/medium, 500)",
+        "fontSize": "var(--text/sm/font-size, 14px)",
+        "lineHeight": "var(--text/sm/line-height, 20px)"
+      }
+    },
+    {
+      "state": "Focus",
+      "nodeId": "523:14507",
+      "background": "var(--brand/blue-monkey/900, #0d2144)",
+      "border": "none",
+      "text": {
+        "color": "var(--text/text-tertiary, #ffffff)",
+        "fontFamily": "var(--font/font-sans, Noto Sans JP)",
+        "fontWeight": "var(--font-weight/medium, 500)",
+        "fontSize": "var(--text/sm/font-size, 14px)",
+        "lineHeight": "var(--text/sm/line-height, 20px)"
+      }
+    },
+    {
+      "state": "Disabled",
+      "nodeId": "523:14509",
+      "figmaStateName": "DIsable",
+      "background": "var(--background/button/bg-btn-disablle, #d1d5db)",
+      "border": "none",
+      "text": {
+        "color": "var(--text/text-tertiary, #ffffff)",
+        "fontFamily": "var(--font/font-sans, Noto Sans JP)",
+        "fontWeight": "var(--font-weight/medium, 500)",
+        "fontSize": "var(--text/sm/font-size, 14px)",
+        "lineHeight": "var(--text/sm/line-height, 20px)"
+      }
+    }
+  ],
+  "typography": {
+    "label": {
+      "fontFamily": "var(--font/font-sans, Noto Sans JP)",
+      "fontSize": "var(--text/sm/font-size, 14px)",
+      "fontWeight": "var(--font-weight/medium, 500)",
+      "lineHeight": "var(--text/sm/line-height, 20px)",
+      "letterSpacing": 0
+    }
+  },
+  "props": {
+    "state": {
+      "type": "string",
+      "enum": ["Default", "Hover", "Focus", "Disabled"],
+      "default": "Default"
+    },
+    "label": {
+      "type": "string",
+      "default": "ボタン"
+    }
+  },
+  "notes": "Figma 内の Disabled 状態名は誤記 'DIsable'（大文字 I）。実装時は 'Disabled' として扱う。"
+}

@@ -1,0 +1,49 @@
+{
+  "nodeId": "917:52673",
+  "componentName": "RadioButton/Text",
+  "category": "Atoms",
+  "index": 11,
+  "figmaCode": "const imgVector = \"https://www.figma.com/api/mcp/asset/43194019-93aa-4ba9-ac54-9094686c0c43\";\n\ntype RadioButtonTextProps = {\n  className?: string;\n  state?: \"Unselect\" | \"Select\";\n};\n\nexport default function RadioButtonText({ className, state = \"Select\" }: RadioButtonTextProps) {\n  const isUnselect = state === \"Unselect\";\n  return (\n    <div className={className || `content-stretch flex items-center relative ${isUnselect ? \"\" : \"w-[688px]\"}`} id={isUnselect ? \"node-917_52672\" : \"node-849_2752\"}>\n      <div className={`content-stretch flex gap-[var(--spacing/2,8px)] h-[36px] items-center p-[var(--spacing/3,12px)] relative ${isUnselect ? \"shrink-0 w-[688px]\" : \"flex-[1_0_0] min-w-px\"}`} id={isUnselect ? \"node-917_52974\" : \"node-917_52687\"} data-name=\"RadioButton\">\n        <div className={`overflow-clip relative rounded-[var(--border-radius/rounded-full,9999px)] shrink-0 size-[16px] ${isUnselect ? \"bg-[var(--background/button/bg-btn-disablle,#d1d5db)]\" : \"bg-[var(--background/button/bg-btn-primary,#2862cb)]\"}`}>\n          <div className=\"-translate-x-1/2 -translate-y-1/2 absolute h-[8px] left-1/2 overflow-clip top-1/2 w-[var(--width/w-2,8px)]\">\n            {state === \"Select\" && (\n              <div className=\"absolute inset-[8.33%]\">\n                <div className=\"absolute inset-[-9.98%_-9.97%_-9.97%_-9.98%]\">\n                  <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector} />\n                </div>\n              </div>\n            )}\n          </div>\n        </div>\n        <div className=\"content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacing/1-5,6px)] items-start justify-center min-w-px pt-px relative\">\n          <div className=\"flex flex-col font-['Noto_Sans_JP:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[color:var(--text/text-primary,#0d2144)] text-[length:var(--text/sm/font-size,14px)] w-full\">\n            <p className=\"leading-[var(--text/sm/line-height,20px)]\">ページ作成時の「ファイル名」のディレクトリURLを使用する</p>\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n}",
+  "variants": [
+    {
+      "name": "Select",
+      "nodeId": "849:2752",
+      "description": "選択済み状態。ラジオボタンが青（#2862cb）で中央に白丸（チェック）が表示される。"
+    },
+    {
+      "name": "Unselect",
+      "nodeId": "917:52672",
+      "description": "未選択状態。ラジオボタンがグレー（#d1d5db）で中央に何も表示されない。"
+    }
+  ],
+  "styles": {
+    "containerHeight": "36px",
+    "containerPadding": "12px (var(--spacing/3))",
+    "gap": "8px (var(--spacing/2))",
+    "radioSize": "16px",
+    "radioBorderRadius": "9999px (var(--border-radius/rounded-full))",
+    "radioColor_Select": "#2862cb (var(--background/button/bg-btn-primary))",
+    "radioColor_Unselect": "#d1d5db (var(--background/button/bg-btn-disablle))",
+    "innerDotSize": "8px (var(--width/w-2))",
+    "textColor": "#0d2144 (var(--text/text-primary))",
+    "fontSize": "14px (var(--text/sm/font-size))",
+    "fontWeight": "400 (Regular)",
+    "fontFamily": "Noto Sans JP",
+    "lineHeight": "20px (var(--text/sm/line-height))"
+  },
+  "typography": {
+    "label": {
+      "style": "text-sm/leading-normal/regular",
+      "fontFamily": "Noto Sans JP",
+      "fontStyle": "Regular",
+      "fontSize": "var(--text/sm/font-size)",
+      "fontWeight": 400,
+      "lineHeight": "var(--text/sm/line-height)",
+      "letterSpacing": 0
+    }
+  },
+  "assets": {
+    "innerDotVector": "https://www.figma.com/api/mcp/asset/43194019-93aa-4ba9-ac54-9094686c0c43"
+  },
+  "notes": "横幅は688pxに固定。ラジオボタン（16px丸）+ テキストラベルの横並びレイアウト。内部の白丸はSVGアセット（imgVector）。"
+}

@@ -1,0 +1,32 @@
+{
+  "nodeId": "520:12941",
+  "name": "Contact",
+  "atomicLevel": "Atoms",
+  "description": "サポートチャットなどへのコンタクトボタン。画像アセット使用。単一バリアント。",
+  "variants": [
+    {
+      "name": "Default",
+      "description": "単一バリアント。丸い青いアイコン（チャットバブル）。"
+    }
+  ],
+  "props": {},
+  "dimensions": {
+    "width": "64px",
+    "height": "64.5px"
+  },
+  "imageAssets": {
+    "contact": "青い円形背景 + 白いチャットバブルアイコン。PNG または SVG 画像アセット。",
+    "note": "画像 URL は Figma MCP の一時 URL（7日間有効）。Vue 実装時は静的アセットとして配置する必要あり。"
+  },
+  "structure": {
+    "root": "div（64x64.5px, relative）",
+    "image": "img（absolute, inset-0, size-full, object-cover）"
+  },
+  "notes": [
+    "単一バリアント・プロパティなし",
+    "全体が画像アセット（丸い青ボタン + チャットバブルアイコン）",
+    "Vue 実装では画像を assets/ に配置し <img> で参照する",
+    "インタラクション（クリックでチャット起動など）は別途実装が必要",
+    "サイドバー下部などに配置される想定"
+  ]
+}

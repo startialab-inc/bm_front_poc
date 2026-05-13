@@ -1,0 +1,77 @@
+{
+  "nodeId": "632:8058",
+  "name": "Button/Icon",
+  "atomicLevel": "Atom",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "アイコンのみの丸型ボタン（テキストなし）。shadcn/ui Button 相当。",
+  "referenceUrl": "https://ui.shadcn.com/docs/components/button",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "gap": "0px",
+    "height": "var(--height/h-8, 32px)",
+    "width": "var(--width/w-8, 32px)",
+    "padding": "0px",
+    "borderRadius": "var(--border-radius/rounded-full, 9999px)"
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "632:8054",
+      "background": "var(--background/surface/bg-sf-secondary, #f8fafc)",
+      "border": "none",
+      "icon": {
+        "color": "var(--iconitify/ic-primary, #143166)"
+      }
+    },
+    {
+      "state": "Hover",
+      "nodeId": "632:8055",
+      "background": "var(--background/surface/bg-sf-selected, #eff6ff)",
+      "border": "none",
+      "icon": {
+        "color": "var(--iconitify/ic-primary, #143166)"
+      }
+    },
+    {
+      "state": "Focus",
+      "nodeId": "632:8056",
+      "background": "var(--background/surface/bg-sf-selected, #eff6ff)",
+      "border": "none",
+      "icon": {
+        "color": "var(--iconitify/ic-primary, #143166)"
+      }
+    },
+    {
+      "state": "Disabled",
+      "nodeId": "632:8057",
+      "figmaStateName": "Disable",
+      "background": "var(--background/surface/bg-sf-secondary, #f8fafc)",
+      "border": "none",
+      "icon": {
+        "color": "var(--iconitify/ic-disable, #cbd5e1)"
+      }
+    }
+  ],
+  "icon": {
+    "library": "Font Awesome 7 Free",
+    "style": "Solid",
+    "size": "16px",
+    "fontSize": "14px",
+    "placeholder": "arrow-left"
+  },
+  "props": {
+    "state": {
+      "type": "string",
+      "enum": ["Default", "Hover", "Focus", "Disabled"],
+      "default": "Default"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Font Awesome アイコン名（例: arrow-left）",
+      "default": "arrow-left"
+    }
+  }
+}

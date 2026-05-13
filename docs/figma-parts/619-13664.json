@@ -1,0 +1,40 @@
+{
+  "nodeId": "619:13664",
+  "name": "PageCountBadge",
+  "atomicLevel": "Atoms",
+  "description": "ページ件数を表示するバッジ。単一バリアント。",
+  "figmaDocUrl": "https://ui.shadcn.com/docs/components/badge#secondary",
+  "variants": [
+    {
+      "name": "Default",
+      "description": "数字（件数）を表示するバッジ。バリアントなし。"
+    }
+  ],
+  "props": {
+    "count": "number（表示する件数）"
+  },
+  "dimensions": {
+    "note": "padding: px-2 py-0.5（8px / 2px）で内容に合わせて幅が変化"
+  },
+  "designTokens": {
+    "background": "var(--background/surface/bg-sf-tertiary, #e2e8f0)",
+    "textColor": "var(--text/text-primary, #0d2144)",
+    "fontSize": "var(--text/xs/font-size, 12px)",
+    "lineHeight": "var(--text/xs/line-height, 16px)",
+    "fontWeight": "var(--font-weight/semibold, 600)",
+    "fontFamily": "var(--font/font-sans, 'Geist:SemiBold', sans-serif)",
+    "borderRadius": "var(--border-radius/rounded-md, 8px)",
+    "paddingX": "var(--spacing/2, 8px)",
+    "paddingY": "var(--spacing/0-5, 2px)",
+    "gap": "var(--spacing/1, 4px)"
+  },
+  "structure": {
+    "root": "div（flex, items-center, justify-center, gap-1, px-2, py-0.5, rounded-md, bg-sf-tertiary）",
+    "text": "p（semibold 12px, text-primary色, whitespace-nowrap）"
+  },
+  "notes": [
+    "単一バリアント（件数の数値だけが変わる）",
+    "Shadcn UI の Badge/secondary に相当",
+    "幅は内容（数字の桁数）に応じて伸縮する"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "nodeId": "308:6387",
+  "name": "logo",
+  "atomicLevel": "Atoms",
+  "description": "BowNow / BlueMonkey のロゴ。横長（Landscape）と正方形（Square）の2バリアント。画像アセット使用。",
+  "variants": [
+    {
+      "name": "Landscape",
+      "prop1": "Landscape",
+      "description": "横長バリアント。マーク画像 + 'BlueMonkey by CloudCircus' テキスト画像。160x48px。",
+      "dimensions": { "width": "160px", "height": "48px" }
+    },
+    {
+      "name": "Square",
+      "prop1": "Square",
+      "description": "正方形バリアント。マーク画像のみ。40x40px。サイドバー折りたたみ時などに使用。",
+      "dimensions": { "width": "40px", "height": "40px" }
+    }
+  ],
+  "props": {
+    "prop1": "'Landscape' | 'Square'（バリアント）"
+  },
+  "imageAssets": {
+    "mark": "ブランドマーク（円形の青いアイコン）。両バリアント共通。サイズ: 約34x34px。",
+    "typeGroup": "ロゴタイプ画像（'BlueMonkey' テキスト部分）。Landscape のみ。約97x16px。",
+    "typeGroupSub": "サブテキスト画像（'by CloudCircus' テキスト部分）。Landscape のみ。約37x5px。",
+    "note": "画像 URL は Figma MCP の一時 URL（7日間有効）。Vue 実装時は静的アセットとして配置する必要あり。"
+  },
+  "structure": {
+    "root": "div（flex, items-center, justify-center）",
+    "mark": "div（34x34px）> img（マークアセット）",
+    "type": "div（inline-grid）> Group > テキスト2段（img 2枚）※ Landscape のみ"
+  },
+  "notes": [
+    "2バリアント（Landscape: 横長 / Square: 正方形）",
+    "全要素が画像アセット（SVG/PNG）。テキストは CSS ではなく画像として提供される",
+    "Vue 実装では public/ または assets/ に画像を配置し、src で参照する",
+    "Landscape の gap は 6px（デザイントークンなしの固定値）",
+    "sidebar / Header（Organism）などで使用される"
+  ]
+}
