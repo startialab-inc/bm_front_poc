@@ -1,0 +1,80 @@
+{
+  "nodeId": "2051:66855",
+  "componentName": "Snackbar",
+  "category": "Atoms",
+  "index": 29,
+  "figmaVariantNames": ["Success", "info", "warning", "Error"],
+  "vueTypeNames": ["success", "info", "warning", "error"],
+  "styles": {
+    "width": "388px",
+    "paddingX": "16px (var(--spacing/4))",
+    "paddingY": "12px (var(--spacing/3))",
+    "gap": "4px (var(--spacing/1))",
+    "borderRadius": "6px (var(--border-radius/rounded-sm))",
+    "borderWidth": "1px (var(--border-width/border))"
+  },
+  "variants": {
+    "success": {
+      "figmaName": "Success",
+      "nodeId": "2051:66851",
+      "background": "#ecfdf5 (var(--background/success/bg-success-foreground))",
+      "borderColor": "#34d399 (var(--background/success/bg-success-dark))",
+      "iconName": "circle-check",
+      "iconFaClass": "fa-circle-check",
+      "iconColor": "#059669 (var(--background/success/bg-success-light))"
+    },
+    "info": {
+      "figmaName": "info",
+      "nodeId": "2051:66852",
+      "background": "#f0f9ff (var(--background/safe/bg-success-foreground))",
+      "borderColor": "#0ea5e9 (var(--background/safe/bg-safe-dark))",
+      "iconName": "circle-info",
+      "iconFaClass": "fa-circle-info",
+      "iconColor": "#0ea5e9 (var(--background/safe/bg-safe-dark))"
+    },
+    "warning": {
+      "figmaName": "warning",
+      "nodeId": "2051:66853",
+      "background": "#fff7ed (var(--background/caution/bg-caution-foreground))",
+      "borderColor": "#fb923c (var(--background/caution/bg-caution-dark))",
+      "iconName": "circle-exclamation",
+      "iconFaClass": "fa-circle-exclamation",
+      "iconColor": "#ea580c (var(--background/caution/bg-caution-light))"
+    },
+    "error": {
+      "figmaName": "Error",
+      "nodeId": "2051:66854",
+      "background": "#fef2f2 (var(--background/notice/bg-notice-foreground))",
+      "borderColor": "#f87171 (var(--background/notice/bg-notice-dark))",
+      "iconName": "triangle-exclamation",
+      "iconFaClass": "fa-triangle-exclamation",
+      "iconColor": "#dc2626 (var(--background/notice/bg-notice-light))"
+    }
+  },
+  "titleText": {
+    "fontFamily": "Noto Sans JP Bold",
+    "fontWeight": 700,
+    "fontSize": "16px (var(--text/base/font-size))",
+    "lineHeight": "24px (var(--text/base/line-height))",
+    "color": "rgba(0,0,0,0.85)"
+  },
+  "descriptionText": {
+    "fontFamily": "Noto Sans JP Regular",
+    "fontWeight": 400,
+    "fontSize": "12px (var(--text/xs/font-size))",
+    "lineHeight": "16px (var(--text/xs/line-height))",
+    "color": "rgba(0,0,0,0.85)",
+    "paddingLeft": "24px (description area は pl-6 = 24px でアイコン幅分インデント)"
+  },
+  "iconStyle": {
+    "fontFamily": "Font Awesome 7 Free: Solid",
+    "fontSize": "16px",
+    "lineHeight": "leading-[1.4]"
+  },
+  "props": {
+    "type": "'success' | 'info' | 'warning' | 'error'（必須）",
+    "title": "string（必須）",
+    "description": "string（省略可能）"
+  },
+  "notes": "Figma の type 名は 'Success'/'info'/'warning'/'Error'（大文字小文字混在）だが、Vue 実装では全て小文字に統一（CLAUDE.md 記載）。description は省略可能 prop。"
+}

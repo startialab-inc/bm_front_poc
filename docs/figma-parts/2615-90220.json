@@ -1,0 +1,59 @@
+{
+  "nodeId": "2615:90220",
+  "componentName": "Tooltip-top",
+  "category": "Atoms",
+  "index": "14b",
+  "figmaCode": "const imgRectangle5 = \"https://www.figma.com/api/mcp/asset/9e730aeb-eed1-48b8-a4b6-39e271dc4ece\";\n\nexport default function TooltipTop({ className }: { className?: string }) {\n  return (\n    <div className={className || \"content-stretch drop-shadow-[...] flex gap-[var(--spacing/1,4px)] items-center justify-center px-[var(--spacing/2,8px)] py-[var(--spacing/1,4px)] relative rounded-[4px] w-[146px]\"} data-node-id=\"2615:90220\" data-name=\"Tooltip-top\">\n      <div className=\"absolute h-[29px] left-0 top-[-5px] w-[146px]\" data-node-id=\"2615:90218\">\n        <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgRectangle5} />\n      </div>\n      <div className=\"flex items-center justify-center relative shrink-0\">\n        <div className=\"-scale-y-100 flex-none\">\n          <p className=\"... font-[var(--font-weight/semibold,600)] leading-[var(--text/xs/line-height,16px)] relative text-[10px] text-[color:var(--base/primary-foreground,#fafafa)] whitespace-nowrap\" data-node-id=\"2615:90219\">\n            テキスト\n          </p>\n        </div>\n      </div>\n    </div>\n  );\n}",
+  "variants": [
+    {
+      "name": "（単一バリアント）",
+      "nodeId": "2615:90220",
+      "description": "矢印が下向き（ツールチップがトリガーの上に配置）のツールチップ。Tooltip-under（619:13590）をY軸反転した形状。"
+    }
+  ],
+  "styles": {
+    "width": "146px",
+    "paddingX": "8px (var(--spacing/2))",
+    "paddingY": "4px (var(--spacing/1))",
+    "gap": "4px (var(--spacing/1))",
+    "borderRadius": "4px",
+    "shadow": "shadow/md（2層のドロップシャドウ）",
+    "textColor": "#fafafa (var(--base/primary-foreground))",
+    "fontSize": "10px",
+    "fontWeight": "600 (SemiBold)",
+    "lineHeight": "16px (var(--text/xs/line-height))",
+    "arrowDirection": "下向き（ツールチップはトリガーの上に位置する）"
+  },
+  "shadow": {
+    "name": "shadow/md",
+    "layers": [
+      {
+        "type": "DROP_SHADOW",
+        "color": "rgba(0,0,0,0.1)",
+        "offsetX": "0px",
+        "offsetY": "4px",
+        "blur": "6px",
+        "spread": "0px"
+      },
+      {
+        "type": "DROP_SHADOW",
+        "color": "rgba(0,0,0,0.1)",
+        "offsetX": "0px",
+        "offsetY": "2px",
+        "blur": "4px",
+        "spread": "0px"
+      }
+    ]
+  },
+  "assets": {
+    "backgroundShape": "https://www.figma.com/api/mcp/asset/9e730aeb-eed1-48b8-a4b6-39e271dc4ece",
+    "backgroundShapeDescription": "矢印が下向きの吹き出し形状背景画像（濃紺）。高さ29px、幅146px、上部に-5pxのオフセット。Tooltip-under の Y 軸反転版。"
+  },
+  "documentation": "https://ui.shadcn.com/docs/components/badge#default",
+  "notes": "Tooltip-under（619:13590）を Y 軸反転した形状（-scale-y-100）。スタイルは Tooltip-under と完全同一。Vue 実装では AppTooltip.vue の placement='top'（デフォルト）が対応する。既存実装で追加変更不要。",
+  "vueImplementation": {
+    "component": "AppTooltip.vue",
+    "prop": "placement='top'（デフォルト値）",
+    "status": "実装済み（A-7）。placement prop の top/bottom/left/right で4方向対応済み。"
+  }
+}

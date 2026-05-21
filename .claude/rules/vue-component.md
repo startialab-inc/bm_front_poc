@@ -21,6 +21,23 @@ paths:
 - デザイントークン変数（`bg-brand`、`text-primary` 等）を優先し、変数がない場合は任意値（`bg-[#FF6464]`）を使う
 - デザイントークンの一覧は `docs/design-tokens.md` を参照
 
+#### `position: absolute` の位置計算
+`position: absolute` の子要素の `left` / `right` / `top` / `bottom` は、**最近傍の `position: relative` 祖先要素の padding box 内端（border の内側）** を基準とする。親の `padding` の値は absolute 子要素の座標原点に影響しない。
+
+```
+┌─── border ───────────────────────────────┐
+│  padding │     content area     │ padding  │
+│          ↑ left: 0 はここが原点（padding box 内端）
+└──────────────────────────────────────────┘
+```
+
+計算例（幅 36px・border-2・padding なし・子 16px のスイッチ）：
+- 内側幅 = 36 − 2 × 2 = 32px
+- 子を左端に: `left: 0`
+- 子を右端に: `left: 32 − 16 = 16px`（right: 0 でも同じ）
+
+**誤り**: 「Figma の padding: 2px → left: 2px にする」（padding は absolute 子の座標には影響しない）
+
 ### アイコン
 <!-- TODO: プロジェクト固有のアイコンフォントがある場合はここに記述してください -->
 <!-- 例: プロジェクト独自フォントの使い方・クラス名の確認方法・サイズ指定の注意点 -->

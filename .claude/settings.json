@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rtk git:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:cdn.jsdelivr.net)",
+      "WebFetch(domain:github.com)",
+      "Bash(node -e ':*)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(k,':',v\\) for k,v in {**d.get\\('dependencies',{}\\), **d.get\\('devDependencies',{}\\)}.items\\(\\) if 'vue' in k.lower\\(\\)]\")",
+      "Bash(npm list:*)",
+      "mcp__playwright__browser_run_code",
+      "mcp__playwright__browser_close"
+    ],
+    "additionalDirectories": [
+      "/Users/ms.komori/Documents/Git/bm_front_poc/.playwright-mcp"
+    ]
+  }
+}

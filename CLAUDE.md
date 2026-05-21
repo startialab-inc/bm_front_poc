@@ -7,6 +7,7 @@ DOM 構造と計算済みスタイル値の比較で Figma との再現精度を
 
 - **ランタイム**: Node.js v24.15.0（`.node-version` で管理、`fnm` 推奨）+ TypeScript
 - **フロントエンド**: Vue 3 (Composition API) + Tailwind CSS v4
+- **多言語対応**: vue-i18n v11（`legacy: false`、Composition API モード）。メッセージは `src/locales/ja.ts`
 - **アイコン**: FontAwesome（CDN 経由、`<i class="fa-solid fa-...">` 形式）
 - **開発サーバー**: Vite v6（ポート 8300）
 
@@ -61,16 +62,16 @@ DOM 構造と計算済みスタイル値の比較で Figma との再現精度を
 ✅ **Phase B**: デザイントークンを収集し `docs/design-tokens.md` を作成する
 ✅ **Phase C（Atoms）**: #1〜#28 全 Atoms の Figma 情報を `docs/figma-parts/{nodeId}.json` に保存完了
 ✅ **Phase C.5**: Atoms の Vue.js コンポーネント構成をユーザーと相談・確定完了
-🔄 **Phase D（Atoms）**: Vue SFC + Storybook Story + テスト を実装中（A-1・A-2・A-3・A-4・A-5 完了、A-6 着手前）
+🔄 **Phase D（Atoms）**: A-1〜A-17・A-21 完了。A-7b（Tooltip-top）は既存 placement prop で対応済みと確認。残りは A-18〜A-20（外部アセット依存）のみ
 ⬜ **Phase C（Molecules）**: Atoms Phase D 完了後に開始
 ⬜ **Phase D（Molecules）**: Molecules Phase C 完了後に開始
 ⬜ **Phase C・D（Organisms）**: Molecules 完了後
 
-### 全体フローの方針（2026-04-27 更新）
+### 全体フローの方針（2026-05-21 更新）
 
-- Atoms を優先：Phase C（Atoms）→ Phase C.5 ✅ → Phase D（Atoms）🔄（A-1〜A-5 完了、A-6 着手前）
+- Atoms Phase D 残件：A-18〜A-20（AppLogo/AppLeftMenuIcon/AppContact）のみ。外部アセット準備セッションが先決
 - Molecules は Atoms Phase D 完了後：Phase C → Phase D
-- Organisms はさらに後続（AppSidebar.vue を O-1 として追加済み）
+- Organisms はさらに後続（O-1〜O-4 登録済み）
 
 ### Figma typo 一覧（Vue 実装時は正しい名称に読み替える）
 
@@ -78,23 +79,16 @@ DOM 構造と計算済みスタイル値の比較で Figma との再現精度を
 - Badge/SubStatus の state 名: 'Editting' → 正: 'Editing'
 - PagerNubmer のコンポーネント名: 'PagerNubmer' → 正: 'PagerNumber'
 - PagerNubmer の state 名: 'Acutive' → 正: 'Active'
+- Snackbar の type 名: 'info' → 実装時は 'info'（小文字のまま）、他は 'success'/'warning'/'error'（小文字統一）
 
-### 申し送り事項（2026-05-13）
+### 申し送り事項
 
-- **進捗更新のルール（必須）**: `/session-wrapup` 時に CLAUDE.md の「次の作業」を更新する際は、`docs/session-plan.md` の**コンポーネント一覧テーブル**（Phase D 列）と **Phase D タスクリスト**の両方を必ずセットで更新する
-- **次のタスク**: A-6 `AppSwitch.vue` の実装（Figma node-id: 849:2931）
-  - 6点セット：Vue SFC + Story + Spec + Demo + DevIndex 更新 + Router 追加
-  - `docs/figma-parts/849-2931.json` が存在するか確認し、なければ Phase C から開始する
-- **A-5 完了済み（2026-05-13）**:
-  - `AppTag.vue`（Vue SFC）・`AppTag.stories.ts`・`AppTag.spec.ts`（9件 PASS）
-  - `AppTagDemo.vue`・`DevIndex.vue` 更新（done: true）・`router/index.ts` ルート追加
-  - `getComputedStyle()` 検証済み（全 12 項目 Figma 一致）
-- **A-5 実装仕様**: `deletable` prop で Deleteable（削除ボタンあり）/ Undelete（ボーダーあり）を切り替え。削除時は `delete` emit。
-- **Story ファイルの必須事項**: `parameters.docs.description.component` を必ず記述する（`docs/storybook.md` 参照）
-- **1コンポーネント実装セット（6点）**: Vue SFC + Story + テスト（spec.ts）+ デモページ + DevIndex 更新 + Router 追加（`.claude/rules/vue-component.md` / `docs/testing.md` 参照）
-- **ファイル命名規則**: `docs/figma-parts/` は全てハイフン区切り（`619-13664.json`）に統一済み
-- **画像アセット**: AppLogo / AppLeftMenuIcon / AppContact の Phase D 実装前にアセット準備セッションが必要（詳細は memory 参照）
-- **コンポーネント構成**: `docs/session-plan.md` の Phase C.5 セクション参照
-- **Figma typo**: 上記一覧の通り（JSON の `figmaStateName` / `figmaNameNote` に記録済み）
+- **進捗更新（必須）**: `/session-wrapup` 時は CLAUDE.md「次の作業」・`docs/session-plan.md` のコンポーネント一覧テーブル（Phase D 列）・Phase D タスクリスト・memory の4点をセットで更新する
+- **詳細な実装ノート**: `docs/session-plan.md` の「Phase D 実施メモ」参照（Vite base 設定・テストパターン・CSS 注意点など）
+- **デモページ更新予定**: `docs/session-plan.md` の「デモページ更新予定タスク」参照（Molecule 実装後の置き換え作業一覧）
+- **画像アセット準備**: AppLogo / AppLeftMenuIcon / AppContact の実装前に別セッションでアセット準備が必要
+- **A-7b 完了（2026-05-21）**: Tooltip-top（2615:90220）の figma-parts JSON 作成。AppTooltip.vue の既存 `placement='top'` が対応済みと確認（コード変更なし）。
+- **A-21 完了（2026-05-21）**: AppSnackbar.vue 6 点セット実装。4 type（success/info/warning/error）対応。テスト 30 件 PASS。
+- **vue-i18n 導入済み（2026-05-21）**: `AppPasswordStrength.vue`（A-16）実装に伴い vue-i18n v11 を導入。Storybook への適用は `globalThis.PLUGINS_SETUP_FUNCTIONS` 操作で実現（`setup` export 方式や `@storybook/vue3-vite` インポートは動作不可）。テストは `createI18n` を `{ global: { plugins: [i18n] } }` で mount に渡す。
 
 詳細な全体計画 → `docs/session-plan.md`
