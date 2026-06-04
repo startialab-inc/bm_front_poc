@@ -105,6 +105,42 @@ const router = createRouter({
       name: 'AppSnackbarDemo',
       component: () => import('@/pages/dev/AppSnackbarDemo.vue'),
     },
+    {
+      path: '/dev/app-logo',
+      name: 'AppLogoDemo',
+      component: () => import('@/pages/dev/AppLogoDemo.vue'),
+    },
+    {
+      path: '/dev/app-left-menu-icon',
+      name: 'AppLeftMenuIconDemo',
+      component: () => import('@/pages/dev/AppLeftMenuIconDemo.vue'),
+    },
+    {
+      path: '/dev/app-contact',
+      name: 'AppContactDemo',
+      component: () => import('@/pages/dev/AppContactDemo.vue'),
+    },
+    // ---- Molecules デモ ----
+    {
+      path: '/dev/app-radio-button',
+      name: 'AppRadioButtonDemo',
+      component: () => import('@/pages/dev/AppRadioButtonDemo.vue'),
+    },
+    {
+      path: '/dev/app-checkbox',
+      name: 'AppCheckboxDemo',
+      component: () => import('@/pages/dev/AppCheckboxDemo.vue'),
+    },
+    {
+      path: '/dev/app-segment-control',
+      name: 'AppSegmentControlDemo',
+      component: () => import('@/pages/dev/AppSegmentControlDemo.vue'),
+    },
+    {
+      path: '/dev/app-tab',
+      name: 'AppTabDemo',
+      component: () => import('@/pages/dev/AppTabDemo.vue'),
+    },
     // TODO: コンポーネントを実装したらここにデモページのルートを追記する
 
     // ---- アプリケーションページ ----

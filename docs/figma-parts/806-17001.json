@@ -1,0 +1,59 @@
+{
+  "componentName": "AppConfirmSection",
+  "nodeId": "806:17001",
+  "figmaName": "ConfirmSection-caution",
+  "vueComponent": "AppConfirmSection.vue",
+  "moleculeId": "#34",
+  "description": "注意喚起メッセージを複数行リスト形式で表示する警告セクション。shadcn/ui の Alert に相当。",
+  "container": {
+    "layout": "flex column",
+    "gap": "12px",
+    "gapToken": "spacing/3",
+    "padding": "16px",
+    "paddingToken": "spacing/4",
+    "background": "#fef2f2",
+    "backgroundToken": "background/notice/bg-notice-foreground",
+    "borderRadius": "6px",
+    "borderRadiusToken": "border-radius/rounded-sm",
+    "width": "720px（Figma の固定幅。実装は w-full 推奨）",
+    "alignItems": "flex-start",
+    "justifyContent": "center"
+  },
+  "item": {
+    "layout": "flex row",
+    "gap": "8px",
+    "gapToken": "spacing/2",
+    "alignItems": "center",
+    "width": "full",
+    "icon": {
+      "font": "Font Awesome 7 Free Solid",
+      "name": "fa-solid fa-circle-exclamation",
+      "size": "14px",
+      "color": "#dc2626",
+      "colorToken": "iconitify/ic-notice"
+    },
+    "text": {
+      "font": "Noto Sans JP Regular",
+      "fontSize": "12px",
+      "fontSizeToken": "text/xs/font-size",
+      "fontWeight": "400（regular）",
+      "lineHeight": "16px",
+      "lineHeightToken": "text/xs/line-height",
+      "color": "#dc2626",
+      "colorToken": "text/text-notice",
+      "overflow": "ellipsis"
+    }
+  },
+  "props": {
+    "items": "string[]（注意文言の配列）"
+  },
+  "notes": [
+    "Figma コンポーネント名は 'ConfirmSection-caution'（caution バリアント）",
+    "アイコンは FontAwesome fa-solid fa-circle-exclamation（赤 #dc2626）",
+    "背景色は薄いピンク #fef2f2（bg-notice-foreground）",
+    "各行はアイコン＋テキストのフレックス行、テキストは flex-1",
+    "テキストは overflow-ellipsis（長文は省略）",
+    "複数行を v-for でリスト表示する設計",
+    "幅は Figma では 720px 固定だが Vue 実装は w-full 推奨"
+  ]
+}

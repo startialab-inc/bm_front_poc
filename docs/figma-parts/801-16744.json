@@ -1,0 +1,44 @@
+{
+  "componentName": "AppFormTitle",
+  "nodeId": "801:16744",
+  "figmaName": "FormTitle",
+  "vueComponent": "AppFormTitle.vue",
+  "moleculeId": "#33",
+  "description": "左端に縦線アクセントを持つフォーム項目タイトル。",
+  "container": {
+    "layout": "flex row",
+    "gap": "8px",
+    "gapToken": "spacing/2",
+    "alignItems": "center"
+  },
+  "accentBar": {
+    "element": "div",
+    "width": "2px",
+    "height": "20px",
+    "background": "#0d2144",
+    "backgroundToken": "text/text-primary",
+    "borderRadius": "2px",
+    "borderRadiusToken": "border-radius/rounded-xs"
+  },
+  "title": {
+    "element": "p",
+    "font": "Noto Sans JP Bold",
+    "fontSize": "16px",
+    "fontSizeToken": "text/base/font-size",
+    "fontWeight": "700（bold）",
+    "lineHeight": "24px",
+    "lineHeightToken": "text/base/line-height",
+    "textColor": "#0d2144",
+    "textColorToken": "text/text-primary",
+    "whiteSpace": "nowrap",
+    "exampleText": "ページ名"
+  },
+  "props": {
+    "title": "string（必須）"
+  },
+  "notes": [
+    "左端の縦線（2px × 20px、rounded-xs）はアクセント。色は text-primary と同じ #0d2144",
+    "テキストは whitespace-nowrap（折り返しなし）",
+    "FormHeading の下位に配置されるフォーム項目ラベル"
+  ]
+}

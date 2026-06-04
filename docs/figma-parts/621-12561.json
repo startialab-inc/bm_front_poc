@@ -1,0 +1,49 @@
+{
+  "componentName": "AppPageSettingStatus",
+  "nodeId": "621:12561",
+  "figmaName": "PageSettingStatus",
+  "description": "ページ設定の ON/OFF 状態を示すバッジコンポーネント。丸アイコン（画像アセット）+ テキストラベルを横並び。",
+  "variants": [
+    {
+      "name": "ON",
+      "nodeId": "621:12559",
+      "description": "オン状態。緑の丸アイコン + テキスト「ON」（text-primary）"
+    },
+    {
+      "name": "OFF",
+      "nodeId": "621:12560",
+      "description": "オフ状態。グレーの丸アイコン + テキスト「OFF」（text-secondary）"
+    }
+  ],
+  "sizes": {
+    "width": 64,
+    "height": 28,
+    "iconSize": 12
+  },
+  "colors": {
+    "background": "#f8fafc",
+    "textOn": "#0d2144",
+    "textOff": "#64748b"
+  },
+  "typography": {
+    "label": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": 400,
+      "fontSize": 12,
+      "lineHeight": 16,
+      "width": 24
+    }
+  },
+  "spacing": {
+    "borderRadius": 4,
+    "paddingX": 8,
+    "paddingY": 4,
+    "gap": 4
+  },
+  "assets": {
+    "iconOn": "緑の丸（PNG/SVG）。Figma MCP 経由では直接取得不可。ユーザーが手動エクスポート必要。",
+    "iconOff": "グレーの丸（PNG/SVG）。同上。"
+  },
+  "states": ["ON", "OFF"],
+  "notes": "アイコン部分は Figma 上で画像アセット（Group）。実装時はインライン SVG または CSS で代替可能（緑の丸 #22c55e / グレーの丸 #cbd5e1）。"
+}

@@ -1,0 +1,81 @@
+{
+  "componentName": "AppSegmentControl",
+  "nodeId": "520:13298",
+  "figmaName": "SegmentControl",
+  "vueComponent": "AppSegmentControl.vue",
+  "moleculeId": "#29",
+  "childComponent": "AppSegmentControlItem.vue（A-12）",
+  "description": "複数タブを横並びに並べるセグメントコントロール。shadcn/ui の Tabs コンポーネントに相当。",
+  "container": {
+    "height": "40px",
+    "heightToken": "height/h-10",
+    "background": "#e2e8f0",
+    "backgroundToken": "background/surface/bg-sf-tertiary",
+    "border": "#e5e5e5",
+    "borderToken": "divider/divider-primary",
+    "padding": "4px",
+    "paddingToken": "spacing/1",
+    "borderRadius": "6px",
+    "borderRadiusToken": "border-radius/rounded-sm",
+    "gap": "0px",
+    "width": "1440px（コンテナ幅に依存）",
+    "layout": "flex row、各子要素が flex-1"
+  },
+  "states": {
+    "selected": {
+      "element": "div",
+      "background": "#ffffff",
+      "backgroundToken": "background/surface/bg-sf-primary",
+      "border": "rgba(255,255,255,0)（透明）",
+      "borderToken": "custom/dark:input",
+      "borderWidth": "1px",
+      "borderRadius": "6px",
+      "borderRadiusToken": "border-radius/rounded-sm",
+      "padding": "4px 8px",
+      "textColor": "#0d2144",
+      "textColorToken": "text/text-primary",
+      "fontSize": "14px",
+      "fontWeight": "500（medium）",
+      "lineHeight": "20px"
+    },
+    "unselected": {
+      "element": "button",
+      "background": "なし（透明）",
+      "borderRadius": "8px",
+      "borderRadiusToken": "border-radius/rounded-md",
+      "padding": "4px 8px",
+      "textColor": "#64748b",
+      "textColorToken": "text/text-secondary",
+      "fontSize": "14px",
+      "fontWeight": "500（medium）",
+      "lineHeight": "20px"
+    }
+  },
+  "badgeNumber": {
+    "height": "20px",
+    "minWidth": "20px",
+    "padding": "0 4px",
+    "overflow": "clip（hidden）",
+    "textColor": "#64748b",
+    "textColorToken": "text/text-secondary",
+    "fontSize": "12px",
+    "fontWeight": "600（semibold）",
+    "lineHeight": "16px",
+    "format": "(N) 形式（例: (8)）"
+  },
+  "exampleTabs": [
+    "すべて (8)",
+    "公開中 (8)",
+    "非公開中 (0)",
+    "編集中 (4)",
+    "申請中 (3)",
+    "承認済 (4)",
+    "差戻し (1)"
+  ],
+  "notes": [
+    "tabs の数は動的（v-for で AppSegmentControlItem を繰り返す）",
+    "選択中のアイテムは div（白背景）、未選択は button（透明）",
+    "バッジ数字は AppSegmentControlItem.vue（A-12）の count prop に対応",
+    "コンテナ幅は親に依存する（1440px は Figma の canvas 幅）"
+  ]
+}

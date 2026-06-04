@@ -1,0 +1,102 @@
+{
+  "componentName": "AppImageSelector",
+  "nodeId": "2051:66897",
+  "figmaName": "ImageSelector",
+  "category": "Molecules",
+  "index": "M-7",
+  "description": "画像選択コンポーネント。未選択時はグレー背景のプレースホルダーに「画像を選択」ボタン、選択済み時は画像プレビューと変更・削除ボタンを表示する。",
+  "variants": [
+    {
+      "name": "Unselect",
+      "nodeId": "864:42491",
+      "description": "画像未選択状態。グレー背景のプレースホルダー + 中央に「画像を選択」ボタン",
+      "layout": "単一カラム（画像エリアのみ）",
+      "imageArea": {
+        "background": "#f8fafc",
+        "backgroundToken": "var(--background/surface/bg-sf-secondary, #f8fafc)",
+        "border": "1px solid #e5e5e5",
+        "borderToken": "var(--divider/divider-primary, #e5e5e5)",
+        "borderRadius": 8,
+        "aspectRatio": "920/523",
+        "width": 320
+      },
+      "centerButton": {
+        "label": "画像を選択",
+        "icon": "image",
+        "iconFont": "Font Awesome 7 Free: Solid",
+        "iconSize": 15,
+        "iconColor": "#0d2144",
+        "iconColorToken": "var(--text/text-primary, #0d2144)",
+        "textColor": "#0d2144",
+        "textColorToken": "var(--text/text-primary, #0d2144)",
+        "fontSize": 14,
+        "fontFamily": "Noto Sans JP Regular",
+        "fontWeight": 400,
+        "height": 32,
+        "paddingLeft": 12,
+        "paddingRight": 16,
+        "paddingY": 4,
+        "borderRadius": 8,
+        "background": "transparent",
+        "position": "absolute center（translate -50% -50%）"
+      }
+    },
+    {
+      "name": "Selected",
+      "nodeId": "2051:66896",
+      "description": "画像選択済み状態。画像プレビュー + 右側に変更・削除ボタン",
+      "layout": "横並び flex-row items-end gap-10px",
+      "imageArea": {
+        "background": "画像表示（object-cover, rounded-8px）",
+        "border": "1px solid #e5e5e5",
+        "borderToken": "var(--divider/divider-primary, #e5e5e5)",
+        "borderRadius": 8,
+        "aspectRatio": "920/523",
+        "width": 320,
+        "sampleImage": "https://www.figma.com/api/mcp/asset/246e940e-c431-4f17-8a57-d93d8d8b3660"
+      },
+      "actionButtons": [
+        {
+          "label": "画像を変更",
+          "icon": "image",
+          "iconFont": "Font Awesome 7 Free: Solid",
+          "iconSize": 15,
+          "iconColor": "#0d2144",
+          "iconColorToken": "var(--text/text-primary, #0d2144)",
+          "textColor": "#0d2144",
+          "textColorToken": "var(--text/text-primary, #0d2144)"
+        },
+        {
+          "label": "画像を削除",
+          "icon": "trash",
+          "iconFont": "Font Awesome 7 Free: Solid",
+          "iconSize": 15,
+          "iconColor": "#dc2626",
+          "iconColorToken": "var(--text/text-notice, #dc2626)",
+          "textColor": "#dc2626",
+          "textColorToken": "var(--text/text-notice, #dc2626)"
+        }
+      ]
+    }
+  ],
+  "actionButtonStyle": {
+    "height": 32,
+    "paddingLeft": 12,
+    "paddingRight": 16,
+    "paddingY": 4,
+    "borderRadius": 8,
+    "background": "transparent",
+    "fontSize": 14,
+    "fontSizeToken": "var(--text/sm/font-size, 14px)",
+    "fontFamily": "Noto Sans JP Regular",
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "gap": 8
+  },
+  "notes": [
+    "AppButton コンポーネント（variant='ghost'相当）を利用する",
+    "画像エリアは aspect-ratio: 920/523 で固定。width は 320px 固定",
+    "画像は v-model や emit で親へ伝える（ファイルオブジェクト or URL）",
+    "削除ボタンのアイコン・テキストは text-notice（赤）で表示"
+  ]
+}

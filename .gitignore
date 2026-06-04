@@ -45,3 +45,6 @@ docs/playwright/*
 
 # セキュリティの絡むローカルの設定ファイル
 .claude/settings.local.json
+
+# SpecStory（AIセッション履歴）
+.specstory/

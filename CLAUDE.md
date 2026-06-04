@@ -6,6 +6,7 @@ DOM 構造と計算済みスタイル値の比較で Figma との再現精度を
 ## 技術スタック
 
 - **ランタイム**: Node.js v24.15.0（`.node-version` で管理、`fnm` 推奨）+ TypeScript
+- **パッケージマネージャー**: pnpm 10.33.0（`packageManager` フィールドで固定、`use-node-version=24.15.0` を `.npmrc` に設定済み）
 - **フロントエンド**: Vue 3 (Composition API) + Tailwind CSS v4
 - **多言語対応**: vue-i18n v11（`legacy: false`、Composition API モード）。メッセージは `src/locales/ja.ts`
 - **アイコン**: FontAwesome（CDN 経由、`<i class="fa-solid fa-...">` 形式）
@@ -15,9 +16,9 @@ DOM 構造と計算済みスタイル値の比較で Figma との再現精度を
 
 | コマンド | 用途 |
 |---|---|
-| `npm run dev` | 開発サーバー起動（http://localhost:8300） |
-| `npm run build` | プロダクションビルド |
-| `npm run storybook` | Storybook 起動（http://localhost:6006） |
+| `pnpm dev` | 開発サーバー起動（http://localhost:8300） |
+| `pnpm build` | プロダクションビルド |
+| `pnpm storybook` | Storybook 起動（http://localhost:6006） |
 
 ## 行動原則
 
@@ -62,16 +63,17 @@ DOM 構造と計算済みスタイル値の比較で Figma との再現精度を
 ✅ **Phase B**: デザイントークンを収集し `docs/design-tokens.md` を作成する
 ✅ **Phase C（Atoms）**: #1〜#28 全 Atoms の Figma 情報を `docs/figma-parts/{nodeId}.json` に保存完了
 ✅ **Phase C.5**: Atoms の Vue.js コンポーネント構成をユーザーと相談・確定完了
-🔄 **Phase D（Atoms）**: A-1〜A-17・A-21 完了。A-7b（Tooltip-top）は既存 placement prop で対応済みと確認。残りは A-18〜A-20（外部アセット依存）のみ
-⬜ **Phase C（Molecules）**: Atoms Phase D 完了後に開始
-⬜ **Phase D（Molecules）**: Molecules Phase C 完了後に開始
-⬜ **Phase C・D（Organisms）**: Molecules 完了後
+✅ **Phase D（Atoms）**: 全 Atoms 完了（A-1〜A-21、A-7b 含む）。2026-05-22 完了
+✅ **Phase C（Molecules）**: 全件完了（22件）。2026-06-04 完了
+⬜ **Phase D（Molecules）**: 実施可能。`/component-impl` で開始する
+🔄 **Phase C（Organisms）**: 進行中（1件完了）。`/figma-collect 3` で続きを実施する
 
-### 全体フローの方針（2026-05-21 更新）
+### 全体フローの方針（2026-06-04 更新）
 
-- Atoms Phase D 残件：A-18〜A-20（AppLogo/AppLeftMenuIcon/AppContact）のみ。外部アセット準備セッションが先決
-- Molecules は Atoms Phase D 完了後：Phase C → Phase D
-- Organisms はさらに後続（O-1〜O-4 登録済み）
+- Atoms Phase D 完了（2026-05-22）
+- Molecules Phase C 完了（2026-06-04）
+- Molecules Phase D は `/component-impl` で開始可能
+- Organisms Phase C 進行中（O-1 sidebar 完了、次は `/figma-collect 3` で O-2 Header から収集）
 
 ### Figma typo 一覧（Vue 実装時は正しい名称に読み替える）
 
@@ -83,12 +85,14 @@ DOM 構造と計算済みスタイル値の比較で Figma との再現精度を
 
 ### 申し送り事項
 
-- **進捗更新（必須）**: `/session-wrapup` 時は CLAUDE.md「次の作業」・`docs/session-plan.md` のコンポーネント一覧テーブル（Phase D 列）・Phase D タスクリスト・memory の4点をセットで更新する
+- **pnpm 移行完了（2026-05-22）**: npm → pnpm 移行済み。`package-lock.json` 削除・`pnpm-lock.yaml` 生成済み。`.npmrc` に `use-node-version=24.15.0` 設定済み。
+- **進捗更新（必須）**: `/session-wrapup` 時は CLAUDE.md「次の作業」・`docs/session-plan.md` のコンポーネント一覧テーブル（Phase C/D 列）・Phase D タスクリスト・memory の4点をセットで更新する
 - **詳細な実装ノート**: `docs/session-plan.md` の「Phase D 実施メモ」参照（Vite base 設定・テストパターン・CSS 注意点など）
 - **デモページ更新予定**: `docs/session-plan.md` の「デモページ更新予定タスク」参照（Molecule 実装後の置き換え作業一覧）
-- **画像アセット準備**: AppLogo / AppLeftMenuIcon / AppContact の実装前に別セッションでアセット準備が必要
-- **A-7b 完了（2026-05-21）**: Tooltip-top（2615:90220）の figma-parts JSON 作成。AppTooltip.vue の既存 `placement='top'` が対応済みと確認（コード変更なし）。
-- **A-21 完了（2026-05-21）**: AppSnackbar.vue 6 点セット実装。4 type（success/info/warning/error）対応。テスト 30 件 PASS。
-- **vue-i18n 導入済み（2026-05-21）**: `AppPasswordStrength.vue`（A-16）実装に伴い vue-i18n v11 を導入。Storybook への適用は `globalThis.PLUGINS_SETUP_FUNCTIONS` 操作で実現（`setup` export 方式や `@storybook/vue3-vite` インポートは動作不可）。テストは `createI18n` を `{ global: { plugins: [i18n] } }` で mount に渡す。
+- **SVG アセット取得方針（2026-05-22 確定）**: Figma MCP では SVG を直接取得できない。SVG が必要な場合はユーザーに手動エクスポートを依頼する。PNG の場合は必ず 2x スケール（scale=2）で取得する。
+- **vue-i18n 導入済み（2026-05-21）**: Storybook への適用は `globalThis.PLUGINS_SETUP_FUNCTIONS` 操作で実現。テストは `createI18n` を `{ global: { plugins: [i18n] } }` で mount に渡す。
+- **スキル改修（2026-06-04）**: `/figma-collect` と `/component-impl` をバッチ処理方式に改修済み。`/figma-collect` は件数を都度確認（デフォルト 3 件）、`/component-impl` は引数なしで先頭 1 件のみ処理。
+- **Molecules Phase C 完了（2026-06-04）**: 全 22 件完了。次は `/component-impl` で Molecules Phase D を開始する。
+- **Organisms Phase C 開始（2026-06-04）**: O-1 sidebar（308:6191）完了。次は `/figma-collect 3` で O-2 Header（520:6480）から収集する。
 
 詳細な全体計画 → `docs/session-plan.md`

@@ -26,18 +26,32 @@ describe('BaseCheckboxInput', () => {
       expect(wrapper.classes()).toContain('appearance-none')
     })
 
-    it('w-4 クラスが付与される', () => {
+    it('デフォルト（md）では w-5 クラスが付与される', () => {
       const wrapper = mount(BaseCheckboxInput, {
         props: { value: 'option1' },
       })
-      expect(wrapper.classes()).toContain('w-4')
+      expect(wrapper.html()).toContain('w-5')
     })
 
-    it('h-4 クラスが付与される', () => {
+    it('デフォルト（md）では h-5 クラスが付与される', () => {
       const wrapper = mount(BaseCheckboxInput, {
         props: { value: 'option1' },
       })
-      expect(wrapper.classes()).toContain('h-4')
+      expect(wrapper.html()).toContain('h-5')
+    })
+
+    it('size="sm" では w-4 クラスが付与される', () => {
+      const wrapper = mount(BaseCheckboxInput, {
+        props: { value: 'option1', size: 'sm' },
+      })
+      expect(wrapper.html()).toContain('w-4')
+    })
+
+    it('size="sm" では h-4 クラスが付与される', () => {
+      const wrapper = mount(BaseCheckboxInput, {
+        props: { value: 'option1', size: 'sm' },
+      })
+      expect(wrapper.html()).toContain('h-4')
     })
 
     it('rounded クラスが付与される', () => {

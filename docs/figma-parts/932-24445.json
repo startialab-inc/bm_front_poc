@@ -1,0 +1,124 @@
+{
+  "componentName": "AppFavoriteBlock",
+  "nodeId": "932:24445",
+  "figmaName": "FavoriteBlock",
+  "description": "お気に入りブロックの選択コンポーネント。ヘッダー行（タイトル + 編集/削除アイコン）+ ブロックプレビューエリアで構成。選択状態で青枠＋青アイコンに変化。",
+  "variants": [
+    {
+      "name": "Selected",
+      "nodeId": "932:24443",
+      "description": "選択済み状態。ブロックエリアが水色背景（#eff6ff）+ 青ボーダー（2px #2862cb）。circle-check アイコンが青（#2862cb）。"
+    },
+    {
+      "name": "Default",
+      "nodeId": "932:24444",
+      "description": "未選択状態。ブロックエリアがグレー背景（#f8fafc）。circle-check アイコンがグレー（#cbd5e1）。"
+    }
+  ],
+  "structure": {
+    "root": {
+      "tag": "div",
+      "layout": "flex-col",
+      "gap": 10,
+      "width": 232,
+      "children": [
+        {
+          "name": "ヘッダー行",
+          "layout": "flex-row",
+          "gap": 8,
+          "paddingRight": 8,
+          "children": [
+            {
+              "name": "左ボーダー",
+              "tag": "div",
+              "width": 2,
+              "height": "full",
+              "borderRadius": 2,
+              "color": "#143166"
+            },
+            {
+              "name": "タイトル",
+              "tag": "p",
+              "text": "ブロックタイトル",
+              "fontSize": 14,
+              "fontWeight": 500,
+              "lineHeight": 20,
+              "color": "#0d2144",
+              "flex": "1_0_0"
+            },
+            {
+              "name": "アクションアイコン群",
+              "layout": "flex-row",
+              "gap": 4,
+              "children": [
+                { "icon": "pen", "iconSize": 12, "color": "#64748b", "containerSize": 20 },
+                { "icon": "trash", "iconSize": 12, "color": "#64748b", "containerSize": 20 }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ブロックエリア",
+          "tag": "div",
+          "height": 160,
+          "width": "full",
+          "borderRadius": 6,
+          "variants": {
+            "Selected": {
+              "background": "#eff6ff",
+              "border": "2px solid #2862cb"
+            },
+            "Default": {
+              "background": "#f8fafc",
+              "border": "none"
+            }
+          },
+          "children": [
+            {
+              "name": "選択アイコン（circle-check）",
+              "position": "absolute",
+              "top": 10,
+              "left": 10,
+              "size": 16,
+              "icon": "circle-check",
+              "iconSize": 16,
+              "variants": {
+                "Selected": { "color": "#2862cb" },
+                "Default": { "color": "#cbd5e1" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sizes": {
+    "width": 232,
+    "blockAreaHeight": 160
+  },
+  "colors": {
+    "leftBorder": "#143166",
+    "titleText": "#0d2144",
+    "actionIcon": "#64748b",
+    "blockBgDefault": "#f8fafc",
+    "blockBgSelected": "#eff6ff",
+    "blockBorderSelected": "#2862cb",
+    "checkIconDefault": "#cbd5e1",
+    "checkIconSelected": "#2862cb"
+  },
+  "typography": {
+    "title": {
+      "fontFamily": "Geist",
+      "fontWeight": 500,
+      "fontSize": 14,
+      "lineHeight": 20
+    }
+  },
+  "icons": {
+    "edit": "fa-solid fa-pen",
+    "delete": "fa-solid fa-trash",
+    "check": "fa-solid fa-circle-check"
+  },
+  "states": ["Selected", "Default"],
+  "notes": "state prop で Selected/Default を切り替え。ブロックエリアの背景・ボーダー・アイコン色が変化。タイトルは slot または prop で差し替え可能。"
+}

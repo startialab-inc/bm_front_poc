@@ -1,0 +1,48 @@
+{
+  "componentName": "AppFormHeading",
+  "nodeId": "801:16732",
+  "figmaName": "FormHeading",
+  "vueComponent": "AppFormHeading.vue",
+  "moleculeId": "#32",
+  "description": "フォームセクションの見出しと説明文をセットにしたコンポーネント。",
+  "container": {
+    "layout": "flex column",
+    "gap": "8px",
+    "gapToken": "spacing/2",
+    "alignItems": "flex-start",
+    "width": "720px（Figma の固定幅。実装は w-full 推奨）",
+    "textColor": "#0d2144",
+    "textColorToken": "text/text-primary"
+  },
+  "title": {
+    "element": "p",
+    "font": "Noto Sans JP Bold",
+    "fontSize": "18px",
+    "fontSizeToken": "text/lg/font-size",
+    "fontWeight": "700（bold）",
+    "lineHeight": "28px",
+    "lineHeightToken": "text/lg/line-height",
+    "width": "full",
+    "exampleText": "基本設定"
+  },
+  "description": {
+    "element": "p",
+    "font": "Noto Sans JP Regular",
+    "fontSize": "12px",
+    "fontSizeToken": "text/xs/font-size",
+    "fontWeight": "400（regular）",
+    "lineHeight": "16px",
+    "lineHeightToken": "text/xs/line-height",
+    "width": "full",
+    "exampleText": "説明文が入ります"
+  },
+  "props": {
+    "title": "string（必須）",
+    "description": "string（任意）"
+  },
+  "notes": [
+    "見出し（title）と説明文（description）の2行構成",
+    "説明文は任意（なければ非表示）",
+    "幅は Figma では 720px 固定だが、Vue 実装では w-full とする"
+  ]
+}

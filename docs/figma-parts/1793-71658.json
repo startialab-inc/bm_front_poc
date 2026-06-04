@@ -1,0 +1,105 @@
+{
+  "componentName": "AppContactItemType",
+  "nodeId": "1793:71658",
+  "figmaName": "ContactItemType",
+  "category": "Molecules",
+  "variants": [
+    {
+      "type": "Default",
+      "nodeId": "1793:71235",
+      "description": "横並び：ラベル（入力タイプ）+ ドロップダウン（初期値「姓名」）",
+      "layout": "horizontal",
+      "height": 48
+    },
+    {
+      "type": "Date",
+      "nodeId": "1793:71262",
+      "description": "縦並び：ドロップダウン行 + オプション行（チェックボックス「今日の日付を初期値とする」+ 初期値入力欄）",
+      "layout": "vertical"
+    },
+    {
+      "type": "Year",
+      "nodeId": "1793:71291",
+      "description": "縦並び：ドロップダウン行 + オプション行（有効範囲 from/to 入力 + 初期値入力）",
+      "layout": "vertical"
+    },
+    {
+      "type": "Textbox",
+      "nodeId": "1793:71335",
+      "description": "縦並び：ドロップダウン行 + オプション行（長さ：短/中/長 ラジオボタン）",
+      "layout": "vertical"
+    },
+    {
+      "type": "Textarea",
+      "nodeId": "1793:71494",
+      "description": "縦並び：ドロップダウン行 + オプション行（長さ：短/中/長 + 高さ：短/中/長 ラジオボタン）",
+      "layout": "vertical"
+    },
+    {
+      "type": "Checkbox",
+      "nodeId": "1793:71493",
+      "description": "縦並び：ドロップダウン行 + オプション行（※注意書き + テキストエリア「選択肢1」）",
+      "layout": "vertical"
+    },
+    {
+      "type": "Radiobutton",
+      "nodeId": "1793:71533",
+      "description": "縦並び：ドロップダウン行 + オプション行（※注意書き + テキストエリア「選択肢1」）",
+      "layout": "vertical"
+    },
+    {
+      "type": "Selectbox",
+      "nodeId": "1793:71572",
+      "description": "縦並び：ドロップダウン行 + オプション行（※注意書き + テキストエリア「選択肢1」）",
+      "layout": "vertical"
+    },
+    {
+      "type": "File",
+      "nodeId": "1793:71657",
+      "description": "縦並び：ドロップダウン行 + オプション行（長さ：短/中/長 ラジオボタン）",
+      "layout": "vertical"
+    }
+  ],
+  "sizes": {
+    "width": 640,
+    "headerRow": { "height": 48 },
+    "optionRow": { "paddingLeft": 112, "paddingY": 4 },
+    "optionArea": { "borderRadius": 8, "padding": 16 }
+  },
+  "colors": {
+    "background": "white",
+    "optionAreaBackground": "#f8fafc",
+    "textPrimary": "#0d2144",
+    "textSecondary": "#64748b",
+    "textXs": "#0d2144",
+    "borderColor": "#e5e5e5",
+    "labelAccent": "#0d2144",
+    "radioSelected": "#2862cb",
+    "radioUnselected": "#cbd5e1"
+  },
+  "typography": {
+    "label": { "family": "Noto Sans JP", "weight": 700, "size": 14, "lineHeight": 1 },
+    "dropdownText": { "family": "Noto Sans JP", "weight": 400, "size": 14, "lineHeight": "20px" },
+    "optionLabel": { "family": "Noto Sans JP", "weight": 400, "size": 14, "lineHeight": 1 },
+    "note": { "family": "Noto Sans JP", "weight": 400, "size": 12, "lineHeight": 1 }
+  },
+  "structure": {
+    "labelWidth": 96,
+    "dropdownWidth": 368,
+    "dropdownHeight": 36,
+    "dropdownBorderRadius": 6,
+    "labelBarWidth": 2,
+    "labelBarBorderRadius": 2,
+    "textareaHeight": 96
+  },
+  "notes": [
+    "Default バリアントのみ横並び（height: 48px固定）",
+    "他バリアントは縦並び（ドロップダウン行 + オプション行）",
+    "オプション行は左 padding 112px（ラベル幅96px + gap16px に対応）",
+    "DropdownMenu 内に chevron-down アイコン（size: 16px）",
+    "Checkbox/Radiobutton/Selectbox のオプションは textarea 風の複数行テキスト入力",
+    "Textbox/File/Textarea のオプションは RadioButton で 短/中/長 を選択",
+    "Year のオプションは from/to の数値入力 + 初期値入力",
+    "Date のオプションはチェックボックス（今日の日付を初期値）+ 初期値テキスト入力"
+  ]
+}

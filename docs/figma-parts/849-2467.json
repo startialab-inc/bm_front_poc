@@ -1,0 +1,56 @@
+{
+  "componentName": "AppTab",
+  "nodeId": "849:2467",
+  "figmaName": "Tab",
+  "vueComponent": "AppTab.vue",
+  "moleculeId": "#30",
+  "childComponent": "AppTabItem.vue（A-13）",
+  "description": "複数タブを横並びに並べるタブコンポーネント。下線で選択状態を示す。",
+  "container": {
+    "borderBottom": "1px solid #e5e5e5",
+    "borderBottomToken": "divider/divider-primary",
+    "background": "なし（透明）",
+    "layout": "flex row、items-start、gap: 0px、padding: 0px",
+    "width": "コンテナ幅に依存"
+  },
+  "states": {
+    "selected": {
+      "element": "div（TabChild）",
+      "background": "#ffffff",
+      "backgroundToken": "background/surface/bg-sf-primary",
+      "borderBottom": "2px solid #2862cb",
+      "borderBottomToken": "divider/divider-brand",
+      "height": "44px",
+      "width": "204px",
+      "innerPadding": "4px 8px（py-1 px-2）",
+      "textColor": "#0d2144",
+      "textColorToken": "text/text-primary",
+      "fontSize": "14px",
+      "fontWeight": "500（medium）",
+      "lineHeight": "20px",
+      "textAlign": "center"
+    },
+    "unselected": {
+      "element": "div（TabChild）",
+      "background": "#ffffff",
+      "backgroundToken": "background/surface/bg-sf-primary",
+      "borderBottom": "なし",
+      "height": "44px",
+      "width": "204px",
+      "innerPadding": "4px 8px",
+      "textColor": "#64748b",
+      "textColorToken": "text/text-secondary",
+      "fontSize": "14px",
+      "fontWeight": "500（medium）",
+      "lineHeight": "20px",
+      "textAlign": "center"
+    }
+  },
+  "notes": [
+    "Tab コンテナの下線（#e5e5e5, 1px）は常時表示",
+    "選択中の TabChild のみ border-bottom 2px brand blue（#2862cb）が重なる",
+    "SegmentControl とは異なりバッジ数字なし",
+    "各タブ幅は固定 204px（Figma の実寸）",
+    "子要素は AppTabItem.vue（A-13）を v-for で繰り返す"
+  ]
+}

@@ -11,6 +11,9 @@ import i18n from '../src/locales/index';
 
 const preview: Preview = {
   parameters: {
+    docs: {
+      codePanel: true,
+    },
     backgrounds: {
       default: 'light',
       values: [

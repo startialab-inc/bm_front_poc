@@ -1,0 +1,120 @@
+{
+  "componentName": "AppSidebarMenuItem",
+  "nodeId": "308:6450",
+  "figmaName": "side-bar/menu-open",
+  "description": "サイドバーの開閉可能なメニューアイテム。grip-horizontal アイコン + テキスト + オプションの通知バッジ + chevron アイコンを横並び。3状態（Default/Current/Hover）。",
+  "variants": [
+    {
+      "name": "Default",
+      "nodeId": "308:6451",
+      "description": "通常状態。背景 white、テキスト #0d2144、chevron-down アイコン"
+    },
+    {
+      "name": "Current",
+      "nodeId": "308:6457",
+      "description": "現在地状態。背景 #2862cb (btn-primary)、テキスト white、chevron-up アイコン"
+    },
+    {
+      "name": "Hover",
+      "nodeId": "308:6463",
+      "description": "ホバー状態。背景 #ddeaff (blue-monkey/50)、テキスト #2862cb (text-brand)、chevron-down アイコン"
+    }
+  ],
+  "props": {
+    "notificationNumber": {
+      "type": "boolean",
+      "default": false,
+      "description": "通知バッジの表示/非表示"
+    },
+    "sidebarText": {
+      "type": "string",
+      "default": "ダッシュボード",
+      "description": "メニューのテキストラベル"
+    },
+    "state": {
+      "type": "'Default' | 'Current' | 'Hover'",
+      "default": "Default"
+    }
+  },
+  "sizes": {
+    "width": 224,
+    "height": 40
+  },
+  "colors": {
+    "bgDefault": "#ffffff",
+    "bgCurrent": "#2862cb",
+    "bgHover": "#ddeaff",
+    "textDefault": "#0d2144",
+    "textCurrent": "#ffffff",
+    "textHover": "#2862cb",
+    "iconDefault": "#1e3a8a",
+    "iconCurrent": "#ffffff",
+    "iconHover": "#1e3a8a",
+    "notificationBg": "#10b981",
+    "notificationText": "#fafafa"
+  },
+  "typography": {
+    "label": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": 1
+    },
+    "notification": {
+      "fontFamily": "Geist",
+      "fontWeight": 600,
+      "fontSize": 12,
+      "lineHeight": 16
+    }
+  },
+  "spacing": {
+    "borderRadius": 8,
+    "paddingX": 12,
+    "paddingY": 8,
+    "gap": 8
+  },
+  "structure": {
+    "root": {
+      "layout": "flex-row",
+      "height": 40,
+      "children": [
+        {
+          "name": "グリップアイコン",
+          "icon": "grip-horizontal",
+          "iconFamily": "Font Awesome 7 Free Solid",
+          "iconSize": 16,
+          "containerSize": 20
+        },
+        {
+          "name": "テキストラベル",
+          "tag": "p",
+          "flex": "1_0_0",
+          "fontSize": 14
+        },
+        {
+          "name": "通知バッジ（省略可）",
+          "tag": "div",
+          "size": 16,
+          "borderRadius": 9999,
+          "bg": "#10b981",
+          "text": "1",
+          "fontSize": 12,
+          "condition": "notificationNumber === true"
+        },
+        {
+          "name": "chevron アイコン",
+          "iconDefault": "chevron-down",
+          "iconCurrent": "chevron-up",
+          "iconSize": 10
+        }
+      ]
+    }
+  },
+  "icons": {
+    "grip": "fa-solid fa-grip-horizontal",
+    "chevronDown": "fa-solid fa-chevron-down",
+    "chevronUp": "fa-solid fa-chevron-up"
+  },
+  "states": ["Default", "Current", "Hover"],
+  "notes": "session-plan の M-4 AppSidebarMenuItem.vue に対応。Atom #25 (308:6380 side-bar/menu-icon) とこのコンポーネント (308:6450) を統合した Molecule。Current 状態では chevron-up に切り替わる（サブメニュー展開を示す）。"
+}

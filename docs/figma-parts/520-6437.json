@@ -1,0 +1,52 @@
+{
+  "componentName": "AppSidebarSubMenu",
+  "nodeId": "520:6437",
+  "figmaName": "side-bar/menu-icon/sub-menu",
+  "description": "メニューアイコンのサブメニューリスト。白背景＋drop-shadow のポップアップ形式。#40 (308:6469) と同一 Vue コンポーネント（AppSidebarSubMenu.vue）として実装する。",
+  "variants": [
+    {
+      "name": "Border",
+      "nodeId": "520:6438",
+      "description": "唯一のバリアント。白背景＋drop-shadow のポップアップ形式。"
+    }
+  ],
+  "comparedWith308_6469": {
+    "difference": "#40 (308:6469) は左縦ボーダー付きインライン展開。#41 (520:6437) は白背景＋drop-shadow のポップアップ形式。",
+    "commonPoint": "どちらも AppSidebarSubMenuItem を縦に並べたリスト構造（同一 Vue コンポーネント）。"
+  },
+  "sizes": {
+    "width": 240
+  },
+  "colors": {
+    "background": "#ffffff",
+    "itemText": "#0d2144"
+  },
+  "typography": {
+    "itemText": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": 1
+    }
+  },
+  "spacing": {
+    "borderRadius": 8,
+    "padding": 12,
+    "gap": 8,
+    "itemHeight": 36,
+    "itemPaddingX": 12,
+    "itemBorderRadius": 8
+  },
+  "shadow": {
+    "token": "shadow/xl",
+    "description": "drop-shadow xl（2層）: offset(0,20px) blur-25px rgba(0,0,0,0.1), offset(0,8px) blur-10px rgba(0,0,0,0.1)"
+  },
+  "childComponent": {
+    "nodeId": "417:8662",
+    "figmaName": "Sidebar / SidebarMenuSubItem",
+    "description": "サブメニューアイテム単体。テキストのみ。高さ 36px。"
+  },
+  "reference": "shadcn/ui SidebarMenuSub に類似: https://ui.shadcn.com/docs/components/sidebar#sidebarmenusub",
+  "states": ["Border"],
+  "notes": "session-plan の M-5 AppSidebarSubMenu.vue に対応（#40 と同一コンポーネント）。#40 との使い分け: type prop などでポップアップ/インラインを切り替えるか、それぞれ別コンポーネントにするかは Phase D 実装時に判断。"
+}

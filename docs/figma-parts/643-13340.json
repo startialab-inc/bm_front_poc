@@ -1,0 +1,79 @@
+{
+  "componentName": "AppBlockEditMenuCell",
+  "nodeId": "643:13340",
+  "figmaName": "BlockEditMenuCell",
+  "description": "ブロック追加メニューのセルコンポーネント。ダークブルー背景に「+」アイコン + テキストを縦並びで表示。ホバー/フォーカス時に背景が明るい青に変化。",
+  "variants": [
+    {
+      "name": "Default",
+      "nodeId": "643:13337",
+      "description": "通常状態。背景 #1b4187 (bg-sf-editor)、gap 4px"
+    },
+    {
+      "name": "Hover",
+      "nodeId": "643:13338",
+      "description": "ホバー状態。背景 #2862cb (bg-btn-secondary)、gap 8px"
+    },
+    {
+      "name": "Focus",
+      "nodeId": "643:13339",
+      "description": "フォーカス状態。背景 #2862cb (bg-btn-secondary)、gap 8px"
+    }
+  ],
+  "sizes": {
+    "width": 112,
+    "height": 80
+  },
+  "colors": {
+    "bgDefault": "#1b4187",
+    "bgHoverFocus": "#2862cb",
+    "iconColor": "#ffffff",
+    "textColor": "#ffffff"
+  },
+  "typography": {
+    "label": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": 700,
+      "fontSize": 12,
+      "lineHeight": 16,
+      "color": "#ffffff"
+    }
+  },
+  "spacing": {
+    "padding": 8,
+    "gapDefault": 4,
+    "gapHoverFocus": 8
+  },
+  "structure": {
+    "root": {
+      "layout": "flex-col",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "children": [
+        {
+          "name": "アイコンコンテナ",
+          "tag": "div",
+          "width": 22,
+          "height": 24,
+          "padding": 10,
+          "children": [
+            { "icon": "add（plus）", "iconFamily": "Font Awesome 6 Free Solid", "iconSize": 16, "color": "#ffffff" }
+          ]
+        },
+        {
+          "name": "ラベル",
+          "tag": "div",
+          "text": "ブロック追加",
+          "fontSize": 12,
+          "fontWeight": 700,
+          "color": "#ffffff"
+        }
+      ]
+    }
+  },
+  "icons": {
+    "add": "fa-solid fa-plus"
+  },
+  "states": ["Default", "Hover", "Focus"],
+  "notes": "Hover と Focus は同じ見た目（背景 #2862cb）。アイコンは Font Awesome 6 の 'add'（fa-plus に相当）。gap が Default: 4px、Hover/Focus: 8px で異なる。"
+}

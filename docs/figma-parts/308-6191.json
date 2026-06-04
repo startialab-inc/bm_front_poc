@@ -1,0 +1,117 @@
+{
+  "componentName": "AppSidebar",
+  "nodeId": "308:6191",
+  "figmaName": "sidebar",
+  "category": "Organisms",
+  "variants": [
+    {
+      "state": "open",
+      "nodeId": "308:6192",
+      "description": "展開状態：240px幅、ロゴ（横型）+ テキスト付きメニュー項目 + 再構築ボタン",
+      "width": 240,
+      "height": 900
+    },
+    {
+      "state": "icon only",
+      "nodeId": "308:6210",
+      "description": "折りたたみ状態：56px幅、ロゴ（正方形）+ アイコンのみ + 再構築ボタン",
+      "width": 56,
+      "height": 900
+    }
+  ],
+  "sizes": {
+    "open": { "width": 240, "height": 900 },
+    "iconOnly": { "width": 56, "height": 900 },
+    "headerHeight": 56,
+    "menuItemHeight": 40,
+    "subMenuItemHeight": 36,
+    "menuItemPaddingX": 12,
+    "menuItemPaddingY": 8,
+    "menuItemBorderRadius": 8,
+    "contentPadding": 8,
+    "contentGap": 4
+  },
+  "colors": {
+    "background": "white",
+    "border": "#e5e5e5",
+    "menuItemDefault": "white",
+    "menuItemActive": "#2862cb",
+    "menuItemActiveText": "white",
+    "subMenuItemActive": "#e2e8f0",
+    "textPrimary": "#0d2144",
+    "textActive": "white",
+    "iconDefault": "#143166",
+    "iconActive": "white",
+    "iconActiveInNav": "#1e3a8a",
+    "subMenuBorderColor": "#e5e5e5",
+    "rebuildButtonBg": "#d4d4d8",
+    "rebuildButtonText": "#fafafa"
+  },
+  "typography": {
+    "menuLabel": { "family": "Noto Sans JP", "weight": 400, "size": 14, "lineHeight": 1 },
+    "subMenuLabel": { "family": "Noto Sans JP", "weight": 400, "size": 14, "lineHeight": 1 },
+    "rebuildButton": { "family": "Noto Sans JP", "weight": 700, "size": 14, "lineHeight": 1 }
+  },
+  "logo": {
+    "landscape": { "width": 160, "height": 48, "gap": 6 },
+    "square": { "width": 40, "height": 40 }
+  },
+  "menuItemsOpen": [
+    { "icon": "grip-horizontal", "iconStyle": "Solid", "label": "ダッシュボード", "hasChevron": true, "state": "default" },
+    { "icon": "sitemap", "iconStyle": "Solid", "label": "サイト", "hasChevron": true, "state": "active", "hasSubMenu": true,
+      "subItems": [
+        { "label": "サイト一覧", "state": "default" },
+        { "label": "共通パーツ", "state": "active" },
+        { "label": "ゴミ箱", "state": "default" }
+      ]
+    },
+    { "icon": "newspaper", "iconStyle": "Regular", "label": "記事", "hasChevron": true, "state": "default" },
+    { "icon": "bell", "iconStyle": "Regular", "label": "お知らせ", "hasChevron": false, "state": "default" },
+    { "icon": "image", "iconStyle": "Regular", "label": "ファイル", "hasChevron": false, "state": "default" },
+    { "icon": "image", "iconStyle": "Regular", "label": "アイテム", "hasChevron": true, "state": "default" },
+    { "icon": "users", "iconStyle": "Solid", "label": "ユーザー", "hasChevron": false, "state": "default" },
+    { "icon": "gear", "iconStyle": "Solid", "label": "各種設定", "hasChevron": true, "state": "default" },
+    { "icon": "tools", "iconStyle": "Solid", "label": "各種ツール", "hasChevron": true, "state": "default" },
+    { "icon": "database", "iconStyle": "Solid", "label": "バックアップ", "hasChevron": false, "state": "default" },
+    { "icon": "ellipsis", "iconStyle": "Solid", "label": "その他", "hasChevron": true, "state": "default" }
+  ],
+  "menuItemsIconOnly": [
+    { "icon": "grip-horizontal", "iconStyle": "Solid", "state": "active" },
+    { "icon": "sitemap", "iconStyle": "Solid", "state": "default" },
+    { "icon": "newspaper", "iconStyle": "Regular", "state": "default" },
+    { "icon": "bell", "iconStyle": "Regular", "state": "default" },
+    { "icon": "image", "iconStyle": "Regular", "state": "default" },
+    { "icon": "image", "iconStyle": "Regular", "state": "default" },
+    { "icon": "users", "iconStyle": "Solid", "state": "default" },
+    { "icon": "gear", "iconStyle": "Solid", "state": "default" },
+    { "icon": "tools", "iconStyle": "Solid", "state": "default" },
+    { "icon": "database", "iconStyle": "Solid", "state": "default" },
+    { "icon": "ellipsis", "iconStyle": "Solid", "state": "default" }
+  ],
+  "subMenu": {
+    "paddingLeft": 24,
+    "paddingRight": 16,
+    "paddingY": 12,
+    "gap": 8,
+    "borderLeft": { "width": 1, "color": "#e5e5e5", "left": 16 }
+  },
+  "rebuildButton": {
+    "icon": "rotate",
+    "label": "サイトの再構築",
+    "background": "#d4d4d8",
+    "open": { "height": 36, "borderRadius": 8 },
+    "iconOnly": { "height": 36, "borderRadius": 10 }
+  },
+  "notes": [
+    "open 状態：幅 240px、メニュー項目にラベルとアイコンを表示",
+    "icon only 状態：幅 56px、アイコンのみ表示",
+    "アクティブメニューは青背景（#2862cb）、白文字",
+    "サブメニューは左に縦線ボーダー付き",
+    "サブメニューアクティブ項目は bg-sf-tertiary（#e2e8f0）背景",
+    "サイドバー下部に「サイトの再構築」ボタン固定（position: absolute）",
+    "ロゴは Landscape/Square の 2 バリアント（open/icon only で切替）",
+    "Font Awesome アイコンは fa-solid / fa-regular の混在",
+    "chevron-down（折りたたみ）/ chevron-up（展開）でサブメニュートグル",
+    "icon only の再構築ボタンは border-radius: 10px（open は 8px）"
+  ]
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="66"
+   height="65"
+   viewBox="0 0 66 65"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="Contact.svg"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="12.430769"
+     inkscape:cx="32.982673"
+     inkscape:cy="32.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M 29.6,43.5 22.8,50 V 43.5 Z M 41.5,24 c 4.6944,0 8.5,3.6377 8.5,8.125 0,4.4873 -3.8056,8.125 -8.5,8.125 h -17 C 19.8056,40.25 16,36.6123 16,32.125 16,27.6377 19.8056,24 24.5,24 Z"
+     fill="white"
+     id="path1"
+     style="fill:#ffffff" />
+</svg>

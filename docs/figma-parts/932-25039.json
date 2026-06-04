@@ -1,0 +1,88 @@
+{
+  "componentName": "AppPagination",
+  "nodeId": "932:25039",
+  "figmaName": "Pagination",
+  "vueComponent": "AppPagination.vue",
+  "moleculeId": "#31",
+  "childComponent": "AppPagerNumber.vue（A-14）",
+  "description": "総件数テキスト＋ページナビゲーションボタンで構成されるページネーション。",
+  "container": {
+    "layout": "flex row",
+    "gap": "24px",
+    "alignItems": "center"
+  },
+  "totalCount": {
+    "text": "全 N 件中",
+    "font": "Noto Sans JP Regular",
+    "fontSize": "12px",
+    "fontWeight": "400（regular）",
+    "lineHeight": "1（leading-none）",
+    "textColor": "#0d2144",
+    "textColorToken": "text/text-primary",
+    "overflow": "ellipsis"
+  },
+  "pager": {
+    "layout": "flex row",
+    "gap": "16px",
+    "paddingLeft": "12px",
+    "alignItems": "center",
+    "navIcons": {
+      "font": "Font Awesome 7 Free Solid",
+      "fontSize": "14px",
+      "icons": {
+        "first": "fa-solid fa-angles-left",
+        "prev": "fa-solid fa-chevron-left",
+        "next": "fa-solid fa-chevron-right",
+        "last": "fa-solid fa-angles-right"
+      },
+      "colorActive": "#0d2144",
+      "colorActiveToken": "text/text-primary",
+      "colorDisabled": "#cbd5e1",
+      "colorDisabledToken": "text/text-disable"
+    },
+    "pageNumbers": {
+      "component": "AppPagerNumber.vue（A-14）",
+      "size": "24px（24×24px 円形）",
+      "sizeToken": "height/h-6, width/w-6",
+      "borderRadius": "9999px（rounded-full）",
+      "states": {
+        "active": {
+          "background": "#143166",
+          "backgroundToken": "background/button/secondary/btn-secondary-default-outline",
+          "textColor": "#ffffff",
+          "textColorToken": "new-ui/grayscale/#ffffff",
+          "border": "なし"
+        },
+        "default": {
+          "background": "#f8fafc",
+          "backgroundToken": "background/surface/bg-sf-secondary",
+          "textColor": "#0d2144",
+          "textColorToken": "text/text-primary",
+          "border": "1px solid #e5e5e5",
+          "borderToken": "divider/divider-primary"
+        },
+        "ellipsis": {
+          "text": "‥",
+          "style": "default と同スタイル"
+        }
+      },
+      "font": "Noto Sans JP Regular",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "lineHeight": "1（leading-none）"
+    }
+  },
+  "example": {
+    "totalCount": "全 42 件中",
+    "pages": ["1（active）", "2", "3", "‥", "10"],
+    "firstPrevDisabled": true,
+    "nextLastActive": true
+  },
+  "notes": [
+    "ナビゲーション矢印は FontAwesome（CDN 経由、fa-solid）を使用",
+    "先頭・前ページ矢印が無効（disabled）な場合は text-disable (#cbd5e1)",
+    "ページ番号には AppPagerNumber.vue (A-14) を v-for で使用",
+    "省略記号 (‥) も AppPagerNumber と同スタイルの div で表現",
+    "Figma typo: コンポーネント名は PagerNubmer（正: PagerNumber）"
+  ]
+}

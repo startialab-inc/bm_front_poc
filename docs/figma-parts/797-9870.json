@@ -1,0 +1,71 @@
+{
+  "componentName": "AppBlockEditMenu",
+  "nodeId": "797:9870",
+  "figmaName": "BlockEditMenu",
+  "category": "Molecules",
+  "index": 44,
+  "description": "ブロック編集メニュー。非選択時（Unselect）と選択時（Select）でメニュー項目数が異なる縦並びパネル。",
+  "variants": [
+    {
+      "name": "Unselect",
+      "nodeId": "643:13358",
+      "description": "ブロック未選択時のメニュー（4項目 + フッターヘルプ）",
+      "size": { "width": 112, "height": 736 },
+      "menuItems": [
+        { "icon": "add", "label": "ブロック追加" },
+        { "icon": "image", "label": "ファイルアップロード" },
+        { "icon": "shapes", "label": "ダウンロードブロック" },
+        { "icon": "pager", "label": "ページテンプレート" }
+      ],
+      "footerItem": {
+        "icon": "circle-question",
+        "label": "編集ツールの使い方",
+        "position": "absolute bottom-[47px]"
+      }
+    },
+    {
+      "name": "Select",
+      "nodeId": "797:9868",
+      "description": "ブロック選択時のメニュー（9項目）",
+      "size": { "width": 112, "height": 720 },
+      "menuItems": [
+        { "icon": "clone", "label": "ブロックコピー" },
+        { "icon": "image", "label": "ファイルアップロード" },
+        { "icon": "eye-slash", "label": "ブロック非表示" },
+        { "icon": "pencil", "label": "ブロック編集" },
+        { "icon": "add", "label": "ブロック追加" },
+        { "icon": "star", "label": "お気に入りに追加" },
+        { "icon": "circle-arrow-down", "label": "ダウンロードブロック" },
+        { "icon": "trash", "label": "ブロック削除" },
+        { "icon": "lock", "label": "ブロックロック" }
+      ]
+    }
+  ],
+  "cell": {
+    "description": "BlockEditMenuCell: 各メニュー項目の共通セル",
+    "nodeId": "643:13337",
+    "size": { "width": 112, "height": 80 },
+    "padding": "8px",
+    "gap": "4px",
+    "iconSize": 16,
+    "iconColor": "var(--tailwind-colors/base/white, white)",
+    "iconFont": "Font Awesome 6 Free: Solid",
+    "labelFontFamily": "Noto Sans JP Bold",
+    "labelFontSize": 12,
+    "labelFontWeight": 700,
+    "labelLineHeight": 16,
+    "labelColor": "var(--text/text-tertiary, white)",
+    "labelTextAlign": "center"
+  },
+  "colors": {
+    "background": "#1b4187",
+    "backgroundToken": "var(--background/surface/bg-sf-editor, #1b4187)",
+    "iconColor": "#ffffff",
+    "labelColor": "#ffffff"
+  },
+  "layout": {
+    "direction": "column",
+    "gap": 0,
+    "itemSize": { "width": 112, "height": 80 }
+  }
+}

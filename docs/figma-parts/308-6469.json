@@ -1,0 +1,80 @@
+{
+  "componentName": "AppSidebarSubMenu",
+  "nodeId": "308:6469",
+  "figmaName": "side-bar/menu-open/sub-menu",
+  "description": "サイドバーのサブメニューリスト。左側に縦ボーダーラインを持ち、AppSidebarSubMenuItem を縦に並べたコンテナコンポーネント。",
+  "variants": [
+    {
+      "name": "Border",
+      "nodeId": "308:6470",
+      "description": "唯一のバリアント（type: Border）。左縦ボーダー付きサブメニューリスト。"
+    }
+  ],
+  "sizes": {
+    "width": 240
+  },
+  "colors": {
+    "subMenuItemText": "#0d2144",
+    "leftBorderColor": "画像アセット（CSS border-left または ::before で代替可能）"
+  },
+  "typography": {
+    "itemText": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": 1
+    }
+  },
+  "spacing": {
+    "paddingTop": 12,
+    "paddingBottom": 12,
+    "paddingLeft": 24,
+    "paddingRight": 16,
+    "itemGap": 8,
+    "itemHeight": 36,
+    "itemPaddingX": 12,
+    "itemBorderRadius": 8,
+    "leftBorderPositionFromLeft": 16
+  },
+  "structure": {
+    "root": {
+      "tag": "div",
+      "layout": "flex-col",
+      "gap": 8,
+      "paddingTop": 12,
+      "paddingBottom": 12,
+      "paddingLeft": 24,
+      "paddingRight": 16,
+      "children": [
+        {
+          "name": "左縦ボーダー（装飾）",
+          "position": "absolute",
+          "left": 16,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "description": "Figma では画像アセット。CSS では border-left: 1px solid や ::before 擬似要素で実現"
+        },
+        {
+          "name": "サブメニューアイテム（繰り返し）",
+          "component": "AppSidebarSubMenuItem (417:8671)",
+          "count": "可変（Figma では 10 件表示）",
+          "eachItemHeight": 36,
+          "eachItemPaddingX": 12,
+          "eachItemBorderRadius": 8
+        }
+      ]
+    }
+  },
+  "childComponent": {
+    "nodeId": "417:8662",
+    "figmaName": "Sidebar / SidebarMenuSubItem",
+    "description": "サブメニューアイテム単体。テキストのみ。高さ 36px。"
+  },
+  "assets": {
+    "leftBorder": "Figma 上では画像アセット（imgBorder）。実装時は CSS で代替（border-left: 1px solid #e5e5e5 程度）。"
+  },
+  "reference": "shadcn/ui SidebarMenuSub に類似: https://ui.shadcn.com/docs/components/sidebar#sidebarmenusub",
+  "states": ["Border"],
+  "notes": "session-plan の M-5 AppSidebarSubMenu.vue に対応。#40 (308:6469) と #41 (520:6437) は同一コンポーネントとして扱う。子コンポーネントは M-6 AppSidebarSubMenuItem.vue (417:8671)。左縦ボーダーは画像アセットだが CSS で代替可能。"
+}

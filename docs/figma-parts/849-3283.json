@@ -1,0 +1,95 @@
+{
+  "componentName": "AppCalendarTime",
+  "nodeId": "849:3283",
+  "figmaName": "Calendar+Time",
+  "description": "日付入力欄 + 時刻入力欄 × 2 を横並びにした複合入力コンポーネント。各欄は InputGroup 構造（プレースホルダーテキスト + アイコン）。",
+  "variants": [
+    {
+      "name": "default",
+      "description": "単一バリアント（状態切り替えなし）"
+    }
+  ],
+  "structure": {
+    "root": {
+      "nodeId": "849:3283",
+      "tag": "div",
+      "layout": "flex-row",
+      "gap": 12,
+      "width": 720,
+      "children": [
+        {
+          "nodeId": "849:3177",
+          "name": "InputGroup（日付）",
+          "tag": "div",
+          "height": 36,
+          "paddingX": 12,
+          "paddingY": 4,
+          "gap": 16,
+          "children": [
+            { "tag": "p", "text": "YYYY/MM/DD", "fontSize": 14, "color": "#64748b" },
+            { "tag": "div", "icon": "calendar", "iconSize": 16, "color": "#64748b" }
+          ]
+        },
+        {
+          "nodeId": "849:3262",
+          "name": "InputGroup（開始時刻）",
+          "tag": "div",
+          "height": 36,
+          "paddingX": 12,
+          "paddingY": 4,
+          "gap": 16,
+          "children": [
+            { "tag": "p", "text": "00:00", "fontSize": 14, "color": "#64748b" },
+            { "tag": "div", "icon": "clock", "iconSize": 16, "color": "#64748b" }
+          ]
+        },
+        {
+          "nodeId": "930:18878",
+          "name": "InputGroup（終了時刻）",
+          "tag": "div",
+          "height": 36,
+          "paddingX": 12,
+          "paddingY": 4,
+          "gap": 16,
+          "children": [
+            { "tag": "p", "text": "00:00", "fontSize": 14, "color": "#64748b" },
+            { "tag": "div", "icon": "clock", "iconSize": 16, "color": "#64748b" }
+          ]
+        }
+      ]
+    }
+  },
+  "sizes": {
+    "width": 720,
+    "inputGroupHeight": 36
+  },
+  "colors": {
+    "inputBg": "#ffffff",
+    "inputBorder": "#e5e5e5",
+    "placeholderText": "#64748b",
+    "icon": "#64748b"
+  },
+  "typography": {
+    "inputText": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": 1,
+      "color": "#64748b"
+    }
+  },
+  "spacing": {
+    "borderRadius": 8,
+    "borderWidth": 1,
+    "paddingX": 12,
+    "paddingY": 4,
+    "gapBetweenGroups": 12,
+    "gapInsideGroup": 16
+  },
+  "icons": {
+    "date": "fa-solid fa-calendar",
+    "time": "fa-solid fa-clock"
+  },
+  "states": ["default"],
+  "notes": "3つの InputGroup（日付・開始時刻・終了時刻）を横並びに配置。単一バリアント。プレースホルダーは静的テキスト。"
+}

@@ -1,0 +1,84 @@
+{
+  "componentName": "AppModalFooter",
+  "nodeId": "871:50191",
+  "figmaName": "ModalFooter",
+  "category": "Molecules",
+  "index": 45,
+  "description": "モーダルのフッター部分。ボタン群を右揃えで並べる。Basic（2ボタン）とArticle（3ボタン）の2バリアント。",
+  "variants": [
+    {
+      "name": "Basic",
+      "nodeId": "849:5193",
+      "description": "基本的なモーダルフッター。保存して閉じる（secondary）+ 保存して設定を続ける（primary）",
+      "buttons": [
+        { "label": "保存して閉じる", "variant": "secondary" },
+        { "label": "保存して設定を続ける", "variant": "primary" }
+      ]
+    },
+    {
+      "name": "Article",
+      "nodeId": "871:50190",
+      "description": "記事関連のモーダルフッター。閉じる（secondary）+ 申請する（submit/orange）+ 保存する（primary）",
+      "buttons": [
+        { "label": "閉じる", "variant": "secondary" },
+        { "label": "申請する", "variant": "submit" },
+        { "label": "保存する", "variant": "primary" }
+      ]
+    }
+  ],
+  "sizes": {
+    "width": 768,
+    "height": "auto（コンテンツ依存）"
+  },
+  "styles": {
+    "background": "#ffffff",
+    "backgroundToken": "var(--background/surface/bg-sf-primary, white)",
+    "borderTop": "1px solid #e5e5e5",
+    "borderTopToken": "var(--divider/divider-primary, #e5e5e5)",
+    "padding": "16px",
+    "paddingToken": "var(--spacing/4, 16px)",
+    "gap": "0px",
+    "buttonGap": "12px",
+    "buttonGapToken": "var(--spacing/3, 12px)",
+    "alignment": "justify-end（右揃え）"
+  },
+  "button": {
+    "height": 40,
+    "paddingX": 16,
+    "paddingY": 8,
+    "borderRadius": 8,
+    "borderRadiusToken": "var(--border-radius/rounded-md, 8px)",
+    "fontFamily": "Geist Medium / Noto Sans JP",
+    "fontSize": 14,
+    "fontSizeToken": "var(--text/sm/font-size, 14px)",
+    "fontWeight": 500,
+    "lineHeight": 20,
+    "lineHeightToken": "var(--text/sm/line-height, 20px)",
+    "variants": {
+      "primary": {
+        "background": "#2862cb",
+        "backgroundToken": "var(--background/button/bg-btn-primary, #2862cb)",
+        "textColor": "#ffffff",
+        "border": "none"
+      },
+      "secondary": {
+        "background": "#ffffff",
+        "backgroundToken": "var(--background/surface/bg-sf-primary, white)",
+        "textColor": "#143166",
+        "textColorToken": "var(--brand/blue-monkey/800, #143166)",
+        "border": "1px solid #143166"
+      },
+      "submit": {
+        "background": "#ea580c",
+        "backgroundToken": "var(--background/button/bg-btn-submit, #ea580c)",
+        "textColor": "#ffffff",
+        "border": "none"
+      }
+    }
+  },
+  "notes": [
+    "AppButton コンポーネント（A-1）を利用して実装する",
+    "ボタンの slot/label はコンシューマー側で指定する（固定テキストではなく props で渡す）",
+    "variant='basic'と'article'はボタン構成が異なるため、slots か buttons prop でカスタマイズ可能にする"
+  ]
+}

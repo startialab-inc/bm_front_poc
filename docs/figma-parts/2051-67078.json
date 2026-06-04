@@ -1,0 +1,68 @@
+{
+  "componentName": "AppContactItemTypeSelectMenu",
+  "nodeId": "2051:67078",
+  "figmaName": "ContactItemTypeSelectMenu",
+  "category": "Molecules",
+  "variants": [],
+  "sizes": {
+    "width": 256,
+    "itemHeight": 32,
+    "paddingX": 8,
+    "paddingY": 16,
+    "gap": 8,
+    "borderRadius": 8
+  },
+  "colors": {
+    "background": "white",
+    "textPrimary": "#0d2144",
+    "divider": "#e5e5e5"
+  },
+  "typography": {
+    "item": { "family": "Noto Sans JP", "weight": 400, "size": 14, "lineHeight": 1 }
+  },
+  "shadow": {
+    "type": "drop-shadow",
+    "values": [
+      { "offsetX": 0, "offsetY": 10, "blur": 15, "color": "rgba(0,0,0,0.1)" },
+      { "offsetX": 0, "offsetY": 4, "blur": 6, "color": "rgba(0,0,0,0.1)" }
+    ]
+  },
+  "menuItems": {
+    "group1": [
+      "姓名",
+      "ふりがな",
+      "性別",
+      "郵便番号・住所",
+      "E-mail",
+      "年月日",
+      "年のみ",
+      "月のみ",
+      "日のみ",
+      "電話番号"
+    ],
+    "divider": true,
+    "group2": [
+      "テキストボックス（1行）",
+      "テキストエリア（複数行）",
+      "チェックボックス",
+      "ラジオボタン",
+      "セレクトボックス",
+      "ファイル添付"
+    ]
+  },
+  "itemStructure": {
+    "height": 32,
+    "paddingLeft": 12,
+    "paddingRight": 16,
+    "paddingY": 4,
+    "borderRadius": 8,
+    "hoverState": "未確認（Figmaにホバー状態なし）"
+  },
+  "notes": [
+    "バリアントなしの固定コンテンツ",
+    "2グループに分割（水平区切り線あり）",
+    "各アイテムは Button/text スタイル（pl-12、pr-16、py-4）",
+    "ドロップシャドウあり（shadow/lg）",
+    "ContactItemType の入力タイプドロップダウンを押した時に表示されるメニュー"
+  ]
+}

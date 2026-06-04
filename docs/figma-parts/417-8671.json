@@ -1,0 +1,87 @@
+{
+  "componentName": "AppSidebarSubMenuItem",
+  "nodeId": "417:8671",
+  "figmaName": "side-bar/sub-menu",
+  "description": "サブメニューアイテム単体。テキストのみのシンプルな横幅いっぱいのボタン。3状態（Default/Current/Hover）で背景色が変化。",
+  "variants": [
+    {
+      "name": "Default",
+      "nodeId": "417:8669",
+      "description": "通常状態。背景なし（透明）。テキスト #0d2144"
+    },
+    {
+      "name": "Current",
+      "nodeId": "417:8670",
+      "description": "現在地状態。内側コンテナ背景 #e2e8f0 (bg-sf-tertiary)。テキスト #0d2144"
+    },
+    {
+      "name": "Hover",
+      "nodeId": "417:8676",
+      "description": "ホバー状態。外側ラッパー背景 #ddeaff (blue-monkey/50)、角丸 8px。テキスト #0d2144"
+    }
+  ],
+  "structure": {
+    "root": {
+      "tag": "div",
+      "width": 214,
+      "variants": {
+        "Hover": { "background": "#ddeaff", "borderRadius": 8 },
+        "Default": { "background": "transparent" },
+        "Current": { "background": "transparent" }
+      },
+      "children": [
+        {
+          "name": "内側コンテナ（SidebarMenuSubItem）",
+          "nodeId": "I417:8662",
+          "tag": "div",
+          "height": 36,
+          "paddingX": 12,
+          "borderRadius": 8,
+          "flex": "1_0_0",
+          "variants": {
+            "Current": { "background": "#e2e8f0" },
+            "Default": { "background": "transparent" },
+            "Hover": { "background": "transparent" }
+          },
+          "children": [
+            {
+              "tag": "p",
+              "text": "Sub Menu Item",
+              "fontSize": 14,
+              "fontWeight": 400,
+              "color": "#0d2144",
+              "overflow": "ellipsis"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sizes": {
+    "width": 214,
+    "height": 36
+  },
+  "colors": {
+    "text": "#0d2144",
+    "bgDefault": "transparent",
+    "bgCurrent": "#e2e8f0",
+    "bgHover": "#ddeaff"
+  },
+  "typography": {
+    "itemText": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": 1,
+      "overflow": "ellipsis"
+    }
+  },
+  "spacing": {
+    "height": 36,
+    "paddingX": 12,
+    "borderRadius": 8
+  },
+  "reference": "shadcn/ui SidebarMenuSubItem に類似: https://ui.shadcn.com/docs/components/sidebar#sidebarmenusub",
+  "states": ["Default", "Current", "Hover"],
+  "notes": "session-plan の M-6 AppSidebarSubMenuItem.vue に対応。Hover 時は外側ラッパーに背景が付き、Current 時は内側コンテナに背景が付く（二重構造に注意）。"
+}
