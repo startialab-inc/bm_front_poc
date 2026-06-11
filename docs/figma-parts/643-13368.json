@@ -1,0 +1,65 @@
+{
+  "nodeId": "643:13368",
+  "name": "AddBlockMenuCell",
+  "atomicLevel": "Molecule",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "ブロック追加メニュー（AddBlockMenu）内の各セル。アイコン＋テキストの縦並び。3状態（Default/Hover/Focus）。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "gap": "var(--spacing/3, 12px)",
+    "height": "var(--height/h-16, 64px)",
+    "width": "144px",
+    "padding": "var(--spacing/4, 16px)",
+    "borderRadius": "var(--border-radius/rounded-sm, 6px)"
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "643:13365",
+      "background": "var(--background/surface/bg-sf-editor, #1b4187)"
+    },
+    {
+      "state": "Hover",
+      "nodeId": "643:13366",
+      "background": "var(--brand/blue-monkey/400, #4c7cd4)"
+    },
+    {
+      "state": "Focus",
+      "nodeId": "643:13367",
+      "background": "var(--brand/blue-monkey/400, #4c7cd4)"
+    }
+  ],
+  "icon": {
+    "position": "left",
+    "fontAwesome": "fa-puzzle-piece",
+    "size": "16px",
+    "color": "var(--iconitify/ic-tertiary, white)"
+  },
+  "typography": {
+    "label": {
+      "fontFamily": "Noto Sans JP",
+      "fontSize": "var(--text/xs/font-size, 12px)",
+      "fontWeight": 700,
+      "lineHeight": "var(--text/xs/line-height, 16px)",
+      "color": "var(--text/text-tertiary, white)",
+      "textAlign": "center"
+    }
+  },
+  "props": {
+    "state": {
+      "type": "string",
+      "enum": ["Default", "Hover", "Focus"],
+      "default": "Default"
+    },
+    "icon": {
+      "type": "string",
+      "description": "FontAwesome アイコン名"
+    },
+    "label": {
+      "type": "string",
+      "default": "フリーブロック"
+    }
+  }
+}

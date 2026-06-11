@@ -24,6 +24,7 @@ const atoms = [
   { name: 'AppLogo',                node: '308:6387',   to: '/dev/app-logo',                  done: true  },
   { name: 'AppLeftMenuIcon',        node: '411:7357',   to: '/dev/app-left-menu-icon',        done: true  },
   { name: 'AppContact',             node: '520:12941',  to: '/dev/app-contact',               done: true  },
+  { name: 'BaseControlLabel',       node: '（新設）',    to: '/dev/base-control-label',         done: true  },
 ]
 
 // Molecules コンポーネント一覧
@@ -31,28 +32,27 @@ const molecules = [
   // M-1〜M-3: Atoms 格上げ・新設
   { name: 'AppRadioButton',               node: '917:52673',  to: '/dev/app-radio-button',                  done: true  },
   { name: 'AppCheckbox',                  node: '917:53263',  to: '/dev/app-checkbox',                      done: true  },
-  { name: 'AppSwitchLabel',               node: '（新設）',    to: '/dev/app-switch-label',                  done: false },
+  { name: 'AppSwitchLabel',               node: '（新設）',    to: '/dev/app-switch-label',                  done: true  },
   // #29〜#45: Figma Molecules
   { name: 'AppSegmentControl',            node: '520:13298',  to: '/dev/app-segment-control',               done: true  },
   { name: 'AppTab',                       node: '849:2467',   to: '/dev/app-tab',                           done: true  },
-  { name: 'AppPagination',                node: '932:25039',  to: '/dev/app-pagination',                    done: false },
-  { name: 'AppFormHeading',               node: '801:16732',  to: '/dev/app-form-heading',                  done: false },
-  { name: 'AppFormTitle',                 node: '801:16744',  to: '/dev/app-form-title',                    done: false },
-  { name: 'AppConfirmSection',            node: '806:17001',  to: '/dev/app-confirm-section',               done: false },
+  { name: 'AppPagination',                node: '932:25039',  to: '/dev/app-pagination',                    done: true },
+  { name: 'AppFormHeading',               node: '801:16732',  to: '/dev/app-form-heading',                  done: true  },
+  { name: 'AppFormTitle',                 node: '801:16744',  to: '/dev/app-form-title',                    done: true },
+  { name: 'AppConfirmSection',            node: '806:17001',  to: '/dev/app-confirm-section',               done: true  },
   { name: 'AppCalendarTime',              node: '849:3283',   to: '/dev/app-calendar-time',                 done: false },
-  { name: 'AppPageSettingStatus',         node: '621:12561',  to: '/dev/app-page-setting-status',           done: false },
-  { name: 'AppFavoriteBlock',             node: '932:24445',  to: '/dev/app-favorite-block',                done: false },
-  { name: 'AppBlockEditMenuCell',         node: '643:13340',  to: '/dev/app-block-edit-menu-cell',          done: false },
-  { name: 'AppSidebarMenuItem',           node: '308:6450',   to: '/dev/app-sidebar-menu-item',             done: false },
-  { name: 'AppSidebarSubMenu',            node: '308:6469',   to: '/dev/app-sidebar-sub-menu',              done: false },
-  { name: 'AppSidebarSubMenuItem',        node: '417:8671',   to: '/dev/app-sidebar-sub-menu-item',         done: false },
+  { name: 'AppPageSettingStatus',         node: '621:12561',  to: '/dev/app-page-setting-status',           done: true  },
+  { name: 'AppFavoriteBlock',             node: '932:24445',  to: '/dev/app-favorite-block',                done: true  },
+  { name: 'AppBlockEditMenuCell',         node: '643:13340',  to: '/dev/app-block-edit-menu-cell',          done: true  },
+  { name: 'AppSidebarMenuItem',           node: '308:6450',   to: '/dev/app-sidebar-menu-item',             done: true  },
+  { name: 'AppSidebarSubMenu',            node: '308:6469',   to: '/dev/app-sidebar-sub-menu',              done: true  },
+  { name: 'AppSidebarSubMenuItem',        node: '417:8671',   to: '/dev/app-sidebar-sub-menu-item',         done: true  },
   { name: 'AppScrollArea',                node: '950:43861',  to: '/dev/app-scroll-area',                   done: false },
-  { name: 'AppBlockEditMenu',             node: '797:9870',   to: '/dev/app-block-edit-menu',               done: false },
-  { name: 'AppModalFooter',               node: '871:50191',  to: '/dev/app-modal-footer',                  done: false },
+  { name: 'AppBlockEditMenu',             node: '797:9870',   to: '/dev/app-block-edit-menu',               done: true  },
+  { name: 'AppModalFooter',               node: '871:50191',  to: '/dev/app-modal-footer',                  done: true  },
   // M-7〜M-9: 追加 Molecules
-  { name: 'AppImageSelector',             node: '2051:66897', to: '/dev/app-image-selector',                done: false },
-  { name: 'AppContactItemType',           node: '1793:71658', to: '/dev/app-contact-item-type',             done: false },
-  { name: 'AppContactItemTypeSelectMenu', node: '2051:67078', to: '/dev/app-contact-item-type-select-menu', done: false },
+  { name: 'AppImageSelector',             node: '2051:66897', to: '/dev/app-image-selector',                done: true  },
+  { name: 'AppContactItemType',           node: '1793:71658', to: '/dev/app-contact-item-type',             done: true  },
 ]
 
 // Organisms コンポーネント一覧

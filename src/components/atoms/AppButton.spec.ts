@@ -107,9 +107,23 @@ describe('AppButton', () => {
       })
       expect(wrapper.text()).toContain('絞り込み検索')
     })
+
+    it('variant="ghost-danger" のとき、赤テキストクラスが付与される', () => {
+      const wrapper = mount(AppButton, {
+        props: { variant: 'ghost-danger', label: '削除' },
+      })
+      expect(wrapper.html()).toContain('text-[#dc2626]')
+    })
   })
 
   describe('サイズ', () => {
+    it('variant="ghost-danger" のとき、デフォルトで sm サイズ（h-8）が適用される', () => {
+      const wrapper = mount(AppButton, {
+        props: { variant: 'ghost-danger', label: '削除' },
+      })
+      expect(wrapper.classes()).toContain('h-8')
+    })
+
     it('variant="ghost" のとき、デフォルトで sm サイズ（h-8）が適用される', () => {
       const wrapper = mount(AppButton, {
         props: { variant: 'ghost' },

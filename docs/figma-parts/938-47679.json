@@ -1,0 +1,74 @@
+{
+  "componentName": "TableRowRight/Trash（1つ目）",
+  "nodeId": "938:47679",
+  "figmaName": "TableRowRight/Trash",
+  "category": "Organisms",
+  "description": "ゴミ箱一覧テーブルの行右側エリア。削除者・削除日時ペアが3組・復元ボタン・完全削除ボタンを横並びで表示する。",
+  "layout": {
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "padding": "12px 16px",
+    "gap": 16
+  },
+  "columns": [
+    {
+      "name": "deletedBy1",
+      "width": 112,
+      "content": "削除者名テキスト（14px / #171717 / center）"
+    },
+    {
+      "name": "deletedAt1",
+      "width": 96,
+      "content": "削除日時テキスト（14px / center）"
+    },
+    {
+      "name": "deletedBy2",
+      "width": 112,
+      "content": "削除者名テキスト（14px / #171717 / center）"
+    },
+    {
+      "name": "deletedAt2",
+      "width": 96,
+      "content": "削除日時テキスト（14px / center）"
+    },
+    {
+      "name": "deletedBy3",
+      "width": 112,
+      "content": "削除者名テキスト（14px / #171717 / center）"
+    },
+    {
+      "name": "deletedAt3",
+      "width": 96,
+      "content": "削除日時テキスト（14px / center）"
+    },
+    {
+      "name": "actions",
+      "width": 144,
+      "content": "テキストボタン2つ（復元・完全に削除）",
+      "gap": 8,
+      "buttons": [
+        {
+          "label": "復元",
+          "variant": "ghost",
+          "textColor": "#2862cb",
+          "fontSize": 12,
+          "height": 32,
+          "padding": "4px 12px",
+          "borderRadius": 8
+        },
+        {
+          "label": "完全に削除",
+          "variant": "ghost",
+          "textColor": "#64748b",
+          "fontSize": 12,
+          "height": 32,
+          "padding": "4px 12px",
+          "borderRadius": 8
+        }
+      ]
+    }
+  ],
+  "variants": [],
+  "states": ["default"],
+  "notes": "ボタンは AppButton（variant=ghost）を使用。「復元」は text-brand（#2862cb）、「完全に削除」は text-secondary（#64748b）。フォントサイズは 12px（他列の 14px と異なる）。"
+}

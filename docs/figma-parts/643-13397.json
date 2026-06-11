@@ -1,0 +1,97 @@
+{
+  "componentName": "AppAddBlockMenu",
+  "nodeId": "643:13397",
+  "figmaName": "AddBlockMenu",
+  "description": "記事エディター右側に表示されるブロック追加パネル。追加するブロックの種類（フリーブロック / Youtube / Google マップ / お気に入り / スクリプト）を選択する。",
+  "note": "セッション計画（session-plan.md）では #48「Title」として記録されていたが、Figma 上の実際のコンポーネント名は「AddBlockMenu」。Figma に「Title」という単独 Organism は存在せず（全て Title/Pages・Title/PageDetail 等のサブコンポーネント）。node-id のマッピングが誤っていた。メタデータ調査（2026-06-11）で確定。",
+  "sizes": {
+    "width": 320,
+    "height": 736
+  },
+  "colors": {
+    "background": "#2862cb",
+    "cellBackground": "#1b4187",
+    "textColor": "#ffffff",
+    "iconColor": "#ffffff"
+  },
+  "layout": {
+    "display": "flex",
+    "flexDirection": "column",
+    "gap": "24px",
+    "padding": "24px"
+  },
+  "structure": {
+    "header": {
+      "type": "text",
+      "content": "追加するブロックの種類を選んで下さい。",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "fontFamily": "Noto Sans JP Bold",
+      "color": "#ffffff",
+      "textAlign": "center"
+    },
+    "cellList": {
+      "gap": "8px",
+      "items": [
+        {
+          "label": "フリーブロック",
+          "faIcon": "puzzle-piece",
+          "nodeId": "643:13365"
+        },
+        {
+          "label": "Youtube",
+          "faIcon": "video",
+          "nodeId": "643:13373"
+        },
+        {
+          "label": "Googleマップ",
+          "faIcon": "map",
+          "nodeId": "643:13385"
+        },
+        {
+          "label": "お気に入り",
+          "faIcon": "star",
+          "nodeId": "643:13389"
+        },
+        {
+          "label": "スクリプト",
+          "faIcon": "code",
+          "nodeId": "643:13393"
+        }
+      ]
+    }
+  },
+  "cellDesign": {
+    "nodeId": "643:13365",
+    "figmaName": "AddBlockMenuCell",
+    "width": "100%",
+    "height": "64px",
+    "background": "#1b4187",
+    "borderRadius": "6px",
+    "padding": "16px",
+    "gap": "12px",
+    "layout": "flex row items-center",
+    "icon": {
+      "size": "16px",
+      "faFamily": "Font Awesome 6 Free Solid",
+      "color": "#ffffff"
+    },
+    "label": {
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "fontFamily": "Noto Sans JP Bold",
+      "color": "#ffffff"
+    }
+  },
+  "variants": [
+    {
+      "name": "Default",
+      "state": "Default"
+    }
+  ],
+  "states": ["default"],
+  "fonts": {
+    "primary": "Noto Sans JP Bold",
+    "icon": "Font Awesome 6 Free Solid"
+  }
+}

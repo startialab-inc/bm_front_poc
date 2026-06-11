@@ -1,0 +1,54 @@
+{
+  "nodeId": "702:18792",
+  "name": "DownloadBlockCell",
+  "atomicLevel": "Molecule",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "ダウンロードブロック一覧の各セル。タイトルバー（2pxカラーバー＋テキスト）＋プレビューエリア（青背景のサムネイル）。単一バリアント。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "column",
+    "gap": "var(--spacing/7, 0px)",
+    "width": "189.33px"
+  },
+  "structure": {
+    "titleRow": {
+      "display": "flex",
+      "flexDirection": "row",
+      "gap": "var(--spacing/2, 8px)",
+      "colorBar": {
+        "width": "2px",
+        "height": "20px",
+        "background": "var(--background/surface/bg-sf-selected, #eff6ff)",
+        "borderRadius": "var(--border-radius/rounded-xs, 2px)"
+      },
+      "titleText": {
+        "fontFamily": "Noto Sans JP",
+        "fontSize": "var(--text/sm/font-size, 14px)",
+        "fontWeight": 400,
+        "lineHeight": "var(--text/sm/line-height, 20px)",
+        "color": "var(--text/text-tertiary, white)"
+      }
+    },
+    "previewArea": {
+      "background": "var(--brand/blue-monkey/50, #ddeaff)",
+      "height": "120px",
+      "borderRadius": "var(--border-radius/rounded-sm, 6px)"
+    }
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "702:18792"
+    }
+  ],
+  "props": {
+    "title": {
+      "type": "string",
+      "default": "見出し H2 (T-01)"
+    },
+    "previewImage": {
+      "type": "string",
+      "description": "プレビューサムネイル URL。省略時は青背景プレースホルダー"
+    }
+  }
+}

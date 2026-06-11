@@ -17,7 +17,7 @@ const meta: Meta<typeof AppButton> = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['ghost', 'primary', 'submit', 'destructive', 'secondary', 'sort', 'filter'],
+      options: ['ghost', 'ghost-danger', 'primary', 'submit', 'destructive', 'secondary', 'sort', 'filter'],
     },
     size: {
       control: 'select',
@@ -82,6 +82,29 @@ export const GhostDisabled: Story = {
 export const GhostNoIcon: Story = {
   name: 'Ghost - アイコンなし',
   args: { variant: 'ghost', label: 'アクション' },
+}
+
+// =====================================================
+// ghost-danger バリアント（透明背景・赤テキスト・sm サイズ）
+// =====================================================
+
+export const GhostDangerDefault: Story = {
+  name: 'GhostDanger - Default（赤文字・左アイコン）',
+  args: { variant: 'ghost-danger', label: '削除', iconLeft: 'trash' },
+}
+
+export const GhostDangerHover: Story = {
+  name: 'GhostDanger - Hover（薄赤背景）',
+  args: { variant: 'ghost-danger', label: '削除', iconLeft: 'trash' },
+  play: async ({ canvas }) => {
+    const button = canvas.getByRole('button', { name: '削除' })
+    await userEvent.hover(button)
+  },
+}
+
+export const GhostDangerDisabled: Story = {
+  name: 'GhostDanger - Disabled（グレー文字）',
+  args: { variant: 'ghost-danger', label: '削除', iconLeft: 'trash', disabled: true },
 }
 
 // =====================================================

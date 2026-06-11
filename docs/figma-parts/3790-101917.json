@@ -1,0 +1,44 @@
+{
+  "nodeId": "3790:101917",
+  "name": "Button/Secondary-cancel",
+  "atomicLevel": "Atom",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "キャンセル用のセカンダリボタン。fa-xmark アイコン（左）＋テキスト「キャンセル」の構成。AppButton.vue の variant='secondary' + iconLeft='xmark' で実現可能なため、新規コンポーネント不要。",
+  "note": "単一 symbol（バリアントなし）。Button/Secondary（523:14596）と同じスタイルで iconLeft が追加されたもの。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "gap": "var(--spacing/2, 8px)",
+    "height": "40px",
+    "paddingTop": "var(--spacing/2, 8px)",
+    "paddingBottom": "var(--spacing/2, 8px)",
+    "paddingLeft": "var(--spacing/4, 16px)",
+    "paddingRight": "var(--spacing/4, 16px)",
+    "borderRadius": "var(--border-radius/rounded-md, 8px)"
+  },
+  "icon": {
+    "position": "left",
+    "fontAwesome": "fa-xmark",
+    "unicodeCodePoint": "U+F00D",
+    "color": "var(--brand/blue-monkey/800, #143166)"
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "3790:101904",
+      "background": "var(--background/surface/bg-sf-primary, #ffffff)",
+      "border": "1px solid var(--brand/blue-monkey/800, #143166)",
+      "text": {
+        "content": "キャンセル",
+        "color": "var(--brand/blue-monkey/800, #143166)",
+        "fontFamily": "var(--font/font-sans, Noto Sans JP)",
+        "fontWeight": "var(--font-weight/medium, 500)",
+        "fontSize": "var(--text/sm/font-size, 14px)",
+        "lineHeight": "var(--text/sm/line-height, 20px)"
+      }
+    }
+  ],
+  "vueUsage": "<AppButton variant=\"secondary\" icon-left=\"xmark\" :label=\"t('...')\" />"
+}

@@ -1,0 +1,49 @@
+{
+  "componentName": "TitlePages",
+  "nodeId": "3745:40934",
+  "figmaName": "Title/Pages（別バージョン）",
+  "description": "ページ一覧タイトルバーの別バージョン（幅1200px・高さ56px）。520:11934 より幅が狭くコンパクト。左側にタイトル・サブタイトル・検索Input、右側にボタン群を配置。",
+  "sizes": { "width": 1200, "height": 56 },
+  "layout": {
+    "padding": "16px",
+    "gap": "16px",
+    "direction": "row",
+    "align": "center",
+    "borderBottom": true,
+    "background": "#ffffff"
+  },
+  "slots": {
+    "title": "記事管理設定（例）（Noto Sans JP Bold 20px / #0d2144）",
+    "subtitle": "記事全体の基本設定を行うことができます。（Noto Sans JP Regular 12px / black）",
+    "searchInput": {
+      "placeholder": "ページ名、URLで検索",
+      "width": "384px",
+      "height": "40px"
+    },
+    "buttons": [
+      {
+        "label": "ボタン（例）",
+        "variant": "secondary"
+      },
+      {
+        "label": "保存する（例）",
+        "variant": "primary"
+      }
+    ]
+  },
+  "colors": {
+    "background": "#ffffff",
+    "borderBottom": "#e5e5e5",
+    "titleText": "#0d2144",
+    "subtitleText": "black",
+    "searchBorder": "#e5e5e5",
+    "searchPlaceholder": "#64748b"
+  },
+  "fonts": {
+    "title": "Noto Sans JP Bold 20px / line-height 28px",
+    "subtitle": "Noto Sans JP Regular 12px / line-height 16px",
+    "buttonLabel": "font-sans Medium 14px / line-height 20px",
+    "searchPlaceholder": "font-sans Regular 14px / line-height 20px"
+  },
+  "notes": "520:11934 との違い：幅が1200px（-184px）、高さが56px（-16px）。サブタイトルテキストを持つ。ボタンラベルはプレースホルダー表示で実際の文言はページによって異なる。"
+}

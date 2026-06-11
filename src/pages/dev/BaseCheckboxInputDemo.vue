@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import BaseCheckboxInput from '@/components/atoms/BaseCheckboxInput.vue'
+import AppCheckbox from '@/components/molecules/AppCheckbox.vue'
 
 // グループ選択デモ用（各チェックボックスは独立して ON/OFF）
 const groupA = ref('optionA')
@@ -58,27 +59,19 @@ const demoDisabled = ref(false)
       </div>
     </section>
 
-    <!-- セクション2: グループ選択（複数同時チェック可） -->
+    <!-- セクション2: グループ選択（AppCheckbox Molecule） -->
     <section class="mb-6 bg-white rounded-lg p-6 shadow-sm">
       <h2 class="text-lg font-semibold text-slate-700 border-b border-slate-200 pb-2 mb-4">
-        グループ選択（複数同時チェック可）
+        AppCheckbox（Molecule）でのグループ選択（複数同時チェック可）
       </h2>
       <p class="text-xs text-slate-400 mb-4">
-        ラジオボタンと異なり、チェックボックスは複数を同時に選択できる。各チェックボックスは独立した v-model を持つ。
+        AppCheckbox は BaseCheckboxInput に <code class="bg-slate-100 px-1 rounded">label</code> を組み合わせた Molecule。
+        ラジオボタンと異なり、各チェックボックスは独立して ON/OFF できる。
       </p>
       <div class="flex items-center gap-6 flex-wrap mb-3">
-        <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer">
-          <BaseCheckboxInput v-model="groupA" value="optionA" />
-          <span>オプション A</span>
-        </label>
-        <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer">
-          <BaseCheckboxInput v-model="groupB" value="optionB" />
-          <span>オプション B</span>
-        </label>
-        <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer">
-          <BaseCheckboxInput v-model="groupC" value="optionC" />
-          <span>オプション C</span>
-        </label>
+        <AppCheckbox v-model="groupA" value="optionA" label="オプション A" />
+        <AppCheckbox v-model="groupB" value="optionB" label="オプション B" />
+        <AppCheckbox v-model="groupC" value="optionC" label="オプション C" />
       </div>
       <p class="text-xs text-slate-500">
         A: <strong class="text-slate-700">{{ groupA || '（未選択）' }}</strong>

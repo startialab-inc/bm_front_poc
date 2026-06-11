@@ -28,6 +28,9 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-onboarding'),
     '@storybook/addon-mcp',
   ],
+  features: {
+    componentsManifest: true,
+  },
   async viteFinal(config, { configType }) {
     return mergeConfig(config, {
       base: configType === 'PRODUCTION' ? '/bm_front_storybook/' : '/',

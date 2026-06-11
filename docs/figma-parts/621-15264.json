@@ -1,0 +1,27 @@
+{
+  "componentName": "TableRowRight/GlobalParts",
+  "nodeId": "621:15264",
+  "figmaName": "TableRowRight/GlobalParts",
+  "category": "Organisms",
+  "description": "グローバルパーツ一覧テーブルの行右側エリア。アクションアイコン（pen・download・trash）を横並びで表示する。",
+  "layout": {
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "padding": "12px 16px"
+  },
+  "columns": [
+    {
+      "name": "actions",
+      "width": 112,
+      "content": "アクションアイコン3つ（gap: 16px）",
+      "icons": [
+        { "faIcon": "fa-pen", "color": "#64748b", "size": 16 },
+        { "faIcon": "fa-download", "color": "#64748b", "size": 16 },
+        { "faIcon": "fa-trash", "color": "#64748b", "size": 16 }
+      ]
+    }
+  ],
+  "variants": [],
+  "states": ["default"],
+  "notes": "アイコンは FontAwesome Solid。各アイコンコンテナは 20×20px。列幅 112px で justify-end。"
+}

@@ -34,11 +34,32 @@
     "exampleText": "ページ名"
   },
   "props": {
-    "title": "string（必須）"
+    "title": "string（必須）",
+    "variant": "'default' | 'login'（省略時: 'default'）"
+  },
+  "variants": {
+    "default": {
+      "description": "標準版：左端にアクセント縦線あり（通常のフォーム画面で使用）",
+      "accentBar": {
+        "width": "2px",
+        "height": "20px",
+        "background": "#0d2144",
+        "backgroundToken": "text/text-primary",
+        "borderRadius": "2px",
+        "borderRadiusToken": "border-radius/rounded-xs"
+      }
+    },
+    "login": {
+      "description": "ログイン画面用：アクセント縦線なし・テキストのみ",
+      "referenceNodeId": "2319:5769",
+      "referenceScreen": "ログイン画面（node: 2546:88029）",
+      "accentBar": null
+    }
   },
   "notes": [
     "左端の縦線（2px × 20px、rounded-xs）はアクセント。色は text-primary と同じ #0d2144",
     "テキストは whitespace-nowrap（折り返しなし）",
-    "FormHeading の下位に配置されるフォーム項目ラベル"
+    "FormHeading の下位に配置されるフォーム項目ラベル",
+    "variant='login' はログイン画面での使用例（node: 2319:5769）を参照。縦線なし・テキストスタイルは同一"
   ]
 }

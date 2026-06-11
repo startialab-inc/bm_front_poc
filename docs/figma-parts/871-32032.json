@@ -1,0 +1,64 @@
+{
+  "componentName": "TableHeaderRight/Category",
+  "nodeId": "871:32032",
+  "figmaName": "TableHeaderRight/Cagetgory",
+  "category": "Organisms",
+  "description": "テーブル右ヘッダー（カテゴリ一覧用）。カテゴリURL・表示優先度・投稿数・最終更新者・最終更新日時・操作の6列構成。",
+  "container": {
+    "height": 48,
+    "padding": 16,
+    "gap": 16,
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "borderRadiusTopRight": 8,
+    "overflow": "hidden"
+  },
+  "columns": [
+    {
+      "label": "カテゴリURL",
+      "width": 176,
+      "align": "center",
+      "nodeId": "871:32019"
+    },
+    {
+      "label": "表示優先度",
+      "width": 80,
+      "align": "center",
+      "nodeId": "871:32021"
+    },
+    {
+      "label": "投稿数",
+      "width": 80,
+      "align": "center",
+      "nodeId": "871:32028"
+    },
+    {
+      "label": "最終更新者",
+      "width": 112,
+      "align": "center",
+      "nodeId": "871:32030"
+    },
+    {
+      "label": "最終更新日時",
+      "width": 96,
+      "align": "center",
+      "nodeId": "871:32023"
+    },
+    {
+      "label": "操作",
+      "width": 112,
+      "align": "center",
+      "nodeId": "871:32025"
+    }
+  ],
+  "typography": {
+    "fontFamily": "Noto Sans JP",
+    "fontSize": 14,
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "color": "#0d2144"
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": "Figma のコンポーネント名に typo あり（Cagetgory → 正: Category）。Vue 実装時は Category を使用。バリアントなし。単一状態。"
+}

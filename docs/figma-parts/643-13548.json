@@ -1,0 +1,57 @@
+{
+  "nodeId": "643:13548",
+  "name": "BlockMoveCell",
+  "atomicLevel": "Atom",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "ブロック移動ボタン。上（arrow-up）・下（arrow-down）の 2 バリアント。白背景＋ドロップシャドウ。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "column",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "gap": "var(--spacing/1-5, 6px)",
+    "width": "56px",
+    "height": "56px",
+    "padding": "var(--spacing/2, 8px)",
+    "borderRadius": "var(--border-radius/rounded-md, 8px)"
+  },
+  "style": {
+    "background": "var(--background/surface/bg-sf-primary, white)",
+    "boxShadow": "0px 20px 25px rgba(0,0,0,0.1), 0px 8px 10px rgba(0,0,0,0.1)"
+  },
+  "variants": [
+    {
+      "type": "Up",
+      "nodeId": "643:13546",
+      "icon": "fa-arrow-up",
+      "label": "上に移動"
+    },
+    {
+      "type": "Down",
+      "nodeId": "643:13547",
+      "icon": "fa-arrow-down",
+      "label": "下に移動"
+    }
+  ],
+  "icon": {
+    "fontAwesome": "fa-arrow-up / fa-arrow-down",
+    "size": "14px",
+    "color": "inherit (text-primary)"
+  },
+  "typography": {
+    "label": {
+      "fontFamily": "Noto Sans JP",
+      "fontSize": "10px",
+      "fontWeight": 700,
+      "lineHeight": 1,
+      "textAlign": "center"
+    }
+  },
+  "props": {
+    "type": {
+      "type": "string",
+      "enum": ["Up", "Down"],
+      "default": "Up"
+    }
+  }
+}

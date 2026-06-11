@@ -1,0 +1,54 @@
+{
+  "componentName": "TableRowRight/Category",
+  "nodeId": "871:32033",
+  "figmaName": "TableRowRight/Category",
+  "category": "Organisms",
+  "description": "カテゴリ一覧テーブルの行右側エリア。カテゴリ名・件数2列・担当者・更新日時・アクションアイコンを横並びで表示する。",
+  "layout": {
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "padding": "12px 16px",
+    "gap": 16
+  },
+  "columns": [
+    {
+      "name": "categoryName",
+      "width": 176,
+      "content": "カテゴリ名テキスト（14px / #0d2144 / leading-none）",
+      "textColor": "#0d2144"
+    },
+    {
+      "name": "count1",
+      "width": 80,
+      "content": "件数テキスト（14px / #171717 / center）"
+    },
+    {
+      "name": "count2",
+      "width": 80,
+      "content": "件数テキスト（14px / #171717 / center）"
+    },
+    {
+      "name": "author",
+      "width": 112,
+      "content": "担当者名テキスト（14px / center）"
+    },
+    {
+      "name": "updatedAt",
+      "width": 96,
+      "content": "更新日時テキスト（14px / center）"
+    },
+    {
+      "name": "actions",
+      "width": 112,
+      "content": "アクションアイコン2つ（pen・trash）",
+      "gap": 16,
+      "icons": [
+        { "faIcon": "fa-pen", "color": "#64748b", "size": 16 },
+        { "faIcon": "fa-trash", "color": "#64748b", "size": 16 }
+      ]
+    }
+  ],
+  "variants": [],
+  "states": ["default"],
+  "notes": "カテゴリ名テキストのカラーは #0d2144（text-primary）で他列の #171717（accent-foreground）と異なる点に注意。"
+}

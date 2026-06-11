@@ -1,0 +1,51 @@
+{
+  "componentName": "TitlePages",
+  "nodeId": "520:11934",
+  "figmaName": "Title/Pages",
+  "description": "ページ一覧画面のタイトルバー（幅1384px・高さ72px）。左側にページタイトルと検索Input、右側にSecondaryボタン群＋Primaryボタンを配置。",
+  "sizes": { "width": 1384, "height": 72 },
+  "layout": {
+    "padding": "16px",
+    "gap": "16px",
+    "direction": "row",
+    "align": "center",
+    "borderBottom": true,
+    "background": "#ffffff"
+  },
+  "slots": {
+    "title": "ページ一覧（Noto Sans JP Bold 20px / #0d2144）",
+    "searchInput": {
+      "placeholder": "ページ名、URLで検索",
+      "width": "384px",
+      "height": "40px",
+      "description": "左側: 入力欄（rounded-l-md）、右側: 検索ボタンアイコン（rounded-r-md）"
+    },
+    "buttons": [
+      {
+        "label": "ユーザーディレクトリを追加する",
+        "variant": "secondary",
+        "icon": "folder-open（fa-solid）",
+        "iconPosition": "left"
+      },
+      {
+        "label": "新しくページを作成する",
+        "variant": "primary",
+        "icon": "プラス（fa-solid）",
+        "iconPosition": "left"
+      }
+    ]
+  },
+  "colors": {
+    "background": "#ffffff",
+    "borderBottom": "#e5e5e5",
+    "titleText": "#0d2144",
+    "searchBorder": "#e5e5e5",
+    "searchPlaceholder": "#64748b"
+  },
+  "fonts": {
+    "title": "Noto Sans JP Bold 20px / line-height 28px",
+    "buttonLabel": "font-sans Medium 14px / line-height 20px",
+    "searchPlaceholder": "font-sans Regular 14px / line-height 20px"
+  },
+  "notes": "バリアントなし（単一状態）。検索Inputはshadcn InputGroup相当。ボタンはAppButtonコンポーネントで対応可能。"
+}

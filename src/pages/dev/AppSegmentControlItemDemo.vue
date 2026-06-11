@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import AppSegmentControlItem from '@/components/atoms/AppSegmentControlItem.vue'
+import AppSegmentControl, { type SegmentItem } from '@/components/molecules/AppSegmentControl.vue'
 
 // インタラクティブデモ用のタブデータ
-const tabs = ref([
-  { label: 'すべて', count: 8 },
-  { label: '公開中', count: 3 },
-  { label: '非公開', count: 5 },
+const tabs = ref<SegmentItem[]>([
+  { label: 'すべて', count: 8, value: 'all' },
+  { label: '公開中', count: 3, value: 'published' },
+  { label: '非公開', count: 5, value: 'unpublished' },
 ])
-const selectedIndex = ref(0)
+const selectedValue = ref<string | undefined>('all')
 </script>
 
 <template>
@@ -40,32 +41,30 @@ const selectedIndex = ref(0)
       </div>
     </section>
 
-    <!-- SegmentControl 風横並びデモ -->
+    <!-- AppSegmentControl（Molecule）デモ -->
     <section class="mb-8">
-      <h2 class="mb-3 text-base font-semibold text-slate-700">SegmentControl 風横並び</h2>
+      <h2 class="mb-3 text-base font-semibold text-slate-700">AppSegmentControl（Molecule）</h2>
       <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 space-y-4">
         <div>
           <p class="text-xs text-slate-400 mb-2">「すべて」選択中</p>
-          <div class="flex items-center bg-slate-100 rounded-[10px] p-1 gap-1 w-[360px]">
-            <AppSegmentControlItem label="すべて" :count="8" :selected="true" />
-            <AppSegmentControlItem label="公開中" :count="3" :selected="false" />
-            <AppSegmentControlItem label="非公開" :count="5" :selected="false" />
-          </div>
+          <AppSegmentControl
+            model-value="all"
+            :items="[{ label: 'すべて', count: 8, value: 'all' }, { label: '公開中', count: 3, value: 'published' }, { label: '非公開', count: 5, value: 'unpublished' }]"
+          />
         </div>
         <div>
           <p class="text-xs text-slate-400 mb-2">「公開中」選択中</p>
-          <div class="flex items-center bg-slate-100 rounded-[10px] p-1 gap-1 w-[360px]">
-            <AppSegmentControlItem label="すべて" :count="8" :selected="false" />
-            <AppSegmentControlItem label="公開中" :count="3" :selected="true" />
-            <AppSegmentControlItem label="非公開" :count="5" :selected="false" />
-          </div>
+          <AppSegmentControl
+            model-value="published"
+            :items="[{ label: 'すべて', count: 8, value: 'all' }, { label: '公開中', count: 3, value: 'published' }, { label: '非公開', count: 5, value: 'unpublished' }]"
+          />
         </div>
         <div>
           <p class="text-xs text-slate-400 mb-2">件数ゼロ</p>
-          <div class="flex items-center bg-slate-100 rounded-[10px] p-1 gap-1 w-[360px]">
-            <AppSegmentControlItem label="すべて" :count="0" :selected="true" />
-            <AppSegmentControlItem label="下書き" :count="0" :selected="false" />
-          </div>
+          <AppSegmentControl
+            model-value="all"
+            :items="[{ label: 'すべて', count: 0, value: 'all' }, { label: '下書き', count: 0, value: 'draft' }]"
+          />
         </div>
       </div>
     </section>
@@ -75,17 +74,10 @@ const selectedIndex = ref(0)
       <h2 class="mb-3 text-base font-semibold text-slate-700">インタラクティブデモ</h2>
       <div class="bg-slate-50 rounded-lg p-6 border border-slate-200">
         <p class="text-xs text-slate-500 mb-3">タブをクリックして切り替え</p>
-        <div class="flex items-center bg-slate-100 rounded-[10px] p-1 gap-1 w-[360px]">
-          <AppSegmentControlItem
-            v-for="(tab, i) in tabs"
-            :key="tab.label"
-            :label="tab.label"
-            :count="tab.count"
-            :selected="selectedIndex === i"
-            @click="selectedIndex = i"
-          />
-        </div>
-        <p class="mt-3 text-xs text-slate-500">選択中: {{ tabs[selectedIndex].label }}（{{ tabs[selectedIndex].count }} 件）</p>
+        <AppSegmentControl v-model="selectedValue" :items="tabs" />
+        <p class="mt-3 text-xs text-slate-500">
+          選択中: {{ tabs.find(t => t.value === selectedValue)?.label }}（{{ tabs.find(t => t.value === selectedValue)?.count }} 件）
+        </p>
       </div>
     </section>
   </div>

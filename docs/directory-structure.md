@@ -16,7 +16,7 @@ src/
 docs/
   figma-parts/      ← UIパーツ解析 JSON
   session-plan.md   ← 実装計画・進捗状況テーブル
-  design-tokens.md  ← デザイントークン一覧
+  DESIGN.md         ← デザイントークン一覧（プロジェクトルート直下）
   architecture.md   ← アーキテクチャ・MCP・接続情報
   DOCUMENT_RULES.md ← 文書分類ルール
 .claude/rules/

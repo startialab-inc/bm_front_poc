@@ -1,0 +1,64 @@
+{
+  "componentName": "TableUserDirectoryFile",
+  "nodeId": "849:6271",
+  "figmaName": "Table/UserDirectoryFile",
+  "description": "ユーザーディレクトリのファイル行。ファイルアイコン+名称（左）とアクションアイコン群（右）のレイアウト。フォルダ行より左インデントが深い。",
+  "sizes": {
+    "width": 720,
+    "height": 56
+  },
+  "layout": {
+    "direction": "horizontal",
+    "padding": { "left": 32, "right": 16, "top": 12, "bottom": 12 },
+    "gap": 16,
+    "align": "center",
+    "note": "左 padding が 32px（フォルダ行は 16px）でインデントを表現"
+  },
+  "left": {
+    "width": 528,
+    "icon": {
+      "library": "Font Awesome 7 Free Regular",
+      "name": "file",
+      "size": 14,
+      "color": "#64748b",
+      "style": "Regular（Solid ではなく Regular）"
+    },
+    "text": {
+      "sample": "index.php",
+      "color": "#0d2144",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "fontFamily": "Noto Sans JP",
+      "lineHeight": 1,
+      "note": "テキストプライマリ（フォルダ行の #143166 とは異なる）"
+    }
+  },
+  "right": {
+    "icons": [
+      { "name": "pen", "size": 16, "color": "#64748b" },
+      { "name": "download", "size": 16, "color": "#64748b" },
+      { "name": "upload", "size": 16, "color": "#64748b" },
+      { "name": "folder-tree", "size": 16, "color": "#64748b", "note": "フォルダ行の folder-plus と異なる" }
+    ],
+    "iconSize": 20,
+    "gap": 16
+  },
+  "colors": {
+    "background": "#ffffff",
+    "borderBottom": "#e5e5e5",
+    "textFile": "#0d2144",
+    "iconSecondary": "#64748b"
+  },
+  "border": {
+    "bottom": "1px solid #e5e5e5"
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": [
+    "ファイル行。UserDirectory（フォルダ行）と対になる",
+    "左 padding が 32px でフォルダより深くインデントされる",
+    "ファイルアイコンは FA Regular（アウトライン）。フォルダアイコンは FA Solid と対比",
+    "左テキストカラーは #0d2144（テキストプライマリ）",
+    "右アイコン 4 種: pen / download / upload / folder-tree（フォルダ行との違い）"
+  ]
+}

@@ -47,17 +47,17 @@ const activeVariant = ref<'landscape' | 'portrait' | 'square'>('landscape')
       <div class="rounded-lg border border-slate-200 bg-white p-6">
         <div class="flex items-start gap-10 flex-wrap">
           <div class="flex flex-col items-start gap-3">
-            <span class="text-xs font-medium text-slate-500 uppercase tracking-wide">Landscape</span>
+            <span class="text-xs font-medium text-slate-500">Landscape</span>
             <AppLogo variant="landscape" />
             <span class="text-xs text-slate-400">160 × 48px</span>
           </div>
           <div class="flex flex-col items-start gap-3">
-            <span class="text-xs font-medium text-slate-500 uppercase tracking-wide">Portrait</span>
+            <span class="text-xs font-medium text-slate-500">Portrait</span>
             <AppLogo variant="portrait" />
             <span class="text-xs text-slate-400">160 × 170px</span>
           </div>
           <div class="flex flex-col items-start gap-3">
-            <span class="text-xs font-medium text-slate-500 uppercase tracking-wide">Square</span>
+            <span class="text-xs font-medium text-slate-500">Square</span>
             <AppLogo variant="square" />
             <span class="text-xs text-slate-400">40 × 40px</span>
           </div>

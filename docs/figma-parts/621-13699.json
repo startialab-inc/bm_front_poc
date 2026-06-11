@@ -1,0 +1,66 @@
+{
+  "componentName": "TableHeaderRightPages",
+  "nodeId": "621:13699",
+  "figmaName": "TableHeaderRight/Pages",
+  "category": "Organisms",
+  "variants": [
+    {
+      "name": "Default",
+      "nodeId": "621:13699"
+    }
+  ],
+  "sizes": {
+    "width": 672,
+    "height": 48
+  },
+  "layout": {
+    "direction": "row",
+    "gap": 0,
+    "padding": 16,
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "borderTopRightRadius": 8,
+    "overflow": "hidden"
+  },
+  "columns": [
+    {
+      "label": "各種設定",
+      "width": 208,
+      "align": "left"
+    },
+    {
+      "label": "メニュー表示",
+      "width": 96,
+      "align": "center"
+    },
+    {
+      "label": "認証制限",
+      "width": 88,
+      "align": "center"
+    },
+    {
+      "label": "最終更新",
+      "width": 96,
+      "align": "center"
+    },
+    {
+      "label": "操作",
+      "width": 112,
+      "align": "center"
+    }
+  ],
+  "colors": {
+    "background": "#ffffff",
+    "borderBottom": "#e5e5e5",
+    "text": "#0d2144"
+  },
+  "typography": {
+    "header": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": "Regular",
+      "fontSize": 14,
+      "lineHeight": 1
+    }
+  },
+  "notes": "Pagesテーブルの右側ヘッダー。幅672px固定・高さ48px。右上角丸8px。列：各種設定(208px)・メニュー表示(96px)・認証制限(88px)・最終更新(96px)・操作(112px)。バリアントは1種のみ。TableHeaderLeft/Pages と組み合わせて使用。"
+}

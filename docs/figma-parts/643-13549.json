@@ -1,0 +1,30 @@
+{
+  "nodeId": "643:13549",
+  "name": "BlockHover",
+  "atomicLevel": "Organism",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "ブロックホバー時のオーバーレイ。オレンジ半透明背景＋オレンジ枠線＋中央に「このブロックを編集する」SubmitボタンをSlot配置。単一状態（バリアントなし）。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "column",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "width": "568px",
+    "height": "370px",
+    "padding": "161px 188px"
+  },
+  "style": {
+    "background": "rgba(234, 88, 12, 0.24)",
+    "border": "2px solid var(--divider/divider-editor, #ea580c)"
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "643:13549"
+    }
+  ],
+  "slot": {
+    "description": "中央に配置するボタン。Figma では Button/Submit（「このブロックを編集する」）が使われているが、実装時はスロットで差し替え可能にする。"
+  },
+  "note": "幅・高さはブロックコンテンツに応じて可変にすべき。Figma のサイズは参考値。"
+}

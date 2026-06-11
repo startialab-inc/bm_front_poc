@@ -1,0 +1,93 @@
+{
+  "componentName": "TitleUserDirectorySetting",
+  "nodeId": "849:6145",
+  "figmaName": "Title/UserDirectorySetting",
+  "category": "Organisms",
+  "variants": [
+    {
+      "name": "Default",
+      "nodeId": "849:6145"
+    }
+  ],
+  "sizes": {
+    "width": 768,
+    "height": "auto (2セクション構成)"
+  },
+  "layout": {
+    "direction": "column",
+    "gap": 16,
+    "paddingTop": 24,
+    "paddingBottom": 20,
+    "paddingX": 24,
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5"
+  },
+  "structure": {
+    "section1": {
+      "description": "タイトル行（フォルダアイコン + ディレクトリ名 + 閉じるボタン）",
+      "children": [
+        {
+          "name": "フォルダアイコン",
+          "icon": "folder",
+          "size": "20x20px",
+          "iconColor": "#64748b"
+        },
+        {
+          "name": "ディレクトリ名テキスト",
+          "text": "bowfree",
+          "font": "Noto Sans JP Bold",
+          "fontSize": 18,
+          "lineHeight": 1,
+          "color": "#0d2144",
+          "flex": "1 0 0"
+        },
+        {
+          "name": "Button/Icon（閉じる）",
+          "type": "AppButtonIcon",
+          "icon": "close",
+          "size": "32x32px",
+          "background": "#eff6ff",
+          "borderRadius": "9999px",
+          "iconColor": "#143166"
+        }
+      ]
+    },
+    "section2": {
+      "description": "メタ情報行（最終更新日時のみ）",
+      "children": [
+        {
+          "name": "最終更新日時",
+          "fontSize": 12,
+          "lineHeight": 16,
+          "color": "#64748b",
+          "text": "最終更新日時：2026/01/07　15:05:40",
+          "gap": 12
+        }
+      ]
+    }
+  },
+  "colors": {
+    "background": "#ffffff",
+    "borderBottom": "#e5e5e5",
+    "titleText": "#0d2144",
+    "metaText": "#64748b",
+    "folderIcon": "#64748b",
+    "closeButtonBg": "#eff6ff",
+    "closeButtonIcon": "#143166"
+  },
+  "typography": {
+    "title": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": "Bold",
+      "fontSize": 18,
+      "lineHeight": 1
+    },
+    "meta": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": "Regular",
+      "fontSize": 12,
+      "lineHeight": 16
+    }
+  },
+  "notes": "ユーザーディレクトリ設定パネルのタイトルヘッダー。幅768px（パネル幅）固定。Title/PageSetting の簡略版。アクションボタンなし。フォルダアイコン付き。バリアントは1種のみ。"
+}

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import BaseCheckboxInput from '@/components/atoms/BaseCheckboxInput.vue'
+import BaseControlLabel from '@/components/atoms/BaseControlLabel.vue'
 
 // チェックボックス Molecule コンポーネント
 // BaseCheckboxInput（Atom）にラベルを付加する
@@ -36,8 +37,6 @@ const model = defineModel<string | number | boolean>()
       :value="value"
       :disabled="disabled"
     />
-    <span class="text-sm text-text-primary leading-none font-normal">
-      {{ label }}
-    </span>
+    <BaseControlLabel :label="label" />
   </label>
 </template>

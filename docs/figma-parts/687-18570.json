@@ -1,0 +1,70 @@
+{
+  "nodeId": "687:18570",
+  "name": "DownloadBlockIndex",
+  "atomicLevel": "Molecule",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "ダウンロードブロックのカテゴリインデックスボタン。ラベル＋数値バッジ。3状態（Default/Hover/Focus）で背景色が変化。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "gap": "var(--spacing/2, 8px)",
+    "height": "var(--width/w-10, 40px)",
+    "width": "224px",
+    "padding": "var(--spacing/2, 8px) var(--spacing/3, 12px)",
+    "borderRadius": "var(--border-radius/rounded-sm, 6px)"
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "687:18567",
+      "background": "var(--brand/blue-monkey/500, #2862cb)",
+      "textWeight": 400
+    },
+    {
+      "state": "Hover",
+      "nodeId": "687:18568",
+      "background": "var(--brand/blue-monkey/400, #4c7cd4)",
+      "textWeight": 400
+    },
+    {
+      "state": "Focus",
+      "nodeId": "687:18569",
+      "background": "var(--background/surface/bg-sf-editor, #1b4187)",
+      "textWeight": 700
+    }
+  ],
+  "typography": {
+    "label": {
+      "fontFamily": "Noto Sans JP",
+      "fontSize": "var(--text/sm/font-size, 14px)",
+      "lineHeight": "var(--text/sm/line-height, 20px)",
+      "color": "var(--text/text-tertiary, white)"
+    }
+  },
+  "badge": {
+    "description": "件数バッジ。ライトグレー背景・ブランド青テキスト・12px bold",
+    "background": "var(--background/surface/bg-sf-tertiary, #e2e8f0)",
+    "textColor": "var(--brand/blue-monkey/500, #2862cb)",
+    "fontSize": "var(--text/xs/font-size, 12px)",
+    "fontWeight": 700,
+    "paddingX": "var(--spacing/1-5, 6px)",
+    "paddingY": "var(--spacing/1, 4px)",
+    "borderRadius": "var(--border-radius/rounded-sm, 6px)"
+  },
+  "props": {
+    "state": {
+      "type": "string",
+      "enum": ["Default", "Hover", "Focus"],
+      "default": "Default"
+    },
+    "label": {
+      "type": "string",
+      "default": "すべて"
+    },
+    "count": {
+      "type": "number",
+      "default": 0
+    }
+  }
+}

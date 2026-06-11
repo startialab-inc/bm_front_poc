@@ -1,0 +1,28 @@
+{
+  "nodeId": "2358:78770",
+  "name": "export",
+  "atomicLevel": "Template",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "エクスポートセクション。FormTitle「エクスポート」 + カード内に: フォルダ選択ドロップダウン（36px、chevron-down アイコン）+ 説明文 + 「エクスポートする」Primary ボタン。720×184px。",
+  "layout": {
+    "width": "720px",
+    "height": "184px",
+    "display": "flex",
+    "flexDirection": "column",
+    "gap": "var(--spacing/3, 12px)"
+  },
+  "structure": {
+    "formTitle": "FormTitle「エクスポート」（縦バー + テキスト）",
+    "card": {
+      "padding": "var(--spacing/4, 16px)",
+      "borderRadius": "10px",
+      "border": "1px solid var(--divider/divider-primary, #e5e5e5)",
+      "content": [
+        "フォルダ選択ドロップダウン（Outline ボタン様式、36px、「フォルダを選択してください」）",
+        "説明文（12px、#0d2144）",
+        "「エクスポートする」Primary ボタン（40px）"
+      ]
+    }
+  },
+  "variants": [{ "state": "Default", "nodeId": "2358:78770" }]
+}

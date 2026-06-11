@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import BaseRadioInput from '@/components/atoms/BaseRadioInput.vue'
+import BaseControlLabel from '@/components/atoms/BaseControlLabel.vue'
 
 // ラジオボタン Molecule コンポーネント
 // BaseRadioInput（Atom）にラベルとボックス装飾を付加する
@@ -51,14 +52,10 @@ const isSelected = computed(() => model.value === props.value)
       :name="name"
       :disabled="disabled"
     />
-    <!-- ラベルテキスト: text=font-normal(400)、box=font-medium(500) -->
-    <span
-      :class="[
-        'text-sm text-primary leading-none',
-        variant === 'box' ? 'font-medium' : 'font-normal',
-      ]"
-    >
-      {{ label }}
-    </span>
+    <!-- ラベルテキスト: text=normal(400)、box=medium(500) -->
+    <BaseControlLabel
+      :label="label"
+      :weight="variant === 'box' ? 'medium' : 'normal'"
+    />
   </label>
 </template>

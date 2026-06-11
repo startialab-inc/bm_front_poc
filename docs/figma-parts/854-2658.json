@@ -1,0 +1,58 @@
+{
+  "componentName": "TableUser",
+  "nodeId": "854:2658",
+  "figmaName": "Table/User",
+  "description": "ユーザー一覧テーブルの行。ユーザーアイコン+ユーザー名（左）と削除ボタン（右）のシンプルなレイアウト。",
+  "sizes": {
+    "width": 580,
+    "height": "auto（コンテンツ高さ。padding py-3 で最低高さ確保）"
+  },
+  "layout": {
+    "direction": "horizontal",
+    "padding": { "left": 16, "right": 8, "top": 12, "bottom": 12 },
+    "gap": 16,
+    "align": "start"
+  },
+  "left": {
+    "flex": "1 0 0",
+    "icon": {
+      "library": "Font Awesome 7 Free Solid",
+      "name": "user",
+      "size": 14,
+      "color": "#64748b"
+    },
+    "text": {
+      "sample": "田中  大輔",
+      "color": "#0d2144",
+      "fontSize": 12,
+      "fontWeight": 400,
+      "fontFamily": "Noto Sans JP",
+      "lineHeight": 16,
+      "note": "xs サイズ（12px / 16px）。whitespace-pre-wrap で複数行対応"
+    }
+  },
+  "right": {
+    "icons": [
+      { "name": "circle-xmark", "size": 14, "color": "#64748b", "note": "削除ボタン" }
+    ],
+    "iconSize": 20,
+    "gap": 16
+  },
+  "colors": {
+    "background": "#ffffff",
+    "borderBottom": "#e5e5e5",
+    "textPrimary": "#0d2144",
+    "iconSecondary": "#64748b"
+  },
+  "border": {
+    "bottom": "1px solid #e5e5e5"
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": [
+    "UserDirectory 系（720px）より幅が狭い（580px）",
+    "右アイコンは circle-xmark のみ（削除操作）",
+    "テキストは xs サイズ（12px）。他の Table 系は sm（14px）が多い",
+    "ユーザー名は whitespace-pre-wrap 対応（スペース・改行を保持）"
+  ]
+}

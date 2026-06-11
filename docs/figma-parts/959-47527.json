@@ -1,0 +1,64 @@
+{
+  "componentName": "TableHeaderRight/File",
+  "nodeId": "959:47527",
+  "figmaName": "TableHeaderRight/FIle",
+  "category": "Organisms",
+  "description": "テーブル右ヘッダー（ファイル一覧用）。認証制限・作成者・ラベル・容量・最終更新日時・操作の6列構成。",
+  "container": {
+    "height": 48,
+    "padding": 16,
+    "gap": 16,
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "borderRadiusTopRight": 8,
+    "overflow": "hidden"
+  },
+  "columns": [
+    {
+      "label": "認証制限",
+      "width": 88,
+      "align": "center",
+      "nodeId": "959:47493"
+    },
+    {
+      "label": "作成者",
+      "width": 112,
+      "align": "center",
+      "nodeId": "1174:56511"
+    },
+    {
+      "label": "ラベル",
+      "width": 96,
+      "align": "center",
+      "nodeId": "959:47495"
+    },
+    {
+      "label": "容量",
+      "width": 112,
+      "align": "center",
+      "nodeId": "959:47497"
+    },
+    {
+      "label": "最終更新日時",
+      "width": 96,
+      "align": "center",
+      "nodeId": "959:47499"
+    },
+    {
+      "label": "操作",
+      "width": 64,
+      "align": "center",
+      "nodeId": "959:47505"
+    }
+  ],
+  "typography": {
+    "fontFamily": "Noto Sans JP",
+    "fontSize": 14,
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "color": "#0d2144"
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": "Figma のコンポーネント名に typo あり（FIle → 正: File）。Vue 実装時は File を使用。バリアントなし。単一状態。"
+}

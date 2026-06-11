@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import AppSwitch from '@/components/atoms/AppSwitch.vue'
+import AppSwitchLabel from '@/components/molecules/AppSwitchLabel.vue'
 
 // インタラクティブデモ用
 const demoValue = ref(false)
@@ -65,27 +66,19 @@ const autoSave = ref(true)
       </div>
     </section>
 
-    <!-- セクション3: 複数スイッチのフォームデモ -->
+    <!-- セクション3: AppSwitchLabel（Molecule）を使ったフォームデモ -->
     <section class="mb-6 bg-white rounded-lg p-6 shadow-sm">
       <h2 class="text-lg font-semibold text-slate-700 border-b border-slate-200 pb-2 mb-4">
-        複数スイッチのフォームデモ
+        AppSwitchLabel（Molecule）を使ったフォームデモ
       </h2>
       <p class="text-xs text-slate-400 mb-4">
-        フォーム内でスイッチを複数並べる一般的なユースケース例。
+        AppSwitchLabel は AppSwitch に leftLabel / rightLabel を組み合わせた Molecule。
+        ラベルを含めた全体がクリック可能になる。
       </p>
       <div class="space-y-4 max-w-xs">
-        <div class="flex items-center justify-between">
-          <span class="text-sm text-slate-700">通知</span>
-          <AppSwitch v-model="notifications" />
-        </div>
-        <div class="flex items-center justify-between">
-          <span class="text-sm text-slate-700">ダークモード</span>
-          <AppSwitch v-model="darkMode" />
-        </div>
-        <div class="flex items-center justify-between">
-          <span class="text-sm text-slate-700">自動保存</span>
-          <AppSwitch v-model="autoSave" />
-        </div>
+        <AppSwitchLabel v-model="notifications" right-label="通知" />
+        <AppSwitchLabel v-model="darkMode" right-label="ダークモード" />
+        <AppSwitchLabel v-model="autoSave" right-label="自動保存" />
         <div class="mt-4 pt-4 border-t border-slate-200 text-xs text-slate-400">
           <p>通知: {{ notifications ? 'ON' : 'OFF' }}</p>
           <p>ダークモード: {{ darkMode ? 'ON' : 'OFF' }}</p>

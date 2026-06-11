@@ -1,0 +1,126 @@
+{
+  "componentName": "TableHeaderLeftPages",
+  "nodeId": "621:13684",
+  "figmaName": "TableHeaderLeft/Pages",
+  "category": "Organisms",
+  "variants": [
+    {
+      "name": "Default / Pages",
+      "nodeId": "621:13682",
+      "state": "Default",
+      "type": "Pages"
+    },
+    {
+      "name": "Selected / Pages",
+      "nodeId": "621:13683",
+      "state": "Selected",
+      "type": "Pages"
+    },
+    {
+      "name": "Selected / Article",
+      "nodeId": "871:31818",
+      "state": "Selected",
+      "type": "Article"
+    },
+    {
+      "name": "Selected / Category",
+      "nodeId": "871:33551",
+      "state": "Selected",
+      "type": "Category"
+    }
+  ],
+  "props": {
+    "state": ["Default", "Selected"],
+    "type": ["Pages", "Article", "Category"]
+  },
+  "sizes": {
+    "width": 1200,
+    "height": 48
+  },
+  "layout": {
+    "direction": "row",
+    "padding": 16,
+    "overflow": "hidden",
+    "borderTopLeftRadius": 8
+  },
+  "states": {
+    "Default": {
+      "description": "全選択チェックボックス＋「すべて選択」テキスト",
+      "background": "#ffffff",
+      "border": "1px solid #e5e5e5",
+      "gap": 16,
+      "children": [
+        {
+          "name": "チェックボックスアイコン",
+          "icon": "square",
+          "fontStyle": "Regular",
+          "fontSize": 20,
+          "color": "#2862cb"
+        },
+        {
+          "name": "「すべて選択」テキスト",
+          "text": "すべて選択",
+          "fontSize": 14,
+          "color": "#0d2144"
+        }
+      ]
+    },
+    "Selected": {
+      "description": "選択件数＋一括操作ボタン群（typeにより異なる）",
+      "background": "transparent（背景色なし）",
+      "gap": 0,
+      "children": {
+        "Pages": [
+          "公開ステータス",
+          "メニュー表示",
+          "ワークフロー",
+          "認証制限",
+          "編集権限",
+          "テンプレート設定",
+          "再構築"
+        ],
+        "Article": [
+          "公開ステータス",
+          "ワークフロー",
+          "カテゴリ変更",
+          "ゴミ箱に移動"
+        ],
+        "Category": [
+          "完全に削除する"
+        ]
+      },
+      "buttonStyle": {
+        "height": 32,
+        "background": "transparent",
+        "textColor": "#2862cb",
+        "fontSize": 14,
+        "borderRadius": 8,
+        "paddingLeft": 12,
+        "paddingRight": "8〜16px（ボタンによって異なる）",
+        "paddingY": 4
+      },
+      "countText": {
+        "text": "24件選択中",
+        "fontSize": 14,
+        "color": "#0d2144"
+      }
+    }
+  },
+  "colors": {
+    "background": "#ffffff",
+    "borderBottom": "#e5e5e5",
+    "borderRight": "#e5e5e5",
+    "checkboxColor": "#2862cb",
+    "labelText": "#0d2144",
+    "actionButtonText": "#2862cb"
+  },
+  "typography": {
+    "label": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": "Regular",
+      "fontSize": 14,
+      "lineHeight": 1
+    }
+  },
+  "notes": "テーブル左側ヘッダー。幅1200px・高さ48px・左上角丸8px。Default状態：全選択チェックボックス。Selected状態：選択件数テキスト＋一括操作ボタン（typeで内容が異なる）。Pages=7種、Article=4種、Category=1種。TableHeaderRight/Pagesと組み合わせて使用。"
+}

@@ -1,0 +1,44 @@
+{
+  "componentName": "TableRowRight/News",
+  "nodeId": "970:82953",
+  "figmaName": "TableRowRight/News",
+  "category": "Organisms",
+  "description": "ニュース一覧テーブルの行右側エリア。パスURL・リンクURL・更新日時・ellipsis アクションを横並びで表示する。",
+  "layout": {
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "padding": "12px 16px",
+    "height": 64,
+    "gap": 16
+  },
+  "columns": [
+    {
+      "name": "path",
+      "width": 144,
+      "content": "パステキスト（14px / #171717 / center）"
+    },
+    {
+      "name": "link",
+      "width": 144,
+      "content": "リンクURL テキスト（14px / underline / brand色）",
+      "textColor": "#2862cb",
+      "textDecoration": "underline"
+    },
+    {
+      "name": "updatedAt",
+      "width": 128,
+      "content": "更新日時テキスト（14px / center）"
+    },
+    {
+      "name": "actions",
+      "width": 64,
+      "content": "ellipsis アイコン（20px）",
+      "icons": [
+        { "faIcon": "fa-ellipsis", "color": "#64748b", "size": 20 }
+      ]
+    }
+  ],
+  "variants": [],
+  "states": ["default"],
+  "notes": "リンク列（path.pdf等）は text-brand（#2862cb）+ underline スタイル。"
+}

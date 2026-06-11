@@ -1,0 +1,51 @@
+{
+  "componentName": "TableRowLeftCategory",
+  "nodeId": "871:32495",
+  "figmaName": "TableRowLeft/Category",
+  "category": "Organisms",
+  "description": "カテゴリテーブルの左側行セル。チェックボックス・カテゴリ名のみのシンプル構成。",
+  "sizes": {
+    "width": 800,
+    "height": 64
+  },
+  "layout": {
+    "direction": "row",
+    "padding": "12px 16px",
+    "gap": "16px",
+    "align": "center"
+  },
+  "colors": {
+    "background": "#ffffff",
+    "border": "#e5e5e5"
+  },
+  "borders": {
+    "bottom": "1px solid #e5e5e5",
+    "right": "1px solid #e5e5e5"
+  },
+  "children": {
+    "checkbox": {
+      "type": "icon",
+      "icon": "fa-regular fa-square",
+      "size": "20px",
+      "color": "#2862cb"
+    },
+    "name": {
+      "type": "text",
+      "fontSize": "14px",
+      "lineHeight": "1",
+      "fontWeight": 400,
+      "color": "#0d2144",
+      "whitespace": "nowrap",
+      "sampleText": "カテゴリ"
+    }
+  },
+  "innerLayout": {
+    "checkboxNameGap": "16px（チェックボックスと名前の間）"
+  },
+  "notes": [
+    "チェックボックスは fa-regular fa-square（未選択状態のみ表示）",
+    "カテゴリ名はテキストのみ（アイコンなし）",
+    "高さ固定 64px（h-16）",
+    "GlobalParts と比べてアイコンと件数バッジが存在しないシンプル構成"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "nodeId": "855:18985",
+  "name": "PagesLayer",
+  "atomicLevel": "Molecule",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "ページ階層ツリーの1行アイテム。階層の深さ（Home/TopLayer/2nd〜6thLayer）によって左パディングが増加し、アイコンが変化する。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "column",
+    "width": "294px",
+    "height": "44px"
+  },
+  "variants": [
+    { "type": "Home",     "nodeId": "855:18874", "paddingLeft": "0px",  "icon": "fa-house" },
+    { "type": "TopLayer", "nodeId": "855:18875", "paddingLeft": "0px",  "icon": "fa-file-lines" },
+    { "type": "2ndLayer", "nodeId": "855:18893", "paddingLeft": "var(--spacing/3, 12px)", "icon": "fa-file-lines" },
+    { "type": "3rdLayer", "nodeId": "855:18982", "paddingLeft": "var(--spacing/6, 24px)", "icon": "fa-file-lines" },
+    { "type": "4thLayer", "nodeId": "855:18983", "paddingLeft": "var(--spacing/9, 36px)", "icon": "fa-file-lines" },
+    { "type": "5thLayer", "nodeId": "855:18984", "paddingLeft": "var(--spacing/12, 48px)", "icon": "fa-file-lines" },
+    { "type": "6thLayer", "nodeId": "855:18986", "paddingLeft": "var(--spacing/14, 56px)", "icon": "fa-file-lines" }
+  ],
+  "structure": {
+    "caretIcon": {
+      "description": "展開/折りたたみ矢印（fa-caret-right）。Home は非表示",
+      "icon": "fa-caret-right",
+      "size": "20px",
+      "color": "var(--iconitify/ic-primary, #143166)"
+    },
+    "pageIcon": {
+      "description": "ページアイコン。Home は fa-house、それ以外は fa-file-lines",
+      "size": "14px",
+      "color": "var(--iconitify/ic-secondary, #64748b)"
+    },
+    "pageName": {
+      "fontFamily": "Noto Sans JP",
+      "fontSize": "var(--text/sm/font-size, 14px)",
+      "fontWeight": 400,
+      "lineHeight": 1,
+      "color": "var(--text/text-primary, #0d2144)"
+    },
+    "countBadge": {
+      "description": "ページ数バッジ。グレー背景・グレーテキスト・12px bold",
+      "background": "var(--tailwind-colors/gray/200, #e5e7eb)",
+      "textColor": "var(--tailwind-colors/gray/800, #1f2937)",
+      "fontSize": "var(--text/xs/font-size, 12px)",
+      "fontWeight": 700,
+      "paddingX": "4px",
+      "paddingY": "2px",
+      "borderRadius": "8px"
+    },
+    "urlPath": {
+      "description": "URL パス（./products 等）。10px・ブランド青",
+      "fontSize": "10px",
+      "color": "var(--text/text-brand, #2862cb)"
+    },
+    "copyIcon": {
+      "description": "URLコピーアイコン（fa-copy）",
+      "icon": "fa-copy",
+      "size": "12px",
+      "color": "var(--iconitify/ic-secondary, #64748b)"
+    }
+  },
+  "props": {
+    "type": {
+      "type": "string",
+      "enum": ["Home", "TopLayer", "2ndLayer", "3rdLayer", "4thLayer", "5thLayer", "6thLayer"],
+      "default": "TopLayer"
+    },
+    "label": { "type": "string" },
+    "count": { "type": "number" },
+    "urlPath": { "type": "string" }
+  }
+}

@@ -80,7 +80,7 @@ mcp__figma__get_libraries(fileKey: "{YOUR_FILE_KEY}")
 
 外部ライブラリ（共有スタイル等）が参照されている場合はここで確認する。
 
-### 3-3. `docs/design-tokens.md` を作成する
+### 3-3. `DESIGN.md` を作成する
 
 取得したトークンを以下のフォーマットで整理して保存する:
 
@@ -218,7 +218,7 @@ component_list_file: docs/session-plan.md
 ## チェックリスト
 
 - [ ] `mcp__figma__whoami` で接続確認できる
-- [ ] `docs/design-tokens.md` にトークン一覧が記録されている
+- [ ] `DESIGN.md` にトークン一覧が記録されている
 - [ ] `src/assets/main.css` にトークンが CSS 変数として定義されている
 - [ ] `docs/session-plan.md` に全コンポーネントが登録されている
 - [ ] `.claude/workflow-config.md` に `figma_file_key` と `figma_target_node` が記入されている

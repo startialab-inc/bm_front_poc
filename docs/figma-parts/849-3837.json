@@ -1,0 +1,67 @@
+{
+  "componentName": "TitleModalBasic",
+  "nodeId": "849:3837",
+  "figmaName": "Title/ModalBasic",
+  "category": "Organisms",
+  "variants": [
+    {
+      "name": "Default",
+      "nodeId": "849:3837"
+    }
+  ],
+  "sizes": {
+    "width": 768,
+    "height": "auto (1行構成)"
+  },
+  "layout": {
+    "direction": "column",
+    "gap": 0,
+    "paddingTop": 24,
+    "paddingBottom": 20,
+    "paddingX": 24,
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5"
+  },
+  "structure": {
+    "row1": {
+      "description": "タイトル行（モーダルタイトル + 閉じるボタン）",
+      "gap": 10,
+      "children": [
+        {
+          "name": "タイトルテキスト",
+          "text": "タイトル",
+          "font": "Noto Sans JP Bold",
+          "fontSize": 18,
+          "lineHeight": 1,
+          "color": "#0d2144",
+          "flex": "1 0 0"
+        },
+        {
+          "name": "Button/Icon（閉じる）",
+          "type": "AppButtonIcon",
+          "icon": "close",
+          "size": "32x32px",
+          "background": "#eff6ff",
+          "borderRadius": "9999px",
+          "iconColor": "#143166"
+        }
+      ]
+    }
+  },
+  "colors": {
+    "background": "#ffffff",
+    "borderBottom": "#e5e5e5",
+    "titleText": "#0d2144",
+    "closeButtonBg": "#eff6ff",
+    "closeButtonIcon": "#143166"
+  },
+  "typography": {
+    "title": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": "Bold",
+      "fontSize": 18,
+      "lineHeight": 1
+    }
+  },
+  "notes": "モーダル共通タイトルヘッダー。幅768px固定。Title/* シリーズの最もシンプルな構成。タイトルテキスト＋閉じるボタンのみ。バリアントは1種のみ。Title/UserDirectorySetting と同サイズ・同構造だがアイコンなし。"
+}

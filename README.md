@@ -27,7 +27,7 @@ Claude Code から `/コマンド名` で呼び出せるスキルの一覧。
 | ドキュメント | 内容 |
 |-------------|------|
 | [`docs/session-plan.md`](docs/session-plan.md) | 実装計画・進捗テーブル（セッション開始時に確認） |
-| [`docs/design-tokens.md`](docs/design-tokens.md) | デザイントークン一覧（コンポーネント実装前に確認） |
+| [`DESIGN.md`](DESIGN.md) | デザイントークン一覧（コンポーネント実装前に確認） |
 | [`docs/architecture.md`](docs/architecture.md) | アーキテクチャ・MCP 接続情報 |
 | [`docs/figma-parts/`](docs/figma-parts/) | Figma コンポーネント情報 JSON（`/figma-collect` が生成） |
 

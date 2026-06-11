@@ -1,0 +1,23 @@
+{
+  "nodeId": "2319:5853",
+  "name": "login-news",
+  "atomicLevel": "Template",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "ログイン画面のお知らせパネル。「お知らせ」タイトル + マニュアルサイトリンクボタン（fa-book）+ お知らせ一覧（日付 + タイトル、セパレーター区切り）。440px幅。",
+  "layout": {
+    "width": "440px",
+    "display": "flex",
+    "flexDirection": "column",
+    "gap": "24px",
+    "padding": "24px 24px 0 24px",
+    "borderRadius": "var(--border-radius/rounded-md, 8px)"
+  },
+  "style": {
+    "background": "var(--background/surface/bg-sf-primary, white)"
+  },
+  "structure": {
+    "header": "「お知らせ」テキスト（14px bold）+ 「一覧（マニュアルサイト）」ボタン（fa-book + テキスト、ブランド青）",
+    "newsList": "日付（12px グレー）+ お知らせタイトル（12px ブランド青）の繰り返し、セパレーター区切り"
+  },
+  "variants": [{ "state": "Default", "nodeId": "2319:5853" }]
+}

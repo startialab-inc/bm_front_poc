@@ -1,0 +1,25 @@
+{
+  "nodeId": "1937:72566",
+  "name": "TableRowLeft/CurationList",
+  "atomicLevel": "Organism",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "キュレーションリスト一覧のテーブル行（左列）。チェックボックス + ステータスバッジ（連載済み: emerald-500） + 記事タイトル。単一バリアント。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "column",
+    "height": "64px",
+    "width": "800px",
+    "justifyContent": "center"
+  },
+  "style": {
+    "background": "var(--background/surface/bg-sf-primary, white)",
+    "borderBottom": "1px solid var(--divider/divider-primary, #e5e5e5)",
+    "borderRight": "1px solid var(--divider/divider-primary, #e5e5e5)"
+  },
+  "columns": [
+    { "content": "チェックボックス（fa-square, 20px, ブランド青）" },
+    { "content": "ステータスバッジ（「連載済み」、emerald-500 背景 #10b981、白テキスト）" },
+    { "content": "記事タイトルテキスト（14px、black、overflow ellipsis）" }
+  ],
+  "variants": [{ "state": "Default", "nodeId": "1937:72566" }]
+}

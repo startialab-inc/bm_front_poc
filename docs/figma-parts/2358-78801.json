@@ -1,0 +1,27 @@
+{
+  "nodeId": "2358:78801",
+  "name": "import",
+  "atomicLevel": "Template",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "インポートセクション。FormTitle「インポート」 + カード内に: ファイル選択DropdownMenu（500px）+ 「ファイルを選択する」Secondary ボタン + 説明文 + 「インポート内容を確認する」Primary ボタン。720px幅。",
+  "layout": {
+    "width": "720px",
+    "display": "flex",
+    "flexDirection": "column",
+    "gap": "var(--spacing/3, 12px)"
+  },
+  "structure": {
+    "formTitle": "FormTitle「インポート」（縦バー + テキスト）",
+    "card": {
+      "padding": "var(--spacing/4, 16px)",
+      "borderRadius": "10px",
+      "border": "1px solid var(--divider/divider-primary, #e5e5e5)",
+      "content": [
+        "ファイル選択 DropdownMenu（500px Outline）+ 「ファイルを選択する」Secondary ボタン（横並び）",
+        "説明文（12px、改行あり、「マニュアルサイト」リンク含む）",
+        "「インポート内容を確認する」Primary ボタン（40px）"
+      ]
+    }
+  },
+  "variants": [{ "state": "Default", "nodeId": "2358:78801" }]
+}

@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 // バリアントの型定義
-type Variant = 'ghost' | 'primary' | 'submit' | 'destructive' | 'secondary' | 'sort' | 'filter'
+type Variant = 'ghost' | 'ghost-danger' | 'primary' | 'submit' | 'destructive' | 'secondary' | 'sort' | 'filter'
 type Size = 'sm' | 'md'
 
 const props = withDefaults(defineProps<{
@@ -43,15 +43,15 @@ const effectiveIconLeft = computed(() => props.iconLeft ?? '')
 const hasLeftIcon = computed(() => !!effectiveIconLeft.value)
 const hasRightIcon = computed(() => !!effectiveIconRight.value)
 
-// ghost / sort / filter はアイコンあり系
+// ghost / ghost-danger / sort / filter はアイコンあり系
 const isGhostStyle = computed(() =>
-  props.variant === 'ghost' || props.variant === 'sort' || props.variant === 'filter'
+  props.variant === 'ghost' || props.variant === 'ghost-danger' || props.variant === 'sort' || props.variant === 'filter'
 )
 
-// 実効サイズ（ghost は sm、それ以外は md）
+// 実効サイズ（ghost 系は sm、それ以外は md）
 const effectiveSize = computed((): Size => {
   if (props.size) return props.size
-  return props.variant === 'ghost' ? 'sm' : 'md'
+  return isGhostStyle.value ? 'sm' : 'md'
 })
 
 // ベースクラス（全バリアント共通）
@@ -81,6 +81,14 @@ const variantClasses = computed(() => {
         'bg-transparent text-text-primary font-normal leading-none outline-none',
         'hover:bg-brand-50 hover:text-text-brand hover:font-bold',
         'focus:bg-brand-50 focus:text-text-brand focus:font-bold focus:outline focus:outline-1 focus:outline-brand-500',
+        'disabled:bg-transparent disabled:text-text-disable disabled:font-normal',
+      ].join(' ')
+
+    case 'ghost-danger':
+      return [
+        'bg-transparent text-[#dc2626] font-normal leading-none outline-none',
+        'hover:bg-[#fef2f2]',
+        'focus:bg-[#fef2f2] focus:outline-none',
         'disabled:bg-transparent disabled:text-text-disable disabled:font-normal',
       ].join(' ')
 
@@ -136,6 +144,8 @@ const iconColorClass = computed(() => {
   switch (props.variant) {
     case 'ghost':
       return 'text-icon-primary'
+    case 'ghost-danger':
+      return 'text-[#dc2626]'
     case 'sort':
     case 'filter':
       return 'text-icon-brand'

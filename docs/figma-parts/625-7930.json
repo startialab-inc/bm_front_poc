@@ -1,0 +1,57 @@
+{
+  "componentName": "TableRowRight/Article",
+  "nodeId": "625:7930",
+  "figmaName": "TableRowRight/Article",
+  "category": "Organisms",
+  "description": "記事一覧テーブルの行右側エリア。ページ設定バッジ・カテゴリ・タグ・担当者・更新日時・アクションアイコンを横並びで表示する。",
+  "layout": {
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "padding": "12px 16px",
+    "gap": 16
+  },
+  "columns": [
+    {
+      "name": "badges",
+      "width": 88,
+      "content": "BadgePageSettingIcon × 3（OpenTerm / Curation / BowNow）",
+      "gap": 6,
+      "components": ["AppBadgeIcon"]
+    },
+    {
+      "name": "category",
+      "width": 176,
+      "content": "カテゴリ名テキスト（14px / Noto Sans JP / center）"
+    },
+    {
+      "name": "tags",
+      "width": "auto",
+      "content": "Badge/Tag × 5（タグ）",
+      "gap": 4,
+      "components": ["AppTagBadge"]
+    },
+    {
+      "name": "author",
+      "width": 112,
+      "content": "担当者名テキスト（14px / center）"
+    },
+    {
+      "name": "updatedAt",
+      "width": 96,
+      "content": "更新日時テキスト（14px / center）"
+    },
+    {
+      "name": "actions",
+      "width": 112,
+      "content": "アクションアイコン2つ（pen・ellipsis）",
+      "gap": 16,
+      "icons": [
+        { "faIcon": "fa-pen", "color": "#64748b", "size": 16 },
+        { "faIcon": "fa-ellipsis", "color": "#64748b", "size": 20 }
+      ]
+    }
+  ],
+  "variants": [],
+  "states": ["default"],
+  "notes": "ellipsis アイコンは font-size 20px（他の 16px と異なる）。Badge/Tag は AppTagBadge コンポーネントを使用。BadgePageSettingIcon は AppBadgeIcon を使用。"
+}

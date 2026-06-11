@@ -1,0 +1,38 @@
+{
+  "nodeId": "643:13612",
+  "name": "BlockSelect",
+  "atomicLevel": "Organism",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "ブロック選択状態の複合コンポーネント。BlockMoveCell（上下）+ ブロックコンテンツエリア + Badge/SelectBlock オーバーレイの 3 要素で構成。単一バリアント。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "flex-start",
+    "gap": "var(--spacing/6, 24px)",
+    "position": "relative"
+  },
+  "children": {
+    "blockMoveCell": {
+      "description": "上下移動ボタン 2つ（BlockMoveCell Up + Down）を縦に並べた列",
+      "gap": "var(--spacing/3, 12px)"
+    },
+    "blockContent": {
+      "description": "ブロックのコンテンツ領域（568×370px、Figma では block_hover 画像として表現）",
+      "width": "568px",
+      "height": "370px"
+    },
+    "badgeSelectBlock": {
+      "description": "「ブロック選択中」バッジ。absolute 配置で left:88px / top:8px",
+      "position": "absolute",
+      "left": "88px",
+      "top": "8px"
+    }
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "643:13612"
+    }
+  ],
+  "note": "BlockSelect はブロックエリア全体のラッパー。BlockHover（オレンジオーバーレイ）とは別物。BlockHover はホバー時、BlockSelect は選択確定時に使用。"
+}

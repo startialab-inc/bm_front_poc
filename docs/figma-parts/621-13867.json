@@ -1,0 +1,73 @@
+{
+  "componentName": "TableRowLeft/Pages",
+  "nodeId": "621:13867",
+  "figmaName": "TableRowLeft/Pages",
+  "category": "Organisms",
+  "description": "テーブル左行セル（ページ一覧用）。チェックボックス・公開ステータスバッジ・ページ階層情報・編集中バッジを含む。4状態あり。",
+  "container": {
+    "height": 64,
+    "width": 800,
+    "paddingX": 16,
+    "paddingY": 12,
+    "gap": 16,
+    "borderBottom": "1px solid #e5e5e5",
+    "borderRight": "1px solid #e5e5e5"
+  },
+  "states": ["Default", "Selected", "Disable", "Hover"],
+  "stateStyles": {
+    "Default": {
+      "background": "#ffffff",
+      "nodeId": "621:13863"
+    },
+    "Selected": {
+      "background": "#eff6ff",
+      "nodeId": "621:13864"
+    },
+    "Hover": {
+      "background": "#eff6ff",
+      "nodeId": "621:13865"
+    },
+    "Disable": {
+      "background": "#f8fafc",
+      "nodeId": "621:13866"
+    }
+  },
+  "layout": {
+    "direction": "horizontal",
+    "items": [
+      {
+        "name": "Checkbox",
+        "size": 20,
+        "description": "FontAwesome square（未選択: fa-regular fa-square, ブランド青 #2862cb）/ square-check（選択: fa-solid, プライマリ #143166）"
+      },
+      {
+        "name": "Content",
+        "flex": true,
+        "description": "BadgePageStatus + PagesLayer を横並びに配置",
+        "children": [
+          {
+            "name": "BadgePageStatus",
+            "description": "公開ステータスバッジ。「公開中」= 緑（#10b981）、「非公開」= 別バリアント。高さ 20px、横 px-8px、rounded-sm（6px）"
+          },
+          {
+            "name": "PagesLayer",
+            "flex": true,
+            "height": 44,
+            "description": "ページ階層ツリー行。上段: caret-right（展開アイコン）+ file-lines（ファイルアイコン）+ ページ名テキスト + 件数バッジ（グレー背景 #e5e7eb、12px太字）。下段: URLテキスト（10px ブランド青 #2862cb）+ コピーアイコン（fa-copy）"
+          }
+        ]
+      },
+      {
+        "name": "BadgeSubStatus",
+        "description": "編集中バッジ。state=Editting: グレー背景（#e2e8f0）+「編集中」テキスト。state=PageRebuildTime: オレンジ（#ea580c）+ 時計アイコン + 再構築予約日時テキスト"
+      }
+    ]
+  },
+  "typography": {
+    "pageName": { "fontSize": 14, "fontWeight": 400, "color": "#0d2144" },
+    "url": { "fontSize": 10, "fontWeight": 400, "color": "#2862cb" },
+    "badge": { "fontSize": 12, "fontWeight": 700, "color": "#1f2937" }
+  },
+  "subComponents": ["BadgePageStatus（619:13579）", "PagesLayer（855:18875）", "BadgeSubStatus（619:13581）"],
+  "notes": "PagesLayer は最大7階層（855:18985 として別途収集済み）。今行は TopLayer のみ表示。チェックボックスは FontAwesome で実装（Atom BaseCheckboxInput.vue は使わず FA アイコン切り替えで表現）。"
+}

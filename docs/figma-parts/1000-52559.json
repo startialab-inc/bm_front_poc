@@ -1,0 +1,57 @@
+{
+  "componentName": "TableRowRight/User",
+  "nodeId": "1000:52559",
+  "figmaName": "TableRowRight/User",
+  "category": "Organisms",
+  "description": "ユーザー一覧テーブルの行右側エリア。ユーザーID（リンク）・メールアドレス（リンク）・役割・フラグ・更新日時・ellipsis アクションを横並びで表示する。",
+  "layout": {
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "padding": "12px 16px",
+    "height": 64,
+    "gap": 16
+  },
+  "columns": [
+    {
+      "name": "userId",
+      "width": 128,
+      "content": "ユーザーID（リンク・アンカータグ・14px・brand色・underline）",
+      "textColor": "#2862cb",
+      "textDecoration": "underline",
+      "isLink": true
+    },
+    {
+      "name": "email",
+      "width": 176,
+      "content": "メールアドレス（14px・brand色・underline）",
+      "textColor": "#2862cb",
+      "textDecoration": "underline"
+    },
+    {
+      "name": "role",
+      "width": 144,
+      "content": "役割テキスト（14px / #171717 / center）"
+    },
+    {
+      "name": "flag",
+      "width": 144,
+      "content": "フラグテキスト（14px / #171717 / center）"
+    },
+    {
+      "name": "updatedAt",
+      "width": 128,
+      "content": "更新日時テキスト（14px / center）"
+    },
+    {
+      "name": "actions",
+      "width": 64,
+      "content": "ellipsis アイコン（20px）",
+      "icons": [
+        { "faIcon": "fa-ellipsis", "color": "#64748b", "size": 20 }
+      ]
+    }
+  ],
+  "variants": [],
+  "states": ["default"],
+  "notes": "ユーザーID は <a> タグでリンク。メールアドレスも underline + brand 色。"
+}

@@ -1,0 +1,149 @@
+{
+  "componentName": "TitlePageSetting",
+  "nodeId": "799:16654",
+  "figmaName": "Title/PageSetting",
+  "category": "Organisms",
+  "variants": [
+    {
+      "name": "Default",
+      "nodeId": "799:16654"
+    }
+  ],
+  "sizes": {
+    "width": 768,
+    "height": "auto (2セクション構成)"
+  },
+  "layout": {
+    "direction": "column",
+    "gap": 16,
+    "paddingTop": 24,
+    "paddingBottom": 20,
+    "paddingX": 24,
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5"
+  },
+  "structure": {
+    "section1": {
+      "description": "ページ情報セクション（ステータス・タイトル・URL）",
+      "children": [
+        {
+          "name": "row1（ステータス + 閉じるボタン）",
+          "children": [
+            {
+              "name": "Badge/PageStatus",
+              "type": "AppBadgeStatus",
+              "variant": "pageStatus",
+              "state": "Open",
+              "text": "公開中",
+              "background": "#10b981",
+              "color": "#fafafa",
+              "height": 20,
+              "borderRadius": 6
+            },
+            {
+              "name": "Button/Icon（閉じる）",
+              "type": "AppButtonIcon",
+              "icon": "close",
+              "size": "32x32px",
+              "background": "#eff6ff",
+              "borderRadius": "9999px",
+              "iconColor": "#143166"
+            }
+          ]
+        },
+        {
+          "name": "ページタイトル",
+          "text": "ページ名が入りますページ名が入りますページ名が入りますページ名が入ります",
+          "font": "Noto Sans JP Bold",
+          "fontSize": 16,
+          "lineHeight": 24,
+          "color": "#0d2144",
+          "width": "100%"
+        },
+        {
+          "name": "URLテキスト + コピーアイコン",
+          "gap": 4,
+          "children": [
+            {
+              "name": "URLテキスト",
+              "text": "./products",
+              "fontSize": 10,
+              "color": "#2862cb"
+            },
+            {
+              "name": "コピーアイコン",
+              "icon": "copy",
+              "size": "20x20px",
+              "iconColor": "#64748b"
+            }
+          ]
+        }
+      ]
+    },
+    "section2": {
+      "description": "メタ情報 + アクションボタンセクション",
+      "children": [
+        {
+          "name": "最終更新日時",
+          "fontSize": 12,
+          "lineHeight": 16,
+          "color": "#64748b",
+          "text": "最終更新日時：2026/01/07　15:05:40"
+        },
+        {
+          "name": "Button/Secondary（ページを編集する）",
+          "type": "AppButton",
+          "variant": "secondary",
+          "label": "ページを編集する",
+          "iconLeft": "pen",
+          "height": 40,
+          "borderRadius": 8,
+          "border": "1px solid #143166",
+          "textColor": "#143166"
+        },
+        {
+          "name": "Button/Secondary（プレビュー）",
+          "type": "AppButton",
+          "variant": "secondary",
+          "label": "プレビュー",
+          "iconLeft": "eye",
+          "height": 40,
+          "borderRadius": 8,
+          "border": "1px solid #143166",
+          "textColor": "#143166"
+        }
+      ]
+    }
+  },
+  "colors": {
+    "background": "#ffffff",
+    "borderBottom": "#e5e5e5",
+    "titleText": "#0d2144",
+    "urlText": "#2862cb",
+    "metaText": "#64748b",
+    "copyIcon": "#64748b",
+    "buttonBorder": "#143166",
+    "buttonText": "#143166"
+  },
+  "typography": {
+    "title": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": "Bold",
+      "fontSize": 16,
+      "lineHeight": 24
+    },
+    "url": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": "Regular",
+      "fontSize": 10,
+      "lineHeight": 1
+    },
+    "meta": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": "Regular",
+      "fontSize": 12,
+      "lineHeight": 16
+    }
+  },
+  "notes": "ページ設定パネルのタイトルヘッダー。幅768px（パネル幅）固定。上部セクション：公開ステータスバッジ・閉じるボタン・ページタイトル・URL＋コピー。下部セクション：最終更新日時＋「ページを編集する」「プレビュー」ボタン。バリアントは1種のみ。"
+}

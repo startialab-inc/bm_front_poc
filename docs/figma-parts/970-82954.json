@@ -1,0 +1,52 @@
+{
+  "componentName": "TableHeaderRight/News",
+  "nodeId": "970:82954",
+  "figmaName": "TableHeaderRight/News",
+  "category": "Organisms",
+  "description": "テーブル右ヘッダー（お知らせ一覧用）。RSS取得URL・リンク先URL・お知らせ公開日時・操作の4列構成。",
+  "container": {
+    "height": 48,
+    "padding": 16,
+    "gap": 16,
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "borderRadiusTopRight": 8,
+    "overflow": "hidden"
+  },
+  "columns": [
+    {
+      "label": "RSS取得URL",
+      "width": 144,
+      "align": "center",
+      "nodeId": "970:82916"
+    },
+    {
+      "label": "リンク先URL",
+      "width": 144,
+      "align": "center",
+      "nodeId": "970:82920"
+    },
+    {
+      "label": "お知らせ公開日時",
+      "width": 128,
+      "align": "center",
+      "nodeId": "970:82922"
+    },
+    {
+      "label": "操作",
+      "width": 64,
+      "align": "center",
+      "nodeId": "970:82924"
+    }
+  ],
+  "typography": {
+    "fontFamily": "Noto Sans JP",
+    "fontSize": 14,
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "color": "#0d2144"
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": "バリアントなし。単一状態。お知らせ一覧テーブルの右側ヘッダー4列。"
+}

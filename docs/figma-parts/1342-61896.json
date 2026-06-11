@@ -1,0 +1,70 @@
+{
+  "componentName": "TableHeaderRight/Trash（2つ目）",
+  "nodeId": "1342:61896",
+  "figmaName": "TableHeaderRight/Trash",
+  "category": "Organisms",
+  "description": "テーブル右ヘッダー（ゴミ箱一覧用 2つ目・全列均等幅版）。作成者・作成日時・最終更新者・最終更新日時・削除者・削除日時・操作の7列構成。",
+  "container": {
+    "height": 48,
+    "padding": 16,
+    "gap": 16,
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "borderRadiusTopRight": 8,
+    "overflow": "hidden"
+  },
+  "columns": [
+    {
+      "label": "作成者",
+      "width": 128,
+      "align": "center",
+      "nodeId": "1342:61832"
+    },
+    {
+      "label": "作成日時",
+      "width": 128,
+      "align": "center",
+      "nodeId": "1342:61840"
+    },
+    {
+      "label": "最終更新者",
+      "width": 128,
+      "align": "center",
+      "nodeId": "1342:61845"
+    },
+    {
+      "label": "最終更新日時",
+      "width": 128,
+      "align": "center",
+      "nodeId": "1342:61847"
+    },
+    {
+      "label": "削除者",
+      "width": 128,
+      "align": "center",
+      "nodeId": "1342:61849"
+    },
+    {
+      "label": "削除日時",
+      "width": 128,
+      "align": "center",
+      "nodeId": "1342:61851"
+    },
+    {
+      "label": "操作",
+      "width": 64,
+      "align": "center",
+      "nodeId": "1342:61842"
+    }
+  ],
+  "typography": {
+    "fontFamily": "Noto Sans JP",
+    "fontSize": 14,
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "color": "#0d2144"
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": "ゴミ箱テーブル右ヘッダー2つ目。1つ目（938:47678）と同じ列構成だが、全列が均等 128px幅（1つ目は混在幅）。操作列は 64px。"
+}

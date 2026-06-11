@@ -1,0 +1,145 @@
+{
+  "componentName": "TitleNewArticle",
+  "nodeId": "938:50708",
+  "figmaName": "Title/NewArticle",
+  "category": "Organisms",
+  "variants": [
+    {
+      "name": "Default",
+      "nodeId": "938:50708"
+    }
+  ],
+  "sizes": {
+    "width": 1384,
+    "height": "auto (2行構成)"
+  },
+  "layout": {
+    "direction": "column",
+    "gap": 4,
+    "padding": "16px",
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5"
+  },
+  "structure": {
+    "row1": {
+      "description": "タイトル行（戻るボタン + ページタイトル）",
+      "children": [
+        {
+          "name": "Button/Icon（戻る）",
+          "type": "AppButtonIcon",
+          "icon": "arrow-left",
+          "size": "32x32px",
+          "background": "#eff6ff",
+          "borderRadius": "9999px",
+          "iconColor": "#143166"
+        },
+        {
+          "name": "タイトルテキスト",
+          "text": "新規記事作成",
+          "font": "Noto Sans JP Bold",
+          "fontSize": 18,
+          "lineHeight": 28,
+          "color": "#0d2144"
+        }
+      ]
+    },
+    "row2": {
+      "description": "URL + ボタン群行",
+      "children": [
+        {
+          "name": "公開URL表示エリア",
+          "layout": "row",
+          "gap": 4,
+          "children": [
+            {
+              "name": "ラベル",
+              "text": "公開URL：",
+              "fontSize": 12,
+              "color": "#0d2144"
+            },
+            {
+              "name": "URLテキスト",
+              "text": "https://dev01015.cms2.jp/...",
+              "fontSize": 14,
+              "color": "#2862cb"
+            },
+            {
+              "name": "スラッグ入力",
+              "type": "Input",
+              "width": 80,
+              "height": 36,
+              "border": "1px solid #e5e5e5",
+              "borderRadius": 6,
+              "placeholder": "a32"
+            }
+          ]
+        },
+        {
+          "name": "Button/Submit（申請する）",
+          "type": "AppButton",
+          "variant": "submit",
+          "label": "申請する",
+          "state": "disabled",
+          "background": "#d1d5db",
+          "height": 40,
+          "borderRadius": 8
+        },
+        {
+          "name": "Button/Secondary（プレビュー）",
+          "type": "AppButton",
+          "variant": "secondary",
+          "label": "プレビュー",
+          "height": 40,
+          "borderRadius": 8
+        },
+        {
+          "name": "Button/Secondary（設定）",
+          "type": "AppButton",
+          "variant": "secondary",
+          "label": "設定",
+          "height": 40,
+          "borderRadius": 8
+        },
+        {
+          "name": "Button/Primary（保存する）",
+          "type": "AppButton",
+          "variant": "primary",
+          "label": "保存する",
+          "background": "#2862cb",
+          "height": 40,
+          "borderRadius": 8
+        }
+      ]
+    }
+  },
+  "colors": {
+    "background": "#ffffff",
+    "borderBottom": "#e5e5e5",
+    "titleText": "#0d2144",
+    "urlText": "#2862cb",
+    "labelText": "#0d2144",
+    "backButtonBg": "#eff6ff",
+    "backButtonIcon": "#143166"
+  },
+  "typography": {
+    "title": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": "Bold",
+      "fontSize": 18,
+      "lineHeight": 28
+    },
+    "label": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": "Regular",
+      "fontSize": 12,
+      "lineHeight": 16
+    },
+    "url": {
+      "fontFamily": "Noto Sans JP",
+      "fontWeight": "Regular",
+      "fontSize": 14,
+      "lineHeight": 1
+    }
+  },
+  "notes": "記事新規作成ページのタイトルバー。1行目：戻るボタン＋タイトル。2行目：公開URL（スラッグ入力付き）＋アクションボタン4種。バリアントは1種のみ。幅1384px固定。"
+}

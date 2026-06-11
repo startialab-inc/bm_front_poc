@@ -1,0 +1,72 @@
+{
+  "componentName": "TableRowLeftGlobalParts",
+  "nodeId": "621:16443",
+  "figmaName": "TableRowLeft/GlobalParts",
+  "category": "Organisms",
+  "description": "グローバルパーツテーブルの左側行セル。チェックボックス・フォルダアイコン・フォルダ名・件数バッジを表示する。",
+  "sizes": {
+    "width": 800,
+    "height": 64
+  },
+  "layout": {
+    "direction": "row",
+    "padding": "12px 16px",
+    "gap": "16px",
+    "align": "center"
+  },
+  "colors": {
+    "background": "#ffffff",
+    "border": "#e5e5e5"
+  },
+  "borders": {
+    "bottom": "1px solid #e5e5e5",
+    "right": "1px solid #e5e5e5"
+  },
+  "children": {
+    "checkbox": {
+      "type": "icon",
+      "icon": "fa-regular fa-square",
+      "size": "20px",
+      "color": "#2862cb"
+    },
+    "folderIcon": {
+      "type": "icon",
+      "icon": "fa-solid fa-folder",
+      "size": "14px",
+      "containerWidth": "12px",
+      "containerHeight": "20px",
+      "color": "#64748b"
+    },
+    "name": {
+      "type": "text",
+      "fontSize": "14px",
+      "lineHeight": "1",
+      "fontWeight": 400,
+      "color": "#0d2144",
+      "whitespace": "nowrap",
+      "sampleText": "dcm_common"
+    },
+    "countBadge": {
+      "type": "badge",
+      "background": "#e5e7eb",
+      "border": "1px solid transparent",
+      "borderRadius": "8px",
+      "padding": "2px 8px",
+      "fontSize": "12px",
+      "lineHeight": "16px",
+      "fontWeight": 600,
+      "color": "#1f2937",
+      "sampleText": "8"
+    }
+  },
+  "innerLayout": {
+    "iconNameCountGap": "6px（アイコン・名前・バッジの間）"
+  },
+  "notes": [
+    "チェックボックスは fa-regular fa-square（未選択状態のみ表示）",
+    "フォルダアイコンは fa-solid fa-folder（14px・secondary色）",
+    "フォルダ名はテキスト（14px・primary色 #0d2144）",
+    "件数バッジは gray-200 背景・丸角 8px・semibold 12px",
+    "高さ固定 64px（h-16）"
+  ]
+}

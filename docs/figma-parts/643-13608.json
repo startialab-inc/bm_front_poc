@@ -1,0 +1,35 @@
+{
+  "nodeId": "643:13608",
+  "name": "Badge/SelectBlock",
+  "atomicLevel": "Atom",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "ブロック選択中を示すバッジ。「ブロック選択中」テキスト固定。オレンジ背景・白テキスト・10px。単一バリアント。",
+  "layout": {
+    "display": "flex",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "paddingX": "var(--spacing/2, 8px)",
+    "paddingY": "var(--spacing/1-5, 6px)",
+    "borderRadius": "var(--border-radius/rounded-sm, 6px)"
+  },
+  "style": {
+    "background": "var(--background/button/submit/bg-btn-submit, #ea580c)"
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "643:13608"
+    }
+  ],
+  "typography": {
+    "label": {
+      "content": "ブロック選択中",
+      "fontFamily": "Noto Sans JP",
+      "fontSize": "10px",
+      "fontWeight": 700,
+      "lineHeight": 1,
+      "color": "var(--text/text-tertiary, white)"
+    }
+  },
+  "note": "テキストは固定（props なし）。BlockSelect や BlockHover の左上に absolute 配置される。"
+}

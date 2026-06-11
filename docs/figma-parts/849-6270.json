@@ -1,0 +1,60 @@
+{
+  "componentName": "TableUserDirectory",
+  "nodeId": "849:6270",
+  "figmaName": "Table/UserDirectory",
+  "description": "ユーザーディレクトリのフォルダ行。フォルダアイコン+名称（左）とアクションアイコン群（右）のレイアウト。",
+  "sizes": {
+    "width": 720,
+    "height": 56
+  },
+  "layout": {
+    "direction": "horizontal",
+    "padding": { "x": 16, "y": 12 },
+    "gap": 16,
+    "align": "center"
+  },
+  "left": {
+    "width": 544,
+    "icon": {
+      "library": "Font Awesome 7 Free Solid",
+      "name": "folder",
+      "size": 14,
+      "color": "#64748b"
+    },
+    "text": {
+      "sample": "bowfree",
+      "color": "#143166",
+      "fontSize": 14,
+      "fontWeight": 400,
+      "fontFamily": "Noto Sans JP",
+      "lineHeight": 1,
+      "note": "ブランドブルー（--brand/blue-monkey/800）で表示"
+    }
+  },
+  "right": {
+    "icons": [
+      { "name": "pen", "size": 16, "color": "#64748b" },
+      { "name": "download", "size": 16, "color": "#64748b" },
+      { "name": "upload", "size": 16, "color": "#64748b" },
+      { "name": "folder-plus", "size": 16, "color": "#64748b" }
+    ],
+    "iconSize": 20,
+    "gap": 16
+  },
+  "colors": {
+    "background": "#ffffff",
+    "borderBottom": "#e5e5e5",
+    "textFolder": "#143166",
+    "iconSecondary": "#64748b"
+  },
+  "border": {
+    "bottom": "1px solid #e5e5e5"
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": [
+    "フォルダ行。UserDirectoryFile と対になる（UserDirectory がフォルダ・File がファイル）",
+    "左テキストカラーは #143166（ブランドブルー）で、File 行の #0d2144（テキストプライマリ）と異なる",
+    "右アイコン 4 種: pen（編集）/ download（ダウンロード）/ upload（アップロード）/ folder-plus（フォルダ追加）"
+  ]
+}

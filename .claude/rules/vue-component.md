@@ -16,10 +16,43 @@ paths:
   - 例: `BaseButton.vue`、`BaseCheckbox.vue`、`BaseToggle.vue`
 - Molecule・Organism・Page は機能名をそのまま使う
 
+### Atomic Design 階層構造
+
+#### 階層定義と配置先
+
+| 層 | ディレクトリ | 役割 |
+|---|---|---|
+| Atoms | `src/components/atoms/` | UI の最小単位。単体で意味を持つ基本要素（ボタン・入力欄・ラベル等） |
+| Molecules | `src/components/molecules/` | Atoms を組み合わせた、1つの機能単位を持つ部品 |
+| Organisms | `src/components/organisms/` | Molecules・Atoms を組み合わせた、画面の区画を構成する複合部品 |
+| Pages | `src/pages/` | Organisms・Molecules を組み合わせた実際の画面 |
+
+#### 依存方向のルール（最重要）
+
+```
+Pages → Organisms → Molecules → Atoms
+```
+
+- **上位層は下位層を import してよい**（例: Molecules → Atoms ✅）
+- **下位層が上位層を import してはいけない**（例: Atoms → Molecules ❌）
+- **下位層から上位層の import は禁止**（例: Atoms → Molecules ❌）
+- **同一層間の import は原則禁止**（例: Molecules → Molecules ❌）
+  - 例外1: 汎用 Base コンポーネントを同一 Atoms 層の別 Atom が使うケース（`BaseControlLabel` 等）は許容する
+  - 例外2: 既に実装済みの Molecule を別の Molecule 内で使うケースは許容する。ただし循環参照（A → B → A）は禁止。
+    実装前に `mcp__storybook__get_documentation` で対象 Molecule の仕様を確認すること
+
+#### 実装時の注意点
+
+- **Molecules 実装時**: 既存 Atoms で代替できる部分は必ず Atoms を再利用する。同等の HTML を直書きしない。
+  実装前に `mcp__storybook__get_documentation` で使用予定の Atom の props・slots・型定義を確認すること
+- **Organisms 実装時**: 既存 Molecules・Atoms を優先して再利用する。
+  実装前に `mcp__storybook__list_all_documentation` で利用可能なコンポーネント一覧を確認し、`mcp__storybook__get_documentation` で個別の仕様を把握すること
+- **新 Atom を切り出すタイミング**: Molecule/Organism 内で「他でも再利用できそうな最小単位」が見えた場合は Atom として切り出す
+
 ### スタイリング
 - スタイルは Tailwind ユーティリティクラスを使用する（`<style>` ブロックは使わない）
 - デザイントークン変数（`bg-brand`、`text-primary` 等）を優先し、変数がない場合は任意値（`bg-[#FF6464]`）を使う
-- デザイントークンの一覧は `docs/design-tokens.md` を参照
+- デザイントークンの一覧は `DESIGN.md` を参照
 
 #### `position: absolute` の位置計算
 `position: absolute` の子要素の `left` / `right` / `top` / `bottom` は、**最近傍の `position: relative` 祖先要素の padding box 内端（border の内側）** を基準とする。親の `padding` の値は absolute 子要素の座標原点に影響しない。
@@ -46,9 +79,34 @@ paths:
 - **文字コードの確認**: アイコンの文字コードは Figma `get_screenshot` で目視確認する
   （MCP のテキスト出力ではアイコンが脱落するため）
 
+### 多言語対応（i18n）
+- コンポーネント内で使用する**固定テキストは必ず `useI18n()` の `t()` 関数を使う**（テンプレートへの直書き禁止）
+  - ❌ `<span>入力タイプ</span>`
+  - ✅ `<span>{{ t('components.MyComponent.labelTitle') }}</span>`
+  - ❌ `placeholder="例: 2024-01-01"`
+  - ✅ `:placeholder="t('components.MyComponent.placeholder')"`
+- メッセージは `src/locales/ja.ts` の `components.{ComponentName}` 以下に追加する
+  ```typescript
+  // src/locales/ja.ts
+  components: {
+    MyComponent: {
+      labelTitle: 'ラベル',
+    }
+  }
+  ```
+- テストでは `createI18n` を `global: { plugins: [i18n] }` に渡してマウントする
+  ```typescript
+  const i18n = createI18n({ legacy: false, locale: 'ja', messages: { ja } })
+  mount(MyComponent, { global: { plugins: [i18n] } })
+  ```
+
 ### コメント
 - コメントは日本語で記述する
 - 変数名・関数名は英語の説明的な命名にする
+- **テンプレート内の HTML コメント（`<!-- ... -->`）はルート直下に置かない**
+  Vue 3 はルート直下のコメントノードを独立したノードとして扱うため、コメント + 要素の組み合わせがフラグメント（複数ルートノード）と解釈される。
+  その結果 `wrapper.element.tagName` や `wrapper.classes()` が正しく動作しなくなる。
+  実装の意図を残したいときは `<script>` ブロック内の JS コメントに記述すること。
 
 ### Figma との対応
 - コンポーネントは Figma のノード構造に対応した HTML 要素で構成する

@@ -141,6 +141,86 @@ const router = createRouter({
       name: 'AppTabDemo',
       component: () => import('@/pages/dev/AppTabDemo.vue'),
     },
+    {
+      path: '/dev/base-control-label',
+      name: 'BaseControlLabelDemo',
+      component: () => import('@/pages/dev/BaseControlLabelDemo.vue'),
+    },
+    {
+      path: '/dev/app-switch-label',
+      name: 'AppSwitchLabelDemo',
+      component: () => import('@/pages/dev/AppSwitchLabelDemo.vue'),
+    },
+    {
+      path: '/dev/app-pagination',
+      name: 'AppPaginationDemo',
+      component: () => import('@/pages/dev/AppPaginationDemo.vue'),
+    },
+    {
+      path: '/dev/app-form-heading',
+      name: 'AppFormHeadingDemo',
+      component: () => import('@/pages/dev/AppFormHeadingDemo.vue'),
+    },
+    {
+      path: '/dev/app-form-title',
+      name: 'AppFormTitleDemo',
+      component: () => import('@/pages/dev/AppFormTitleDemo.vue'),
+    },
+    {
+      path: '/dev/app-sidebar-menu-item',
+      name: 'AppSidebarMenuItemDemo',
+      component: () => import('@/pages/dev/AppSidebarMenuItemDemo.vue'),
+    },
+    {
+      path: '/dev/app-sidebar-sub-menu-item',
+      name: 'AppSidebarSubMenuItemDemo',
+      component: () => import('@/pages/dev/AppSidebarSubMenuItemDemo.vue'),
+    },
+    {
+      path: '/dev/app-sidebar-sub-menu',
+      name: 'AppSidebarSubMenuDemo',
+      component: () => import('@/pages/dev/AppSidebarSubMenuDemo.vue'),
+    },
+    {
+      path: '/dev/app-image-selector',
+      name: 'AppImageSelectorDemo',
+      component: () => import('@/pages/dev/AppImageSelectorDemo.vue'),
+    },
+    {
+      path: '/dev/app-contact-item-type',
+      name: 'AppContactItemTypeDemo',
+      component: () => import('@/pages/dev/AppContactItemTypeDemo.vue'),
+    },
+    {
+      path: '/dev/app-confirm-section',
+      name: 'AppConfirmSectionDemo',
+      component: () => import('@/pages/dev/AppConfirmSectionDemo.vue'),
+    },
+    {
+      path: '/dev/app-page-setting-status',
+      name: 'AppPageSettingStatusDemo',
+      component: () => import('@/pages/dev/AppPageSettingStatusDemo.vue'),
+    },
+    {
+      path: '/dev/app-favorite-block',
+      name: 'AppFavoriteBlockDemo',
+      component: () => import('@/pages/dev/AppFavoriteBlockDemo.vue'),
+    },
+    {
+      path: '/dev/app-block-edit-menu-cell',
+      name: 'AppBlockEditMenuCellDemo',
+      component: () => import('@/pages/dev/AppBlockEditMenuCellDemo.vue'),
+    },
+    {
+      path: '/dev/app-block-edit-menu',
+      name: 'AppBlockEditMenuDemo',
+      component: () => import('@/pages/dev/AppBlockEditMenuDemo.vue'),
+    },
+    {
+      path: '/dev/app-modal-footer',
+      name: 'AppModalFooterDemo',
+      component: () => import('@/pages/dev/AppModalFooterDemo.vue'),
+    },
     // TODO: コンポーネントを実装したらここにデモページのルートを追記する
 
     // ---- アプリケーションページ ----

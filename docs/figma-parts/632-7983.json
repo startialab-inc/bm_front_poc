@@ -1,0 +1,105 @@
+{
+  "componentName": "TitlePageDetail",
+  "nodeId": "632:7983",
+  "figmaName": "Title/PageDetail",
+  "description": "ページ詳細編集画面のタイトルバー（幅1384px・高さ110px）。2行構成：上段に戻るボタン・ページ名・ヘルプリンク、下段に公開URL・各種アクションボタン群。",
+  "sizes": { "width": 1384, "height": 110 },
+  "layout": {
+    "padding": "16px",
+    "gap": "6px（行間）",
+    "direction": "column",
+    "borderBottom": true,
+    "background": "#ffffff"
+  },
+  "rows": {
+    "row1": {
+      "description": "上段：戻るボタン＋ページ名＋ヘルプリンク",
+      "items": [
+        {
+          "type": "ButtonIcon",
+          "icon": "arrow-left（fa-solid）",
+          "size": "32x32px",
+          "shape": "circle",
+          "background": "#eff6ff",
+          "iconColor": "#143166"
+        },
+        {
+          "type": "text",
+          "label": "ホーム（ページ名）",
+          "font": "Noto Sans JP Bold 18px / line-height 28px",
+          "color": "#0d2144",
+          "flex": "1"
+        },
+        {
+          "type": "ghost-button",
+          "icon": "circle-question（fa-solid）",
+          "label": "編集ツールの使い方",
+          "color": "#143166",
+          "height": "32px"
+        }
+      ]
+    },
+    "row2": {
+      "description": "下段：公開URL＋アクションボタン群",
+      "items": [
+        {
+          "type": "publicUrl",
+          "label": "公開URL：",
+          "url": "https://dev01015.cms2.jp/case/",
+          "urlColor": "#2862cb",
+          "icons": ["copy（fa-solid）", "arrow-up-right-from-square（fa-solid）"],
+          "iconColor": "#64748b",
+          "iconSize": "20px"
+        },
+        {
+          "type": "button",
+          "label": "申請する",
+          "variant": "submit",
+          "background": "#ea580c",
+          "textColor": "#ffffff",
+          "height": "40px"
+        },
+        {
+          "type": "button",
+          "label": "ページを複製する",
+          "variant": "secondary"
+        },
+        {
+          "type": "button",
+          "label": "ページ設定",
+          "variant": "secondary"
+        },
+        {
+          "type": "button",
+          "label": "その他の設定",
+          "variant": "secondary",
+          "iconRight": "angle-down（fa-solid）",
+          "iconColor": "#0d2144"
+        },
+        {
+          "type": "button",
+          "label": "保存する",
+          "variant": "primary",
+          "background": "#2862cb",
+          "textColor": "#ffffff"
+        }
+      ]
+    }
+  },
+  "colors": {
+    "background": "#ffffff",
+    "borderBottom": "#e5e5e5",
+    "titleText": "#0d2144",
+    "backButtonBg": "#eff6ff",
+    "backButtonIcon": "#143166",
+    "urlText": "#2862cb",
+    "urlIconSecondary": "#64748b"
+  },
+  "fonts": {
+    "title": "Noto Sans JP Bold 18px / line-height 28px",
+    "urlLabel": "Noto Sans JP Regular 12px / line-height 16px",
+    "helpButton": "Noto Sans JP Regular 14px / line-height 1",
+    "buttonLabel": "font-sans Medium 14px / line-height 20px"
+  },
+  "notes": "バリアントなし（単一状態）。2行レイアウト。submitボタン（申請する）はAppButton variant=submit。その他はsecondary/primary。公開URLはクリッカブルリンク+コピー+外部リンクアイコン付き。"
+}

@@ -1,0 +1,64 @@
+{
+  "componentName": "TableHeaderRight/Article",
+  "nodeId": "625:7951",
+  "figmaName": "TableHeaderRight/Article",
+  "category": "Organisms",
+  "description": "テーブル右ヘッダー（記事一覧用）。各種設定・カテゴリ・タグ・最終更新者・最終更新日時・操作の6列構成。",
+  "container": {
+    "height": 48,
+    "padding": 16,
+    "gap": 16,
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "borderRadiusTopRight": 8,
+    "overflow": "hidden"
+  },
+  "columns": [
+    {
+      "label": "各種設定",
+      "width": 88,
+      "align": "left",
+      "nodeId": "625:7936"
+    },
+    {
+      "label": "カテゴリ",
+      "width": 176,
+      "align": "center",
+      "nodeId": "1173:55667"
+    },
+    {
+      "label": "タグ",
+      "width": 176,
+      "align": "center",
+      "nodeId": "625:7949"
+    },
+    {
+      "label": "最終更新者",
+      "width": 112,
+      "align": "center",
+      "nodeId": "625:7947"
+    },
+    {
+      "label": "最終更新日時",
+      "width": 96,
+      "align": "center",
+      "nodeId": "625:7945"
+    },
+    {
+      "label": "操作",
+      "width": 112,
+      "align": "center",
+      "nodeId": "625:7939"
+    }
+  ],
+  "typography": {
+    "fontFamily": "Noto Sans JP",
+    "fontSize": 14,
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "color": "#0d2144"
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": "バリアントなし。単一状態。記事一覧テーブルの右側ヘッダー6列。"
+}

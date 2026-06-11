@@ -1,0 +1,72 @@
+{
+  "componentName": "InlineMenuCuration",
+  "nodeId": "621:17635",
+  "figmaName": "InlineMenu/Curation",
+  "description": "キュレーションメディア一覧テーブル行のインラインメニュー。行ホバー時に表示されるコンテキストメニュー。",
+  "sizes": {
+    "width": 224,
+    "height": "auto"
+  },
+  "container": {
+    "background": "var(--background/surface/bg-sf-primary, #ffffff)",
+    "borderRadius": "var(--border-radius/rounded-md, 8px)",
+    "shadow": "shadow/lg（0px 10px 7.5px rgba(0,0,0,0.1), 0px 4px 3px rgba(0,0,0,0.1)）",
+    "padding": "px-2 py-4（8px 16px）",
+    "gap": "8px",
+    "width": "224px（w-56）"
+  },
+  "menuItems": [
+    {
+      "icon": "fa-solid fa-display",
+      "label": "サイトを表示",
+      "color": "var(--text/text-primary, #0d2144)"
+    },
+    {
+      "icon": "fa-solid fa-rss",
+      "label": "最新RSSを取得",
+      "color": "var(--text/text-primary, #0d2144)"
+    },
+    {
+      "icon": "fa-solid fa-copy",
+      "label": "メディアを複製",
+      "color": "var(--text/text-primary, #0d2144)"
+    },
+    {
+      "type": "divider",
+      "note": "水平区切り線。py-2（8px）のスペーサー付き。画像アセットとして実装（1px ボーダー）"
+    },
+    {
+      "icon": "fa-solid fa-circle-minus",
+      "label": "完全に削除する",
+      "color": "var(--background/notice/bg-notice-light, #dc2626)",
+      "note": "危険操作。アイコン・テキストともに赤色（#dc2626）"
+    }
+  ],
+  "itemStyle": {
+    "height": "32px",
+    "paddingLeft": "12px",
+    "paddingRight": "16px",
+    "paddingY": "4px",
+    "borderRadius": "8px",
+    "width": "100%",
+    "iconSize": "16px",
+    "fontSize": "var(--text/sm/font-size, 14px)",
+    "fontFamily": "Noto Sans JP Regular",
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "gap": "8px"
+  },
+  "colors": {
+    "textPrimary": "#0d2144",
+    "textDanger": "#dc2626",
+    "background": "#ffffff",
+    "divider": "1px solid（画像アセット）"
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": [
+    "バリアントなし・固定コンテンツのコンポーネント",
+    "「完全に削除する」は危険操作のため赤色テキスト（#dc2626）で表示",
+    "全 InlineMenu/* 系は同一コンテナスタイル（白背景・rounded-md・shadow/lg・w-56）"
+  ]
+}

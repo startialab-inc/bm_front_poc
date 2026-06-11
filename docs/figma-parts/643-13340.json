@@ -41,8 +41,7 @@
   },
   "spacing": {
     "padding": 8,
-    "gapDefault": 4,
-    "gapHoverFocus": 8
+    "gap": 4
   },
   "structure": {
     "root": {
@@ -75,5 +74,5 @@
     "add": "fa-solid fa-plus"
   },
   "states": ["Default", "Hover", "Focus"],
-  "notes": "Hover と Focus は同じ見た目（背景 #2862cb）。アイコンは Font Awesome 6 の 'add'（fa-plus に相当）。gap が Default: 4px、Hover/Focus: 8px で異なる。"
+  "notes": "Hover と Focus は同じ見た目（背景 #2862cb）。アイコンは Font Awesome 6 の 'add'（fa-plus に相当）。gap は全状態で 4px 統一。アイコン・ラベルは props で外部から渡す（デフォルト空）。"
 }

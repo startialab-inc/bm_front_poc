@@ -30,7 +30,7 @@ defineEmits<{
   <button
     v-else
     type="button"
-    class="flex h-10 w-10 items-center justify-center rounded-[8px] bg-white text-[#2862cb] hover:bg-[#ddeaff]"
+    class="flex h-10 w-10 items-center justify-center rounded-[8px] bg-white text-[#2862cb] hover:bg-[#ddeaff] group-hover:bg-[#ddeaff]"
     @click="$emit('click')"
   >
     <i :class="`fa-solid fa-${icon}`" class="text-[16px]" />

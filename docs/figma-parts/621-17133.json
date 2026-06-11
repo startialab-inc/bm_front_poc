@@ -1,0 +1,51 @@
+{
+  "componentName": "InlineMenu/Pages",
+  "nodeId": "621:17133",
+  "figmaName": "InlineMenu/Pages",
+  "category": "Organisms",
+  "description": "ページ一覧の行に表示するインラインドロップダウンメニュー。白背景・ドロップシャドウ・角丸のパネルに、アイコン付きテキストボタンをリスト表示する。",
+  "layout": {
+    "background": "#ffffff",
+    "width": 224,
+    "borderRadius": 8,
+    "shadow": "0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.1)",
+    "padding": "16px 8px",
+    "gap": 8
+  },
+  "menuItems": [
+    { "label": "プレビュー", "icon": "fa-eye", "iconColor": "#0d2144" },
+    { "label": "再構築予約時間の設定", "icon": "fa-clock", "iconColor": "#0d2144" },
+    { "label": "編集権限の設定", "icon": "fa-users", "iconColor": "#0d2144" },
+    { "label": "変更履歴", "icon": "fa-clock-rotate-left", "iconColor": "#0d2144" },
+    { "label": "ワークフロー", "icon": "fa-user-check", "iconColor": "#0d2144" },
+    { "label": "下の階層にページを作成", "icon": "fa-add", "iconColor": "#0d2144" },
+    { "label": "ページを複製", "icon": "fa-copy", "iconColor": "#0d2144" },
+    { "label": "下層ページも含めて複製", "icon": "fa-copy", "iconColor": "#0d2144" },
+    { "label": "共通パーツを追加", "icon": "fa-globe", "iconColor": "#0d2144" },
+    { "label": "CVレポート", "icon": "fa-file-contract", "iconColor": "#0d2144" },
+    { "label": "フォームのレポートを出力", "icon": "fa-chart-line", "iconColor": "#0d2144" },
+    { "label": "ページのプロパティ", "icon": "fa-circle-info", "iconColor": "#0d2144" },
+    { "type": "separator" },
+    { "label": "ゴミ箱に移動", "icon": "fa-trash", "iconColor": "#0d2144" }
+  ],
+  "menuItemStyle": {
+    "height": 32,
+    "paddingLeft": 12,
+    "paddingRight": 16,
+    "paddingTop": 4,
+    "paddingBottom": 4,
+    "borderRadius": 8,
+    "iconSize": 15,
+    "textSize": 14,
+    "textColor": "#0d2144",
+    "gap": 8
+  },
+  "separatorStyle": {
+    "color": "#e5e5e5",
+    "width": 208,
+    "marginY": 8
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": "メニュー項目は AppButton（variant=ghost）相当。アイコンは FontAwesome Solid、15px、テキストと同色（#0d2144）。セパレーターは水平線（208px幅）。合計13項目 + セパレーター1本。"
+}

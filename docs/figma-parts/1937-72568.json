@@ -1,0 +1,29 @@
+{
+  "nodeId": "1937:72568",
+  "name": "TableRowRight/CurationList",
+  "atomicLevel": "Organism",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "キュレーションリスト一覧のテーブル行（右列）。5列: 公開日時・登録メディア名・最終更新者・連携更新日時・操作（fa-pen + fa-ellipsis）。単一バリアント。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "padding": "0"
+  },
+  "style": {
+    "background": "var(--background/surface/bg-sf-primary, white)",
+    "borderBottom": "1px solid var(--divider/divider-primary, #e5e5e5)"
+  },
+  "columns": [
+    { "label": "公開日時", "width": "128px", "content": "テキスト（中央揃え）" },
+    { "label": "登録メディア名", "width": "128px", "content": "テキスト（中央揃え）" },
+    { "label": "最終更新者", "width": "128px", "content": "テキスト（中央揃え）" },
+    { "label": "連携更新日時", "width": "96px", "content": "テキスト（中央揃え）" },
+    {
+      "label": "操作",
+      "width": "112px",
+      "content": "fa-pen + fa-ellipsis（グレー #64748b、各 20px）"
+    }
+  ],
+  "variants": [{ "state": "Default", "nodeId": "1937:72568" }]
+}

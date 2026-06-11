@@ -1,0 +1,39 @@
+{
+  "note": "preview_full / 1280 / 1024 / 768 / 400 / 320 は同一コンポーネントとして1ファイルにまとめる。",
+  "components": [
+    { "nodeId": "3738:5856", "name": "preview_full",  "selectedWidth": "full（全幅表示）" },
+    { "nodeId": "3738:5880", "name": "preview_1280", "selectedWidth": "1280px" },
+    { "nodeId": "3738:5904", "name": "preview_1024", "selectedWidth": "1024px" },
+    { "nodeId": "3738:5928", "name": "preview_768",  "selectedWidth": "768px" },
+    { "nodeId": "3738:5952", "name": "preview_400",  "selectedWidth": "400px" },
+    { "nodeId": "3738:5976", "name": "preview_320",  "selectedWidth": "320px" }
+  ],
+  "name": "PreviewBar（全幅インジケーター）",
+  "atomicLevel": "Organism",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "プレビュー画面上部の幅インジケーターバー。1440px幅固定。上段: ライトグレー背景の「選択したサイズでプレビューできます。」テキスト（10px、20px高）。下段: 現在選択中の幅に応じてハイライト色が変わる幅スケールバー（32px高）。full/1280/1024/768/400/320 の 6段階。",
+  "layout": {
+    "width": "1440px",
+    "display": "flex",
+    "flexDirection": "column"
+  },
+  "structure": {
+    "hintRow": {
+      "height": "20px",
+      "background": "var(--tailwind-colors/slate/100, #f1f5f9)",
+      "text": "「選択したサイズでプレビューできます。」10px"
+    },
+    "scaleBar": {
+      "height": "32px",
+      "description": "幅の目盛りバー。選択幅に相当する領域をハイライト（濃色）、それ以外をグレーで表示。幅の境界に縦線と数値ラベル（full/1280/1024/768/400/320）を配置。"
+    }
+  },
+  "props": {
+    "selectedWidth": {
+      "type": "string",
+      "enum": ["full", "1280", "1024", "768", "400", "320"],
+      "default": "full",
+      "description": "ハイライトする幅。実装時は 6 variants を 1 コンポーネントに統合して prop で切り替える。"
+    }
+  }
+}

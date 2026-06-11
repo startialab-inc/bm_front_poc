@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import AppTabItem from '@/components/atoms/AppTabItem.vue'
+import AppTab, { type TabItem } from '@/components/molecules/AppTab.vue'
 
 // インタラクティブデモ用のタブデータ
-const tabs = ref(['タブ1', 'タブ2', 'タブ3'])
-const selectedIndex = ref(0)
+const tabs = ref<TabItem[]>([
+  { label: 'タブ1', value: 'tab1' },
+  { label: 'タブ2', value: 'tab2' },
+  { label: 'タブ3', value: 'tab3' },
+])
+const selectedTab = ref('tab1')
 </script>
 
 <template>
@@ -36,25 +41,23 @@ const selectedIndex = ref(0)
       </div>
     </section>
 
-    <!-- Tab 風横並びデモ -->
+    <!-- AppTab（Molecule）デモ -->
     <section class="mb-8">
-      <h2 class="mb-3 text-base font-semibold text-slate-700">Tab 風横並び</h2>
+      <h2 class="mb-3 text-base font-semibold text-slate-700">AppTab（Molecule）</h2>
       <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 space-y-6">
         <div>
           <p class="text-xs text-slate-400 mb-2">「タブ1」選択中</p>
-          <div class="flex items-start border-b border-slate-200">
-            <AppTabItem label="タブ1" :selected="true" />
-            <AppTabItem label="タブ2" :selected="false" />
-            <AppTabItem label="タブ3" :selected="false" />
-          </div>
+          <AppTab
+            model-value="tab1"
+            :items="[{ label: 'タブ1', value: 'tab1' }, { label: 'タブ2', value: 'tab2' }, { label: 'タブ3', value: 'tab3' }]"
+          />
         </div>
         <div>
           <p class="text-xs text-slate-400 mb-2">「タブ2」選択中</p>
-          <div class="flex items-start border-b border-slate-200">
-            <AppTabItem label="タブ1" :selected="false" />
-            <AppTabItem label="タブ2" :selected="true" />
-            <AppTabItem label="タブ3" :selected="false" />
-          </div>
+          <AppTab
+            model-value="tab2"
+            :items="[{ label: 'タブ1', value: 'tab1' }, { label: 'タブ2', value: 'tab2' }, { label: 'タブ3', value: 'tab3' }]"
+          />
         </div>
       </div>
     </section>
@@ -64,16 +67,10 @@ const selectedIndex = ref(0)
       <h2 class="mb-3 text-base font-semibold text-slate-700">インタラクティブデモ</h2>
       <div class="bg-slate-50 rounded-lg p-6 border border-slate-200">
         <p class="text-xs text-slate-500 mb-3">タブをクリックして切り替え</p>
-        <div class="flex items-start border-b border-slate-200">
-          <AppTabItem
-            v-for="(tab, i) in tabs"
-            :key="tab"
-            :label="tab"
-            :selected="selectedIndex === i"
-            @click="selectedIndex = i"
-          />
-        </div>
-        <p class="mt-3 text-xs text-slate-500">選択中: {{ tabs[selectedIndex] }}</p>
+        <AppTab v-model="selectedTab" :items="tabs" />
+        <p class="mt-3 text-xs text-slate-500">
+          選択中: {{ tabs.find(t => t.value === selectedTab)?.label }}
+        </p>
       </div>
     </section>
   </div>

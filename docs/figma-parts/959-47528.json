@@ -1,0 +1,59 @@
+{
+  "componentName": "TableRowRight/File",
+  "nodeId": "959:47528",
+  "figmaName": "TableRowRight/FIle",
+  "figmaNameNote": "Figma typo: 'FIle' → 正: 'File'",
+  "category": "Organisms",
+  "description": "ファイル一覧テーブルの行右側エリア。ページ設定ステータス・担当者・ファイル種別・ファイルサイズ・更新日時・ellipsis アクションを横並びで表示する。",
+  "layout": {
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "padding": "12px 16px",
+    "height": 112,
+    "gap": 16
+  },
+  "columns": [
+    {
+      "name": "pageSettingStatus",
+      "width": 88,
+      "content": "PageSettingStatus（AppPageSettingStatus）",
+      "component": "AppPageSettingStatus",
+      "state": "OFF",
+      "statusSize": { "width": 64, "height": 28 },
+      "statusBg": "#f8fafc",
+      "statusTextColor": "#64748b",
+      "statusBorderRadius": 4
+    },
+    {
+      "name": "author",
+      "width": 112,
+      "content": "担当者名テキスト（14px / center）"
+    },
+    {
+      "name": "fileType",
+      "width": 96,
+      "content": "ファイル種別テキスト（14px / center）"
+    },
+    {
+      "name": "fileSize",
+      "width": 112,
+      "content": "ファイルサイズテキスト（14px / center）"
+    },
+    {
+      "name": "updatedAt",
+      "width": 96,
+      "content": "更新日時テキスト（14px / center）"
+    },
+    {
+      "name": "actions",
+      "width": 64,
+      "content": "ellipsis アイコン（20px）",
+      "icons": [
+        { "faIcon": "fa-ellipsis", "color": "#64748b", "size": 20 }
+      ]
+    }
+  ],
+  "variants": [],
+  "states": ["default"],
+  "notes": "行高が 112px（他の 64px よりも高い）。ellipsis アイコンのみ（他の pen/trash とは異なる）。"
+}

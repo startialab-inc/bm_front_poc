@@ -1,0 +1,64 @@
+{
+  "componentName": "TableHeaderRight/User",
+  "nodeId": "1176:56723",
+  "figmaName": "TableHeaderRight/User",
+  "category": "Organisms",
+  "description": "テーブル右ヘッダー（ユーザー一覧用）。ユーザーID・メールアドレス・権限グループ・ワークフロー承認権限・最終更新日時・操作の6列構成。",
+  "container": {
+    "height": 48,
+    "padding": 16,
+    "gap": 16,
+    "background": "#ffffff",
+    "borderBottom": "1px solid #e5e5e5",
+    "borderRadiusTopRight": 8,
+    "overflow": "hidden"
+  },
+  "columns": [
+    {
+      "label": "ユーザーID",
+      "width": 128,
+      "align": "center",
+      "nodeId": "1176:56710"
+    },
+    {
+      "label": "メールアドレス",
+      "width": 176,
+      "align": "center",
+      "nodeId": "1176:56712"
+    },
+    {
+      "label": "権限グループ",
+      "width": 144,
+      "align": "center",
+      "nodeId": "1176:56714"
+    },
+    {
+      "label": "ワークフロー承認権限",
+      "width": 144,
+      "align": "center",
+      "nodeId": "1176:56716"
+    },
+    {
+      "label": "最終更新日時",
+      "width": 128,
+      "align": "center",
+      "nodeId": "1176:56718"
+    },
+    {
+      "label": "操作",
+      "width": 64,
+      "align": "center",
+      "nodeId": "1176:56720"
+    }
+  ],
+  "typography": {
+    "fontFamily": "Noto Sans JP",
+    "fontSize": 14,
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "color": "#0d2144"
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": "バリアントなし。単一状態。ユーザー一覧テーブルの右側ヘッダー6列。"
+}

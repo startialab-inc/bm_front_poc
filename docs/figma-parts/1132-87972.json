@@ -1,0 +1,77 @@
+{
+  "nodeId": "1132:87972",
+  "name": "ArticleIndex",
+  "atomicLevel": "Organism",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "記事エディターの目次パネル。Default（閲覧）と Editable（編集）の 2 状態。288×820px の左ボーダー付きサイドパネル。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "column",
+    "width": "var(--width/w-72, 288px)",
+    "height": "820px"
+  },
+  "style": {
+    "background": "var(--background/surface/bg-sf-primary, white)",
+    "borderLeft": "1px solid var(--divider/divider-primary, #e5e5e5)"
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "938:52236",
+      "description": "閲覧モード。目次項目がリンクテキスト（ブランド青）として表示される",
+      "header": {
+        "title": "目次",
+        "rightElement": "fa-pen アイコン（グレー）"
+      }
+    },
+    {
+      "state": "Editable",
+      "nodeId": "1132:87971",
+      "description": "編集モード。目次項目が入力フィールドに変わり、右上に「保存する」テキストリンクが表示される",
+      "header": {
+        "title": "目次",
+        "rightElement": "「保存する」テキストリンク（ブランド青・12px）"
+      }
+    }
+  ],
+  "typography": {
+    "heading": {
+      "fontFamily": "Noto Sans JP",
+      "fontSize": "16px",
+      "fontWeight": 700,
+      "lineHeight": 1,
+      "color": "var(--text/text-primary, #0d2144)",
+      "borderBottom": "2px solid var(--divider/divider-brand, #2862cb)"
+    },
+    "tocItem": {
+      "fontFamily": "Noto Sans JP",
+      "fontSize": "var(--text/sm/font-size, 14px)",
+      "fontWeight": 400,
+      "lineHeight": "var(--text/sm/line-height, 20px)",
+      "color": "var(--text/text-brand, #2862cb)"
+    }
+  },
+  "buttons": [
+    {
+      "label": "目次HTMLを挿入",
+      "variant": "secondary",
+      "width": "240px"
+    },
+    {
+      "label": "目次差し込みコードを挿入",
+      "variant": "secondary",
+      "width": "240px"
+    }
+  ],
+  "props": {
+    "state": {
+      "type": "string",
+      "enum": ["Default", "Editable"],
+      "default": "Default"
+    },
+    "items": {
+      "type": "array",
+      "description": "目次アイテムの配列"
+    }
+  }
+}

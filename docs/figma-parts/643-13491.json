@@ -1,0 +1,72 @@
+{
+  "componentName": "InlineMenuPageEditor",
+  "nodeId": "643:13491",
+  "figmaName": "InlineMenu/PageEditor",
+  "description": "ページエディタ（ブロック編集画面）のインラインメニュー。ブロック操作オプションを表示するコンテキストメニュー。",
+  "sizes": {
+    "width": 224,
+    "height": "auto"
+  },
+  "container": {
+    "background": "var(--background/surface/bg-sf-primary, #ffffff)",
+    "borderRadius": "var(--border-radius/rounded-md, 8px)",
+    "shadow": "shadow/lg（0px 10px 7.5px rgba(0,0,0,0.1), 0px 4px 3px rgba(0,0,0,0.1)）",
+    "padding": "px-2 py-4（8px 16px）",
+    "gap": "8px",
+    "width": "224px（w-56）"
+  },
+  "menuItems": [
+    {
+      "icon": "fa-solid fa-clock",
+      "label": "再構築予約時間の設定",
+      "color": "var(--text/text-primary, #0d2144)"
+    },
+    {
+      "icon": "fa-solid fa-users",
+      "label": "編集権限の設定",
+      "color": "var(--text/text-primary, #0d2144)"
+    },
+    {
+      "icon": "fa-solid fa-clock-rotate-left",
+      "label": "変更履歴",
+      "color": "var(--text/text-primary, #0d2144)"
+    },
+    {
+      "icon": "fa-solid fa-user-check",
+      "label": "ワークフロー",
+      "color": "var(--text/text-primary, #0d2144)"
+    },
+    {
+      "icon": "fa-solid fa-earth",
+      "label": "公開",
+      "note": "アイコンサイズが他と異なる（14px vs 15px）",
+      "color": "var(--text/text-primary, #0d2144)"
+    }
+  ],
+  "itemStyle": {
+    "height": "32px",
+    "paddingLeft": "12px",
+    "paddingRight": "16px",
+    "paddingY": "4px",
+    "borderRadius": "8px",
+    "width": "100%",
+    "iconSize": "16px",
+    "fontSize": "var(--text/sm/font-size, 14px)",
+    "fontFamily": "Noto Sans JP Regular",
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "gap": "8px"
+  },
+  "colors": {
+    "textPrimary": "#0d2144",
+    "background": "#ffffff"
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": [
+    "バリアントなし・固定コンテンツのコンポーネント",
+    "区切り線（divider）なし。他の InlineMenu/* と異なる点に注意",
+    "全 InlineMenu/* 系は同一コンテナスタイル（白背景・rounded-md・shadow/lg・w-56）",
+    "「公開」のアイコン（earth）サイズが 14px と他の 15px と微妙に異なる"
+  ]
+}

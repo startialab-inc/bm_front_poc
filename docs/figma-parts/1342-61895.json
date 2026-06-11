@@ -1,0 +1,28 @@
+{
+  "nodeId": "1342:61895",
+  "name": "TableRowRight/Trash",
+  "atomicLevel": "Organism",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "ゴミ箱一覧のテーブル行（右列）。高さ 80px（既存 938:47679 の 64px より高い）。6列: 削除者・削除日時・元の更新者・元の更新日時・元の作成者・元の作成日時 + 操作（fa-ellipsis）。",
+  "note": "既存の TableRowRight/Trash（938:47679）とは別物。高さが 80px で列数・列内容が異なる。どちらを使うかは画面実装時に要確認。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "column",
+    "height": "80px",
+    "justifyContent": "center"
+  },
+  "style": {
+    "background": "var(--background/surface/bg-sf-primary, white)",
+    "borderBottom": "1px solid var(--divider/divider-primary, #e5e5e5)"
+  },
+  "columns": [
+    { "label": "削除者", "width": "128px" },
+    { "label": "削除日時", "width": "128px" },
+    { "label": "元の更新者", "width": "128px" },
+    { "label": "元の更新日時", "width": "128px" },
+    { "label": "元の作成者", "width": "128px" },
+    { "label": "元の作成日時", "width": "128px" },
+    { "label": "操作", "width": "64px", "content": "fa-ellipsis（グレー）" }
+  ],
+  "variants": [{ "state": "Default", "nodeId": "1342:61895" }]
+}

@@ -1,0 +1,120 @@
+{
+  "componentName": "TableFlow",
+  "nodeId": "3225:6670",
+  "figmaName": "Table/flow",
+  "description": "変更フロー（コメント・システムメッセージ）テーブル全体。ヘッダー1行+データ行4行のコンポジット。",
+  "sizes": {
+    "width": 952,
+    "height": 304
+  },
+  "structure": {
+    "header": {
+      "height": 48,
+      "left": {
+        "nodeId": "3225:6518",
+        "figmaName": "TableHeaderLeft/Pages",
+        "width": 692,
+        "label": "コメント・システムメッセージ",
+        "borderRadius": "rounded-tl-md（左上角 8px）"
+      },
+      "right": {
+        "nodeId": "3225:6519",
+        "figmaName": "TableHeaderRight/News",
+        "width": 260,
+        "columns": [
+          { "label": "権限", "width": 100, "align": "left" },
+          { "label": "更新日時", "width": 80, "align": "center" }
+        ],
+        "borderRadius": "rounded-tr-md（右上角 8px）"
+      }
+    },
+    "rows": [
+      {
+        "type": "userComment",
+        "height": 64,
+        "left": {
+          "figmaName": "TableRowLeft/News",
+          "width": 692,
+          "icon": {
+            "type": "avatar-placeholder",
+            "note": "ユーザーアイコン未設定時は FA Regular \\uF007（user）アイコン + 丸ボーダー背景 48x48px",
+            "background": "#f8fafc",
+            "borderRadius": 8
+          },
+          "text": {
+            "line1": "username1さん",
+            "line2": "これから編集します（コメント本文）",
+            "fontSize": 14,
+            "lineHeight": 20,
+            "color": "#000000（--text）"
+          }
+        },
+        "right": {
+          "figmaName": "TableRowRight/News",
+          "width": 260,
+          "columns": [
+            { "label": "編集者", "width": 100 },
+            { "label": "2026/12/04\n12:24", "width": 80, "align": "right" }
+          ]
+        }
+      },
+      {
+        "type": "systemMessage",
+        "height": 64,
+        "left": {
+          "figmaName": "TableRowLeft/News",
+          "width": 692,
+          "icon": {
+            "type": "app-logo",
+            "note": "システムメッセージは BowNow ロゴ画像を 48x48px 枠内に表示",
+            "background": "#f8fafc",
+            "borderRadius": 8,
+            "assetUrl": "https://www.figma.com/api/mcp/asset/4e2e2241-9656-4d8a-a566-67d33a50e16b"
+          },
+          "text": {
+            "pattern": "username1さんによってステータスが<bold>編集中</bold>に変更されました。",
+            "note": "一部ボールド（Noto Sans JP Bold）が混在したリッチテキスト",
+            "fontSize": 14,
+            "lineHeight": 20
+          }
+        },
+        "right": {
+          "figmaName": "TableRowRight/News",
+          "width": 260,
+          "columns": [
+            { "label": "（空欄）", "width": 100 },
+            { "label": "2026/12/04\n12:24", "width": 80, "align": "right" }
+          ]
+        }
+      }
+    ],
+    "rowCount": 4,
+    "note": "実データは userComment 2行・systemMessage 2行が交互に並ぶ。最終行に rounded-bl/br-md が付く"
+  },
+  "colors": {
+    "background": "#ffffff",
+    "border": "#e5e5e5",
+    "textPrimary": "#0d2144",
+    "textBody": "#000000",
+    "textDisabled": "#cbd5e1",
+    "iconSecondary": "#64748b",
+    "rowBackground": "#f8fafc"
+  },
+  "typography": {
+    "header": { "fontSize": 14, "fontWeight": 400, "lineHeight": 1 },
+    "rowText": { "fontSize": 14, "fontWeight": 400, "lineHeight": 20 },
+    "rowTextBold": { "fontSize": 14, "fontWeight": 700, "lineHeight": 20 },
+    "meta": { "fontSize": 14, "fontWeight": 400, "lineHeight": 20 }
+  },
+  "variants": [],
+  "states": ["default"],
+  "notes": [
+    "コメント・システムメッセージを時系列で表示するテーブル全体コンポジット",
+    "左列（692px）: アバター/ロゴ + テキスト。右列（260px）: 権限（100px）+ 更新日時（80px）",
+    "ユーザーコメント行: アバター未設定時は user アイコン（FA Regular）を丸ボーダー枠内に表示",
+    "システムメッセージ行: BowNow ロゴ画像を枠内に表示。権限列は空欄",
+    "テキストにボールドが混在する場合あり（ステータス名など）",
+    "テーブル全体は border + rounded-md（角丸 8px）で囲まれる",
+    "このコンポーネントは TableRowLeft/News・TableRowRight/News・TableHeaderLeft/Pages・TableHeaderRight/News の組み合わせ（それぞれ別途 Phase C 収集済み）"
+  ]
+}

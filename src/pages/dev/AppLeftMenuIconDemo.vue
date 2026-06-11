@@ -42,12 +42,12 @@ const toggle = () => {
       <div class="rounded-lg border border-slate-200 bg-white p-6">
         <div class="flex items-start gap-10 flex-wrap">
           <div class="flex flex-col items-center gap-3">
-            <span class="text-xs font-medium text-slate-500 uppercase tracking-wide">Close</span>
+            <span class="text-xs font-medium text-slate-500">Close</span>
             <AppLeftMenuIcon status="close" />
             <span class="text-xs text-slate-400">サイドバー開き状態</span>
           </div>
           <div class="flex flex-col items-center gap-3">
-            <span class="text-xs font-medium text-slate-500 uppercase tracking-wide">Open</span>
+            <span class="text-xs font-medium text-slate-500">Open</span>
             <AppLeftMenuIcon status="open" />
             <span class="text-xs text-slate-400">サイドバー閉じ状態</span>
           </div>

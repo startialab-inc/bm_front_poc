@@ -1,0 +1,28 @@
+{
+  "nodeId": "2319:5852",
+  "name": "login",
+  "atomicLevel": "Template",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "ログインフォームカード。ログインID入力 + パスワード入力 + 「ログインIDを保持する」チェックボックス + ログインボタン + パスワード忘れリンク。440×326px。",
+  "layout": {
+    "width": "440px",
+    "height": "326px",
+    "display": "flex",
+    "flexDirection": "column",
+    "gap": "16px",
+    "padding": "24px 24px 32px 24px",
+    "borderRadius": "var(--border-radius/rounded-md, 8px)"
+  },
+  "style": {
+    "background": "var(--background/surface/bg-sf-primary, white)",
+    "border": "1px solid var(--divider/divider-primary, #e5e5e5)"
+  },
+  "structure": {
+    "loginIdField": "FormTitle「ログインID」 + Input（36px高）",
+    "passwordField": "FormTitle「パスワード」 + Input（36px高）",
+    "rememberCheckbox": "Checkbox（17px）+ 「ログインIDを保持する」テキスト（14px）",
+    "loginButton": "Button/Primary「ログインする」（40px高、全幅）",
+    "forgotPassword": "「パスワードを忘れた方はこちら」テキストリンク（12px、ブランド青、中央揃え）"
+  },
+  "variants": [{ "state": "Default", "nodeId": "2319:5852" }]
+}

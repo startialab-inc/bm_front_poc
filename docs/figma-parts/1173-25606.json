@@ -1,0 +1,38 @@
+{
+  "nodeId": "1173:25606",
+  "name": "BlockSelectFooter",
+  "atomicLevel": "Organism",
+  "figmaFileKey": "VpMboz99gE6SKsEeHGcjmP",
+  "description": "ブロック選択時のフッターバー。幅 1440px フル幅。「キャンセル」（Secondary）と「このブロックを追加する」（Primary）の 2 ボタン中央配置。AppModalFooter と同構造だがボタンラベルが固定。",
+  "layout": {
+    "display": "flex",
+    "flexDirection": "column",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "gap": "var(--spacing/4, 0px)",
+    "width": "1440px",
+    "padding": "var(--spacing/4, 16px) var(--spacing/6, 24px)"
+  },
+  "style": {
+    "background": "var(--background/surface/bg-sf-primary, white)",
+    "borderTop": "1px solid var(--divider/divider-primary, #e5e5e5)"
+  },
+  "variants": [
+    {
+      "state": "Default",
+      "nodeId": "1173:25606"
+    }
+  ],
+  "buttons": [
+    {
+      "label": "キャンセル",
+      "variant": "secondary",
+      "iconLeft": null
+    },
+    {
+      "label": "このブロックを追加する",
+      "variant": "primary"
+    }
+  ],
+  "note": "AppModalFooter と同様にデフォルト slot 設計が適切。ボタンをコンシューマー側で自由に差し替えられるようにする。"
+}

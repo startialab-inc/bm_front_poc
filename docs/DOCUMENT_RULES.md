@@ -83,7 +83,7 @@ CLAUDE.md には追加不要（作業時に参照するドキュメント）。
 | ファイル | 内容 |
 |---|---|
 | `docs/architecture.md` | アーキテクチャ・MCP サーバー情報・外部サービス接続情報 |
-| `docs/design-tokens.md` | デザイントークン一覧（色・レイアウト変数） |
+| `DESIGN.md` | デザイントークン一覧（色・レイアウト変数） |
 | `docs/screens.md` | 対象画面一覧・画面遷移 |
 | `docs/session-plan.md` | 実装計画（セッション区切り・実装状況） |
 | `docs/review-plan.md` | レビューフェーズ方針・評価観点 |

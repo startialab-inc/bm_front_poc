@@ -1,0 +1,113 @@
+{
+  "componentName": "AppHeader",
+  "nodeId": "520:6480",
+  "figmaName": "Header",
+  "description": "アプリケーションのグローバルヘッダー。左側にナビゲーションボタン群、右側にワークフロー設定ステータス・アバター・ユーザー名を配置する。",
+  "sizes": {
+    "width": 1200,
+    "height": 56
+  },
+  "colors": {
+    "background": "#ffffff",
+    "border": "#e5e5e5",
+    "textPrimary": "#0d2144",
+    "iconPrimary": "#143166",
+    "iconSecondary": "#64748b"
+  },
+  "layout": {
+    "display": "flex",
+    "height": "56px",
+    "paddingX": "16px",
+    "borderBottom": "1px solid #e5e5e5"
+  },
+  "structure": {
+    "leftArea": {
+      "description": "flex-1、左寄せ。ハンバーガーアイコン + セパレーター + ナビゲーションボタン群",
+      "items": [
+        {
+          "type": "icon",
+          "name": "hamburger",
+          "faIcon": "bars",
+          "faFamily": "Font Awesome 7 Free Solid",
+          "size": "16px",
+          "color": "#143166"
+        },
+        {
+          "type": "separator",
+          "description": "縦線セパレーター、高さ 15px"
+        },
+        {
+          "type": "button",
+          "label": "マニュアルサイト",
+          "faIcon": "book",
+          "height": "28px",
+          "paddingLeft": "8px",
+          "paddingRight": "12px",
+          "borderRadius": "8px"
+        },
+        {
+          "type": "button",
+          "label": "動画マニュアル",
+          "faIcon": "video",
+          "height": "28px",
+          "paddingLeft": "8px",
+          "paddingRight": "12px",
+          "borderRadius": "8px"
+        },
+        {
+          "type": "button",
+          "label": "操作・運用ガイド",
+          "faIcon": "book",
+          "height": "28px",
+          "paddingLeft": "8px",
+          "paddingRight": "12px",
+          "borderRadius": "8px"
+        }
+      ]
+    },
+    "rightArea": {
+      "description": "flex-1、右寄せ。ワークフロー設定ステータス + アバター + ユーザー名 + ドロップダウンアイコン",
+      "items": [
+        {
+          "type": "workflowStatus",
+          "label": "ワークフロー設定：",
+          "statusComponent": "PageSettingStatus",
+          "statusNodeId": "621:12559",
+          "statusHeight": "28px",
+          "statusBackground": "#f8fafc",
+          "statusBorderRadius": "4px"
+        },
+        {
+          "type": "avatar",
+          "size": "32px",
+          "borderRadius": "9999px",
+          "background": "#e2e8f0",
+          "description": "ユーザーアバター画像（丸型）"
+        },
+        {
+          "type": "text",
+          "content": "ユーザーネーム",
+          "fontSize": "12px",
+          "fontWeight": "500",
+          "color": "#0d2144"
+        },
+        {
+          "type": "icon",
+          "name": "dropdown",
+          "faIcon": "chevron-down",
+          "faFamily": "Font Awesome 7 Free Solid",
+          "size": "16px",
+          "color": "#64748b"
+        }
+      ]
+    }
+  },
+  "variants": [],
+  "states": ["default"],
+  "fonts": {
+    "primary": "Noto Sans JP",
+    "icon": "Font Awesome 7 Free Solid",
+    "ui": "Geist Medium"
+  },
+  "notes": "単一バリアント（バリアントなし）。ナビゲーションボタンはホバー時に背景色変化（Figma上明示なし）。ユーザー情報部分はドロップダウンメニューを持つ想定。"
+}

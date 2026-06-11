@@ -3,8 +3,10 @@ import ja from './ja'
 
 // i18n インスタンスを生成してエクスポートする
 // legacy: false で Composition API（useI18n）を使用可能にする
+// warnHtmlMessage: false でラベルに <br/> 等の HTML タグを含める際の警告を抑制する
 export default createI18n({
   legacy: false,
   locale: 'ja',
   messages: { ja },
+  warnHtmlMessage: false,
 })

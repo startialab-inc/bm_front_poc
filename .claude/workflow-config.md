@@ -24,7 +24,7 @@ component_base_dir: src/components/
 demo_dir: src/pages/dev/
 index_page: src/pages/dev/DevIndex.vue
 router_file: src/router/index.ts
-design_tokens_file: docs/design-tokens.md
+design_tokens_file: DESIGN.md
 figma_parts_dir: docs/figma-parts/
 component_list_file: docs/session-plan.md
 ```
